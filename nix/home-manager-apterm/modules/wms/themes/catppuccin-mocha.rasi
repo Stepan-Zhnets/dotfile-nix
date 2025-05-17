@@ -1,0 +1,120 @@
+* {
+    bg-col:  rgba(30, 30, 46, 0.5); // Фон
+    bg-col-glass:  rgba(30, 30, 46, 0); // Прозрачный фон
+    bg-col-light: rgba(30, 30, 46, 1); //
+    border-col: rgba(30, 30, 46, 1); // Границы окна
+    selected-col: rgba(30, 30, 46, 1); // Выбор
+    blue: rgba(137, 180, 250, 1); // иконки меню
+    fg-col: rgba(205, 214, 244, 1); // текст
+    fg-col2: rgba(243, 139, 168, 1); // выбранный текст 
+    grey: rgba(108, 112, 134, 1); // 
+
+    width: 600;
+    font: "JetBrainsMono Nerd Font 14";
+}
+
+element-text, element-icon , mode-switcher {
+    background-color: inherit;
+    text-color:       inherit;
+}
+
+window {
+    height: 360px;
+    border: 3px;
+    border-radius: 15px;
+    border-color: @border-col;
+    background-color: @bg-col;
+}
+
+mainbox {
+    background-color: @bg-col;
+}
+
+inputbar {
+    children: [prompt,entry];
+    background-color: @bg-col;
+    border-radius: 5px;
+    padding: 2px;
+}
+
+prompt {
+    background-color: @blue;
+    padding: 6px;
+    text-color: @bg-col;
+    border-radius: 3px;
+    margin: 20px 0px 0px 20px;
+}
+
+textbox-prompt-colon {
+    expand: false;
+    str: ":";
+}
+
+entry {
+    border-radius: 15px;
+    padding: 6px;
+    margin: 20px 0px 0px 10px;
+    text-color: @fg-col;
+    background-color: @bg-col;
+}
+
+listview { // область выбора
+    border-radius: 20px;
+    border: 0px 0px 0px;
+    padding: 6px 0px 0px;
+    margin: 10px 0px 0px 20px;
+    columns: 2;
+    lines: 5;
+    background-color: @bg-col-glass;
+}
+
+element { // Элементы выбора
+    border-radius: 20px;
+    padding: 5px;
+    background-color: @bg-col-glass;
+    text-color: @fg-col  ;
+}
+
+element-icon { // Иконки элиментов
+    border-radius: 10px;
+    size: 25px;
+}
+
+element selected { // Выбранный элимент
+    border-radius: 20px;
+    background-color:  @selected-col ;
+    text-color: @fg-col2  ;
+}
+
+mode-switcher {
+    spacing: 0;
+  }
+
+button { // Нижние кнопки
+    padding: 10px;
+    background-color: @bg-col-light;
+    text-color: @grey;
+    vertical-align: 0.5; 
+    horizontal-align: 0.5;
+}
+
+button selected { // Выбранная нижняя кнопка
+  background-color: @bg-col;
+  text-color: @blue;
+}
+
+message { // 
+    border-radius: 20px;
+    background-color: @bg-col-light;
+    margin: 2px;
+    padding: 2px;
+    border-radius: 5px;
+}
+
+textbox { // 
+    border-radius: 20px;
+    padding: 6px;
+    margin: 20px 0px 0px 20px;
+    text-color: @blue;
+    background-color: @bg-col-light;
+}
