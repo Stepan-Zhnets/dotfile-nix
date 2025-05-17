@@ -2,7 +2,9 @@
 
 {
 	imports = [
-		./bootloader.nix
+    # ./theme/catppuccin.nix
+
+    ./bootloader.nix
 		./sound.nix
 		./user.nix
 		./xserver.nix
@@ -10,7 +12,7 @@
 		./hyprland.nix
     ./bluetooth.nix
     ./openssh.nix
-	./cron.nix
+	  ./cron.nix
 		./nixvim/nixvim.nix
 		./virtual-box.nix
 

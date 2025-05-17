@@ -10,7 +10,7 @@
 		];
 
 settings = {
-			
+
 	"$mainMod" = "ALT"; # SUPER | ALT
 
 	monitor = [
@@ -132,12 +132,12 @@ settings = {
 	];
 
 	exec-once = [
-		"swww init"
-		"swww img ~/Pictures/ES-Pier-light.jpg"
+        #"swww init"
+        #"swww img ~/Pictures/ES-Pier-light.jpg"
 		"waybar"
 		"hyprlock"
-		"wl-paste --type text --watch cliphist store"
-		"wl-paste --type image --watch cliphist store"
+        #"wl-paste --type text --watch cliphist store"
+        #"wl-paste --type image --watch cliphist store"
 	];
 
       	bind = [

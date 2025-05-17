@@ -8,6 +8,7 @@
     ./wms/hyprland.nix
     ./wms/hyprlock.nix
 		./wms/waybar.nix
-		./wms/rofi.nix
+    ./wms/rofi.nix
+    # ./theme/catppuccin.nix
 	];
 }

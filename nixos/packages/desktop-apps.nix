@@ -7,6 +7,7 @@
     codeium
 		# gparted # графический инструмент для разметки диска
     virtualbox
+    discord
 
 		# Text
 		obsidian
