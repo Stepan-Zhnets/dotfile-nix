@@ -6,8 +6,8 @@
     telegram-desktop
     codeium
 		# gparted # графический инструмент для разметки диска
-    virtualbox
-    discord
+    # virtualbox
+    # discord
 
 		# Text
 		obsidian
@@ -16,35 +16,35 @@
 		neovim
 
 		# Term
-		kitty
+    # kitty
 		alacritty
 
 		# Studio
-		audacity
-		obs-studio
-		kdenlive
+    # audacity
+    # obs-studio
+    # kdenlive
 		mpv
 
 		# File-manager
 		spacedrive
 
 		# Image
-		aseprite
-		krita
+    # aseprite
+    # krita
 
 		# Browser
-		librewolf
+    # librewolf
 		firefox
     		chromium
     		tor-browser
 
 		# Office
-		libreoffice
+    libreoffice
 		kdePackages.okular
 
 		# Widgets
 		rofi-wayland
-		wofi
+    # wofi
 
 		# Games
 		steam

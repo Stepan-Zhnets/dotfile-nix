@@ -80,7 +80,7 @@
       zhnets = home-manager.lib.homeManagerConfiguration {
 			  pkgs = nixpkgs.legacyPackages.${system};
           modules = [
-            ./home-manager-apterm/home.nix
+            ./home-manager/home.nix
             #catppuccin.homeModules.catppuccin
           ];
       };
