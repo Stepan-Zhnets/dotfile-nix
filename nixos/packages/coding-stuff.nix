@@ -8,15 +8,15 @@
 
     # AI
     lmstudio
-    koboldcpp
+    # koboldcpp
 
     # DevOps
-    docker
-    kubernetes
-    jenkins
-    terraform
-    ansible
-    prometheus
+    # docker
+    # kubernetes
+    # jenkins
+    # terraform
+    # ansible
+    # prometheus
 
 
     # JS
