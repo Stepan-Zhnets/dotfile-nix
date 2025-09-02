@@ -15,7 +15,7 @@
 			};
 			scrolling.history = 1000;
 			font = {
-				size = 10;
+				size = 16;
 			};
 		};
 	};

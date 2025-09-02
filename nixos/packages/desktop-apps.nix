@@ -1,56 +1,62 @@
 # ~/nix/nixos/packages/desktop-apps.nix
 
 { pkgs, ... }: {
-	environment.systemPackages = with pkgs; [
+environment.systemPackages = with pkgs; [
 
-    telegram-desktop
-    codeium
-		# gparted # графический инструмент для разметки диска
-    # virtualbox
-    # discord
+	telegram-desktop
+	codeium
+	# gparted # графический инструмент для разметки диска
+	# virtualbox
+	# discord
+	# simplex-chat-desktop
 
-		# Text
-		obsidian
-		vscodium-fhs
-		vim
-		neovim
+	#-System
+	mission-center
 
-		# Term
-    # kitty
-		alacritty
+	#-Text
+	obsidian
+	vscodium-fhs
+	vim
+	neovim
 
-		# Studio
-    # audacity
-    # obs-studio
-    # kdenlive
-		mpv
+	#-Term
+	# kitty
+	alacritty
 
-		# File-manager
-		spacedrive
+	#-Studio
+	# audacity
+	# obs-studio
+	# kdenlive
+	mpv
 
-		# Image
-    # aseprite
-    # krita
+	#-File-manager
+	# spacedrive
+	kdePackages.dolphin
 
-		# Browser
-    # librewolf
-		firefox
-    		chromium
-    		tor-browser
+	#-Image
+	# aseprite
+	# krita
 
-		# Office
-    libreoffice
-		kdePackages.okular
+	#-Browser
+	# librewolf
+	firefox
+	chromium
+	tor-browser
 
-		# Widgets
-		rofi-wayland
-    # wofi
+	#-Office
+	libreoffice
+	kdePackages.okular
 
-		# Games
-		steam
-		wineWowPackages.stable
-		wineWowPackages.waylandFull
+	#-Widgets
+	rofi-wayland
+	# wofi
 
-		godot_4
+	#-Games_Launcher
+	steam
+	# wineWowPackages.stable
+	# wineWowPackages.waylandFull
+	
+	#-Game_Engine
+	#godot_4
 	];
 }

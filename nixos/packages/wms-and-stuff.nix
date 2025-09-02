@@ -2,6 +2,12 @@
 
 { pkgs, ... }: {
 	environment.systemPackages = with pkgs; [
+	
+		#-LogOut
+		wlogout
+
+		# Paper
+		waypaper
 
 		# Bar
 		waybar

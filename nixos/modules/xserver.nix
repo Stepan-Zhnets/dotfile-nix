@@ -1,7 +1,17 @@
 # ~/nix/nixos/modules/xserver.nix
 
 {
-	services.xserver = {
+services = {
+	displayManager.gdm.enable = true;
+	desktopManager.gnome.enable = true;
+
+	libinput = {
+		enable = true;
+		mouse.accelProfile = "flat";
+		touchpad.accelProfile = "flat";
+	};
+
+	xserver = {
 		enable = true;
 		windowManager.herbstluftwm.enable = true;
 
@@ -17,23 +27,8 @@
 			layout = "us";
 			variant = "";
 		};
-
-		# libinput = {
-		#	enable = true;
-		#	mouse.accelProfile = "flat";
-		#	touchpad.accelProfile = "flat";
-		# };
-
 		videoDrivers = [ "nvidia" ];
 		# deviceSection = '' "" '';
-
-		displayManager.gdm.enable = true;
-		desktopManager.gnome.enable = true;
 	};
-
-	services.libinput = {
-		enable = true;
-		mouse.accelProfile = "flat";
-		touchpad.accelProfile = "flat";
-	};
+};
 }

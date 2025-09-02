@@ -1,10 +1,8 @@
 # ~/nix/nixos/
 
 { pkgs, lib, ... }: {
-	programs.eww = {
-		enable.true;
-		settings = [
-			#
-		]
-	};
+programs.eww = {
+	enable = true;
+	# configDir = /home/zhnets/.config/eww
+};
 }

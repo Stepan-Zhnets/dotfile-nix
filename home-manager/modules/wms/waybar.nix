@@ -6,9 +6,9 @@
 		enable = true;
 settings = {
 mainBar = {
-	layer = "top";
-	position = "top";
-	margin = "9 13 -10 18";
+	layer = "bottom";
+	position = "bottom";
+	margin = "9 13 10 18";
 
 	modules-left = [
 		"hyprland/workspaces"
@@ -87,6 +87,7 @@ mainBar = {
 	"cpu" = {
 		interval = 2;
 		format = "{usage}% ";
+		#format = "{usage}% 󰘚";
 		min-length = 6;
 	};
 
@@ -128,8 +129,8 @@ mainBar = {
 		};
 	};
   
-    style = 
-      ''
+style = 
+''
 * {
     border: none;
     border-radius: 0;
@@ -341,7 +342,7 @@ window#waybar.hidden {
         color: #000000;
     }
 }
-      '';
-  };
+'';
+};
 }
 

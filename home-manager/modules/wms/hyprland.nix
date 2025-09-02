@@ -11,11 +11,11 @@
 
 settings = {
 
-	"$mainMod" = "ALT"; # SUPER | ALT
+	"$mainMod" = "SUPER"; # SUPER | ALT
 
 	monitor = [
         "eDP-1,1920x1200@165,auto,1"
-        "HDMI-A-1,1920x1080@60,auto,1,transform,3"
+        # "HDMI-A-1,1920x1080@60,auto,1,transform,4"
       ];
 
 	env = [
@@ -34,7 +34,6 @@ settings = {
 
 	input = {
 		kb_layout = "us,ru";
-		kb_variant = "lang";
 		kb_options = "grp:alt_shift_toggle";
 
 		follow_mouse = 1;
@@ -51,7 +50,7 @@ settings = {
 		gaps_out = 10;
 
 		border_size = 3;
-        	
+
     #"col.active_border" = "rgba(33ccffee) # rgba(00ff99ee) 45deg";
     #"col.inactive_border" = "rgba(595959aa)";
 
@@ -67,8 +66,8 @@ settings = {
 	decoration = {
 		rounding = 10;
 
-		active_opacity = 1.0;
-		inactive_opacity = 1.0;
+#		active_opacity = 1.0;
+#		inactive_opacity = 1.0;
 
 		blur = {
 			enabled = true;
@@ -127,8 +126,8 @@ settings = {
 	};
 
 	windowrule = [
-		"float, ^(imv)$"
-		"float, ^(mpv)$"
+		# "float, ^(imv)$"
+		# "float, ^(mpv)$"
 	];
 
 	exec-once = [
@@ -136,6 +135,7 @@ settings = {
         #"swww img ~/Pictures/ES-Pier-light.jpg"
 		"waybar"
 		"hyprlock"
+		"waypaper --restore"
         #"wl-paste --type text --watch cliphist store"
         #"wl-paste --type image --watch cliphist store"
 	];
@@ -146,14 +146,14 @@ settings = {
 		"$mainMod, Q, exec, alacritty"
 		"$mainMod, C, killactive,"
 		"$mainMod, M, exit,"
-		"$mainMod, E, exec, spacedrive" # dolphin"
-		# "$mainMod, Y, exec, yazi"
+		"$mainMod, E, exec, dolphin" # dolphin"
+		"$mainMod, Y, exec, yazi"
 		"$mainMod, V, togglefloating,"
 		# "$mainMod, D, exec, wofi --show drun"
 		"$mainMod, P, pseudo, # dwindle"
 		"$mainMod, J, togglesplit, # dwindle"
     		"$mainMod, R, exec, rofi -show drun"
-    		"$mainMod, L, exec, hyprlock"
+    		"$mainMod, L, exec, wlogout" # hyprlock
 
 		# Move focus with mainMod + arrow keys
 		"$mainMod, left,  movefocus, l"
@@ -210,7 +210,7 @@ settings = {
 		", XF86AudioLowerVolume, exec, pamixer -d 5 "
 		", XF86AudioMute, exec, pamixer -t"
 		", XF86AudioMicMute, exec, pamixer --default-source -m"
-        
+
 		# Brightness control
 		", XF86MonBrightnessDown, exec, brightnessctl set 5%- "
 		", XF86MonBrightnessUp, exec, brightnessctl set +5% "

@@ -1,8 +1,10 @@
 {
-  services.openssh = {
-    enable = true;
-    permitRootLogin = "no";
-    passwordAuthentication = true;
-    ports = [ 22 ];
-  };
+services.openssh = {
+	enable = true;
+	settings = {
+		PermitRootLogin = "no";
+    		PasswordAuthentication = true;
+	};
+	ports = [ 22 ];
+};
 }

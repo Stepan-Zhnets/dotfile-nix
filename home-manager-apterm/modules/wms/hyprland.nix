@@ -127,8 +127,8 @@ settings = {
 	};
 
 	windowrule = [
-		"float, ^(imv)$"
-		"float, ^(mpv)$"
+		# "float, ^(imv)$"
+		# "float, ^(mpv)$"
 	];
 
 	exec-once = [

@@ -34,9 +34,10 @@
 		bluez
 		bluez-tools
 
-		# Top
+		#-Top
 		htop
 		btop
+		nvtopPackages.full
 
 		# Widgets
 		yazi

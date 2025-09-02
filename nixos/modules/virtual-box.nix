@@ -9,7 +9,7 @@
     };
     guest = {
       enable = true;
-      draganddrop = true;
+      dragAndDrop = true;
     };
   };
   boot.kernelModules = [
