@@ -2,11 +2,11 @@
 
 { pkgs, ... }: {
 	environment.systemPackages = with pkgs; [
-		feh
-		imv
-		dmenu
+		# feh
+		# imv
+		# dmenu
 		# screenkey
-		mako
-		gromit-mpx
+		# mako
+		# gromit-mpx
 	];
 }

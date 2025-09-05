@@ -11,7 +11,7 @@
 					y = 10;
 				};
 				decorations = "none";
-				opacity = 0.7;
+				# opacity = 0.7;
 			};
 			scrolling.history = 1000;
 			font = {

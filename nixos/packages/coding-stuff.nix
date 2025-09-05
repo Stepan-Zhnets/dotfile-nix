@@ -1,16 +1,20 @@
 # ~/nix/nixos/packages/coding-stuff.nix
 
+# Для программирования
+
 { pkgs, ... }: {
 	environment.systemPackages = with pkgs; [
 
-    # Other
+    #|-Other
     github-desktop
+	  vscodium-fhs
+    code-cursor
 
-    # AI
-    lmstudio
+    #|-AI
+    # lmstudio
     # koboldcpp
 
-    # DevOps
+    #|-DevOps
     # docker
     # kubernetes
     # jenkins
@@ -19,28 +23,28 @@
     # prometheus
 
 
-    # JS
-    nodejs
-    yarn
-    twitterBootstrap
+    #|-JS
+    # nodejs
+    # yarn
+    # twitterBootstrap
 
-    # Python
+    #|-Python
     python
-    python-qt
-    python314
-    python313
-    python311
-    python3
-    python2
-    devenv
+    # python-qt
+    # python314
+    # python313
+    # python311
+    # python3
+    # python2
+    # devenv
 
     uv
     ruff
 
-	flet-client-flutter
+	  # flet-client-flutter
     # (python3.withPakages (ps: with ps; [requests]))
 
-    # Rust
+    #|-Rust
     # rustc
     # cargo
     # cargo-tauri

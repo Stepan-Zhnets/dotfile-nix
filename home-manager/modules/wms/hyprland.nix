@@ -66,8 +66,8 @@ settings = {
 	decoration = {
 		rounding = 10;
 
-#		active_opacity = 1.0;
-#		inactive_opacity = 1.0;
+		active_opacity = 1.0;
+		inactive_opacity = 1.0;
 
 		blur = {
 			enabled = true;
@@ -121,7 +121,7 @@ settings = {
 		animate_manual_resizes = true;
 		animate_mouse_windowdragging = true;
 		enable_swallow = true;
-		render_ahead_of_time = false;
+		# render_ahead_of_time = false;
 		disable_hyprland_logo = true;
 	};
 

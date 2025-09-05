@@ -27,10 +27,13 @@ inputs = {
 	};
 
 # ayugram-desktop
-	ayugram-desktop.url = "github:/ayugram-port/ayugram-desktop/release?submodules=1";
+	ayugram-desktop.url = "github:ayugram-port/ayugram-desktop/release?submodules=1";
 
 # swww
 	swww.url = "github:LGFae/swww";
+
+# Python-Bar Fabric
+	pybar-fabric.url = "github:Fabric-Development/fabric";
 
 # GoodbyeDPI-UI
 	# goodbye-dpi-ui.url = "https://github.com/Storik4pro/goodbyeDPI-UI/";
@@ -45,6 +48,7 @@ outputs = {
 	nixpkgs-stable,
 	home-manager,
 	ayugram-desktop,
+	pybar-fabric,
 	# goodbye-dpi-ui,
 	# catppuccin,
 	...

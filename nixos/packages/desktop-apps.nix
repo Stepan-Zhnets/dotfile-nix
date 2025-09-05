@@ -15,12 +15,11 @@ environment.systemPackages = with pkgs; [
 
 	#-Text
 	obsidian
-	vscodium-fhs
 	vim
 	neovim
 
 	#-Term
-	# kitty
+	kitty
 	alacritty
 
 	#-Studio
@@ -40,11 +39,11 @@ environment.systemPackages = with pkgs; [
 	#-Browser
 	# librewolf
 	firefox
-	chromium
-	tor-browser
+	# chromium
+	# tor-browser
 
 	#-Office
-	libreoffice
+	# libreoffice
 	kdePackages.okular
 
 	#-Widgets
@@ -52,7 +51,7 @@ environment.systemPackages = with pkgs; [
 	# wofi
 
 	#-Games_Launcher
-	steam
+	# steam
 	# wineWowPackages.stable
 	# wineWowPackages.waylandFull
 	

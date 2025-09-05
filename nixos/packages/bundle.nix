@@ -1,5 +1,7 @@
 # ~/nix/nixos/packages/bundle.nix
 
+# Связка всех соседних nix файлов
+
 { pkgs, inputs, ... }: {
 imports = [
 	./anti-rkn.nix
@@ -34,20 +36,13 @@ inputs.ayugram-desktop.packages.${pkgs.system}.ayugram-desktop
 home-manager
 # spice-vdagent
 
-libsForQt5.qtstyleplugin-kvantum
-libsForQt5.qt5ct
+# libsForQt5.qtstyleplugin-kvantum
+# libsForQt5.qt5ct
 papirus-nord
 
-# Desktop apps
-# Coding stuff
-# CLI utils
-# GUI utils
-# Wayland stuff
-# WMs and stuff
-# Sound
-# GPU stuff
-# Screenshotting
 ];
+
+# Шрифты
 
 fonts.packages = with pkgs; [
 	jetbrains-mono

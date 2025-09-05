@@ -10,13 +10,13 @@ imports = [
 	./nm.nix
 	./hyprland.nix
 	./bluetooth.nix
-	./openssh.nix
-	./cron.nix
+	# ./openssh.nix
+	# ./cron.nix
 	# ./nixvim/nixvim.nix
-	./virtual-box.nix
-	./devops/devops-bundle.nix
+	# ./virtual-box.nix
+	# ./devops/devops-bundle.nix
 	./drivers.nix
-	./steam.nix
-	./zapret.nix
+	# ./steam.nix
+	# ./zapret.nix
 ];
 }

@@ -1,8 +1,8 @@
 { config, pkgs, ... }:
 {
 	imports = [ # Include the results of the hardware scan.
-		/etc/nixos/hardware-configuration.nix
-		# ./hardware-configuration.nix
+		#/etc/nixos/hardware-configuration.nix
+		./hardware-configuration.nix
 		./modules/bundle.nix
 		./packages/bundle.nix
 	];
