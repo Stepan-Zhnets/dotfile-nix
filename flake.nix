@@ -22,6 +22,9 @@ inputs = {
 # hyprland
 	hyprland.url = "github:hyprwm/Hyprland";
 
+# Zapret-discord-youtube
+	# zapret-discord-youtube.url = "github:kartavkun/zapret-discord-youtube";
+
 # ayugram-desktop
 	# ayugram-desktop.url = "github:ayugram-port/ayugram-desktop/release?submodules=1";
 
@@ -34,6 +37,7 @@ outputs = {
 	nixpkgs,
 	nixpkgs-stable,
 	home-manager,
+	# zapret-discord-youtube,
 	# ayugram-desktop,
 	# swww,
 	...
@@ -53,7 +57,6 @@ nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
 	};
 	modules = [
 		./nixos/configuration.nix
-		# inputs.nixvim.nixosModules.nixvim
 	];
 };
 
