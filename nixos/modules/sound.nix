@@ -3,14 +3,12 @@
 { config, pkgs, ... }:
 {
   #=>Sound
-  sound.enable = true;
-  hardware.pulseaudio.enable = true;
+  # sound.enable = true;
+  # hardware.pulseaudio.enable = true;
 
   security.rtkit.enable = true;
 
   services = {
-    # pulsaudio.enable = true;
-
     #=>Pipewire
     pipewire = {
       enable = true;

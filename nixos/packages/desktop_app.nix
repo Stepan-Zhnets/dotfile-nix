@@ -2,10 +2,10 @@
 
 { config, pkgs, ...}:
 {
-  #=>Editors
   environment.systemPackages = with pkgs; [
     #=>Browsers
     firefox
+    mullvad-browser
 
     #=>Editors
     neovim
@@ -18,20 +18,15 @@
     github-desktop
 
     #=>Chat
-    discord
+    # discord
     telegram-desktop
 
     #=>Media
     spotify
     vlc
-    obs
+    obs-studio
 
     #=>CLI
-    neofetch
-    fastfetch
-    htop
-    nvtop
-    cava
 
     #=>Code
     python3

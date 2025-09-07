@@ -10,5 +10,6 @@ imports = [
   # ./anti_rkn.nix
   ./user.nix
   ./xserver.nix
+  ./steam.nix
 ];
 }

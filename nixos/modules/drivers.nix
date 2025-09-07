@@ -27,7 +27,10 @@
 
       #=>Prime
       prime = {
-        sync.enable = true;
+        offload = {
+          enable = true;
+          enableOffloadCmd = true;
+        };
 
         #=>Inregrated
         intelBusId = "PCI:0:2:0";
