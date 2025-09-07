@@ -2,16 +2,6 @@
 
 {
 imports = [
-	./proton.nix
-	./alacritty.nix
-	# ./vscodium.nix
-	./wms/hyprland.nix
-	./wms/hyprlock.nix
-	./wms/waybar.nix
-	./wms/rofi.nix
-	./wms/waypaper.nix
-	./wms/wlogout.nix
-	./wms/eww.nix
-	# ./theme/catppuccin.nix
+
 ];
 }

@@ -7,6 +7,6 @@
 	home = {
 		username = "zhnets";
 		homeDirectory = "/home/zhnets";
-		stateVersion = "24.11";
+		stateVersion = "25.05";
 	};
 }

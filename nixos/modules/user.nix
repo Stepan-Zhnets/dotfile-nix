@@ -1,4 +1,4 @@
-# ~/nix/nixos/modules/user.nix
+# ~/nixos/modules/user.nix
 
 { pkgs, ... }: {
 	programs.zsh.enable = true;
@@ -15,20 +15,10 @@
 				  "wheel"
 				  "input"
 				  "libvirtd"
-				  "cron"
 			  ];
-        packages = with pkgs; [];
-      };
-      apterm = {
-        isNormalUser = true;
-        description = "apterm";
-        extraGroups = [
-          "networkmanager"
-          "whell"
-          "input"
-          "libvirtd"
+        packages = with pkgs; [
+          kdePackages.kate
         ];
-        packages = with pkgs; [];
       };
 		};
 	};

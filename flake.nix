@@ -14,32 +14,19 @@ inputs = {
 	};
 
 # nixvim
-	nixvim = {
-		url = "github:nix-community/nixvim";
-		inputs.nixpkgs.follows = "nixpkgs";
-	};
+	#nixvim = {
+	#	url = "github:nix-community/nixvim";
+	#	inputs.nixpkgs.follows = "nixpkgs";
+	#};
 
 # hyprland
 	hyprland.url = "github:hyprwm/Hyprland";
-	hyprland-plugins = {
-		url = "github:hyprwm/hyprland-plugins";
-		inputs.hyprland.follows = "hyprland";
-	};
 
 # ayugram-desktop
-	ayugram-desktop.url = "github:ayugram-port/ayugram-desktop/release?submodules=1";
+	# ayugram-desktop.url = "github:ayugram-port/ayugram-desktop/release?submodules=1";
 
 # swww
-	swww.url = "github:LGFae/swww";
-
-# Python-Bar Fabric
-	pybar-fabric.url = "github:Fabric-Development/fabric";
-
-# GoodbyeDPI-UI
-	# goodbye-dpi-ui.url = "https://github.com/Storik4pro/goodbyeDPI-UI/";
-
-# catppuccin
-# catppuccin.url = "github:catppuccin/nix";
+	# swww.url = "github:LGFae/swww";
 };
 
 outputs = {
@@ -47,10 +34,8 @@ outputs = {
 	nixpkgs,
 	nixpkgs-stable,
 	home-manager,
-	ayugram-desktop,
-	pybar-fabric,
-	# goodbye-dpi-ui,
-	# catppuccin,
+	# ayugram-desktop,
+	# swww,
 	...
 }@inputs:
 
@@ -68,20 +53,7 @@ nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
 	};
 	modules = [
 		./nixos/configuration.nix
-		inputs.nixvim.nixosModules.nixvim
-		# catppuccin.nixosModules.catppuccin
-		# home-manager.nixosModules.home-manager
-
-          #{
-          #  home-manager.users = {
-          #    zhnets = {
-          #      imports = [
-          #        ./home-manager/home.nix
-          #        catppuccin.homeModules.catppuccin
-          #      ];
-          #    };
-          #  };
-          #}
+		# inputs.nixvim.nixosModules.nixvim
 	];
 };
 
@@ -90,12 +62,7 @@ homeConfigurations = {
 		pkgs = nixpkgs.legacyPackages.${system};
 		modules = [
 			./home-manager/home.nix
-			#catppuccin.homeModules.catppuccin
 		];
-	};
-	apterm = home-manager.lib.homeManagerConfiguration {
-		pkgs = nixpkgs.legacyPackages.${system};
-		modules = [ ./home-manager-apterm/home.nix ];
 	};
 };
 };

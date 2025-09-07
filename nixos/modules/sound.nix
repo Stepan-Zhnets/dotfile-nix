@@ -1,19 +1,25 @@
-# ~/nix/nixos/modiles/sound.nix
+# ~/nix/nixos/modules/saund.nix
 
+{ config, pkgs, ... }:
 {
-#hardware.pulseaudio.enable = false;
-#services.pulsaudio.enable = false;
-# sound.enable = true;
+  #=>Sound
+  sound.enable = true;
+  hardware.pulseaudio.enable = true;
 
-security.rtkit.enable = true;
+  security.rtkit.enable = true;
 
-services.pipewire = {
-	enable = true;
+  services = {
+    # pulsaudio.enable = true;
 
-	alsa = {
-		enable = true;
-		support32Bit = true;
-	};
-	pulse.enable = true;
-};
+    #=>Pipewire
+    pipewire = {
+      enable = true;
+      alsa = {
+        enable = true;
+        support32Bit = true;
+      };
+      jack.enable = true;
+      pulse.enable = true;
+    };
+  };
 }

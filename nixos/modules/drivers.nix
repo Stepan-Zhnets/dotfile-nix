@@ -1,30 +1,46 @@
 # ~/nix/nixos/modules/drivers.nix
 
-{ pkgs, ... }: {
-	hardware = {
-		graphics = { # OpenGL
-			enable = true;
-			# driSupport = true;
-			# driSupport32Bit = true;
-			enable32Bit = true;
-		};
+{ config, lib, pkgs, ... }:
+{
+  #=>Video Drivers
+  services.xserver.videoDrivers = [ "nvidia" ];
 
-		nvidia = {
-			open = true;
+  #=>Drivers
+  hardware = {
+    #=>OpenGL
+    graphics = {
+      enable = true;
+      enable32Bit = true;
+    };
 
-			modesetting.enable = true;
+    #=>NVIDIA
+    nvidia = {
+      #=>Open Source
+      open = true;
+      modesetting.enable = true;
 
-			prime = {
-				sync.enable = true;
+      #=>Power Management
+      powerManagement = {
+        enable = true;
+        finegrained = true;
+      };
 
-				# Integrated
-				intelBusId = "PCI:0:2:0";
+      #=>Prime
+      prime = {
+        sync.enable = true;
 
-				# Dedicated
-				nvidiaBusId = "PCI:1:0:0";
-			};
-		};
-	};
+        #=>Inregrated
+        intelBusId = "PCI:0:2:0";
 
-	services.xserver.videoDrivers = ["nvidia"];
+        #=>Dedicated
+        nvidiaBusId = "PCI:1:0:0";
+      };
+      
+      #=>Settings
+      nvidiaSettings = true;
+
+      #=>Package
+      package = config.boot.kernelPackages.nvidiaPackages.stable;
+    };
+  };
 }
