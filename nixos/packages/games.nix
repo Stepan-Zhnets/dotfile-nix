@@ -1,9 +1,10 @@
 # ~/nix/packages/games.nix
 
-{ lib, config, ... }:
+{ config, pkgs, ... }:
 {
   environment.systemPackages = with pkgs; [
     #=> Minecraft
+    minecraft
     prismlauncher
-  ]
+  ];
 }
