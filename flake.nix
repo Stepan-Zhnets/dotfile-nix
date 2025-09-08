@@ -22,8 +22,8 @@ inputs = {
 # hyprland
 	hyprland.url = "github:hyprwm/Hyprland";
 
-# Zapret-discord-youtube
-	# zapret-discord-youtube.url = "github:kartavkun/zapret-discord-youtube";
+# PrismLauncher
+	# prism-launcher.url = "github:PrismLauncher/PrismLauncher#prismlauncher";
 
 # ayugram-desktop
 	# ayugram-desktop.url = "github:ayugram-port/ayugram-desktop/release?submodules=1";
@@ -37,7 +37,7 @@ outputs = {
 	nixpkgs,
 	nixpkgs-stable,
 	home-manager,
-	# zapret-discord-youtube,
+	# prism-launcher,
 	# ayugram-desktop,
 	# swww,
 	...

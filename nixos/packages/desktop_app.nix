@@ -18,20 +18,13 @@
     github-desktop
 
     #=>Chat
-    # discord
+    discord
     telegram-desktop
+    simplex-chat-desktop
 
     #=>Media
     spotify
     vlc
-    obs-studio
-
-    #=>CLI
-
-    #=>Code
-    python3
-    uv
-
-    
+    obs-studio   
   ];
 }

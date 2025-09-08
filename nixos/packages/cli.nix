@@ -3,6 +3,9 @@
 { config, pkgs, ...}:
 {
   environment.systemPackages = with pkgs; [
+
+    wget
+
     #=> Fetch
     neofetch
     fastfetch
@@ -14,7 +17,10 @@
     
     #=> 
     cava
-
     git
+
+    #=> Terminal
+    alacritty
+    yazi
   ];
 }

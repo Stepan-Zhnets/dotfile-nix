@@ -1,8 +1,11 @@
-# ~/nixos/packages/anti_rkn.nix
+# ~/nixos/packages/code.nix
+
 
 { config, pkgs, ...}:
 {
   environment.systemPackages = with pkgs; [
-    wget
+    #=> Python
+    python3
+    uv
   ];
 }

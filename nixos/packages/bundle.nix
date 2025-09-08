@@ -4,5 +4,7 @@
 imports = [
   ./cli.nix
   ./desktop_app.nix
+  ./code.nix
+  ./games.nix
 ];
 }
