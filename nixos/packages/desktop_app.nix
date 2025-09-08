@@ -25,6 +25,9 @@
     #=>Media
     spotify
     vlc
-    obs-studio   
+    obs-studio
+
+    #=> All
+    youtube-music
   ];
 }
