@@ -4,6 +4,10 @@
 {
   environment.systemPackages = with pkgs; [
     #=> Minecraft
+    minecraft
+    atlauncher
+    lunar-client
+    hmcl
     prismlauncher
   ];
 }
