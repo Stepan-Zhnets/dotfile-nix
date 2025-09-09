@@ -6,6 +6,7 @@
     #=>Browsers
     firefox
     mullvad-browser
+    chromium
 
     #=>Editors
     neovim
