@@ -3,6 +3,6 @@
     enable = true;
     openFirewall = false;
     # webhookUrl = "";
-    # settings = {}
-  }
+    # settings = {};
+  };
 }
