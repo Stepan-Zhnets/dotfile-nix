@@ -12,5 +12,6 @@ imports = [
   ./xserver.nix
   ./steam.nix
   ./zapret_1.nix
+  ./n8n.nix
 ];
 }

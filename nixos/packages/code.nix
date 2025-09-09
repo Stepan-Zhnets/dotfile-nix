@@ -7,5 +7,8 @@
     #=> Python
     python3
     uv
+
+    #=> N8N
+    n8n
   ];
 }
