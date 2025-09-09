@@ -6,3 +6,4 @@ hardware = {
         settings.General.Experimental = true;
     };
 };
+services.blueman.enable = true;
