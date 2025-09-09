@@ -10,6 +10,6 @@ imports = [
   ./user.nix
   ./xserver.nix
   ./steam.nix
-  ./zapret.nix
+  ./zapret_1.nix
 ];
 }
