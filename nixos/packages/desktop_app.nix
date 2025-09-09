@@ -21,6 +21,7 @@
     discord
     telegram-desktop
     simplex-chat-desktop
+    # thunderbird
 
     #=>Media
     spotify
