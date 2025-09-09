@@ -4,6 +4,7 @@
 imports = [
   ./nm.nix
   ./bootloader.nix
+  ./bluetooth.nix
   ./drivers.nix
   # ./fonts.nix
   ./sound.nix
