@@ -9,5 +9,6 @@ imports = [
 ];
 environment.systemPackages = with pkgs; [
   zapret
+  blueman
 ];
 }
