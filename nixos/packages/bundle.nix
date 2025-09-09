@@ -7,4 +7,7 @@ imports = [
   ./code.nix
   ./games.nix
 ];
+environment.systemPackages = with pkgs; [
+  zapret
+];
 }
