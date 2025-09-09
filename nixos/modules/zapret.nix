@@ -73,7 +73,7 @@
                 "--new"
 
                 "--filter-tcp=80"
-                # "--dpi-desync-ttl=1"Xtl=2"
+                ''--dpi-desync-ttl=1"Xtl=2''
                 "--dpi-desync-fake-tls=0x00000000"
                 "--dpi-desync-split-pos=1"
                 "--dpi-desync=fake,split2"
