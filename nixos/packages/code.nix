@@ -13,5 +13,8 @@
 
     #=> JS
     nodejs_22
+
+    #=> Devops
+    docker
   ];
 }
