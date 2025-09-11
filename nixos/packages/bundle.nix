@@ -10,5 +10,8 @@ imports = [
 environment.systemPackages = with pkgs; [
   zapret
   blueman
+
+  #=> NIX
+  home-manager
 ];
 }
