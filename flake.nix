@@ -25,7 +25,7 @@ inputs = {
 	winapps = {
 		url = "github:winapps-org/winapps";
 		inputs.nixpkgs.follows = "nixpkgs";
-	}
+	};
 
 # PrismLauncher
 	# prism-launcher.url = "github:PrismLauncher/PrismLauncher#prismlauncher";
