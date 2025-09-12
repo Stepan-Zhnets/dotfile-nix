@@ -22,6 +22,11 @@ inputs = {
 # hyprland
 	hyprland.url = "github:hyprwm/Hyprland";
 
+	winapps = {
+		url = "github:winapps-org/winapps";
+		inputs.nixpkgs.follows = "nixpkgs";
+	}
+
 # PrismLauncher
 	# prism-launcher.url = "github:PrismLauncher/PrismLauncher#prismlauncher";
 
@@ -37,6 +42,7 @@ outputs = {
 	nixpkgs,
 	nixpkgs-stable,
 	home-manager,
+	winapps,
 	# prism-launcher,
 	# ayugram-desktop,
 	# swww,
@@ -57,6 +63,19 @@ nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
 	};
 	modules = [
 		./nixos/configuration.nix
+		(
+			{
+				pkgs,
+				system ? pkgs.system,
+				...
+			}:
+			{
+				environment.systemPackages = [
+					winapps.packages."${system}".winapps
+					winapps.packages."${system}".winapps-launcher # optional
+				];
+			}
+		)
 	];
 };
 
