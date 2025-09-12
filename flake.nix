@@ -65,7 +65,6 @@ homeConfigurations = {
 		pkgs = nixpkgs.legacyPackages.${system};
 		modules = [
 			./home-manager/home.nix
-			inputs.zapret-presets.nixosModules.presets
 		];
 	};
 };
