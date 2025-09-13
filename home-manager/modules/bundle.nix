@@ -3,5 +3,7 @@
 {
 imports = [
   ./alacritty.nix
+  ./cava.nix
+  ./librewolf.nix
 ];
 }
