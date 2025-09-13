@@ -3,7 +3,7 @@
 {
   programs.cava = {
     enable = true;
-    package = [];
+    # package = [];
     settings = {
       color = {
         background = "'#1e1e2e'";
