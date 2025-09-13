@@ -18,7 +18,7 @@
         gradient_color_6 = "'#f5c2e7'";
         gradient_color_7 = "'#eba0ac'";
         gradient_color_8 = "'#f38ba8'";
-      }
-    }
+      };
+    };
   };
 }
