@@ -6,6 +6,9 @@
     theme = "gruvbox_dark"; # gruvbox_light | gruvbox_dark _|_ gotham _|_ dracula _|_ catppuccin_mocha _|_
     # package = [];
     settings = {
+      shell = {
+        program = "${pkgs.fish}/bin/fish";
+      };
       window = {
         padding = {
           x = 10;
