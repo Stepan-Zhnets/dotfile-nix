@@ -7,7 +7,8 @@
     # package = [];
     settings = {
       shell = {
-        program = "${pkgs.fish}/bin/fish";
+        program = "fish";
+        # program = "${pkgs.fish}/bin/fish";
       };
       window = {
         padding = {

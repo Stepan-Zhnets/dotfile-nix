@@ -1,6 +1,6 @@
 # ~/home-manager/modules/fish.nix
 
-{
+{ pkgs, config, ... }:{
   programs.fish.enable = true;
   
   programs.bash = {
