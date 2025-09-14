@@ -1,3 +1,5 @@
+# ~/nixos/modules/bluetooth.nix
+
 # https://wiki.nixos.org/wiki/Bluetooth
 
 {
