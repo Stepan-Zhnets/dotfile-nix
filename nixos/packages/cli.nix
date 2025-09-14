@@ -3,6 +3,8 @@
 { config, pkgs, ...}:
 {
   environment.systemPackages = with pkgs; [
+    #=> Bash
+    fish
 
     wget
 

@@ -1,15 +1,15 @@
 # ~/nixos/modules/user.nix
 
 { pkgs, ... }: {
-	programs.zsh.enable = true;
+	# Enable fish shell
+	programs.fish.enable = true;
 
 	users = {
-		# defaultUserShell = pkgs.zsh;
-
     users = {
       zhnets = {
 			  isNormalUser = true;
 			  description = "zhnets";
+			  shell = pkgs.fish;  # Set fish as default shell
 			  extraGroups = [
 				  "networkmanager"
 				  "wheel"
