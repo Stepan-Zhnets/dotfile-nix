@@ -19,6 +19,9 @@ inputs = {
 		inputs.nixpkgs.follows = "nixpkgs";
 	};
 
+# NVF
+	nvf.url = "github:notashelf/nvf";
+
 # hyprland
 	hyprland.url = "github:hyprwm/Hyprland";
 
@@ -44,6 +47,7 @@ outputs = {
 	home-manager,
 	winapps,
 	nixvim,
+	nvf,
 	# prism-launcher,
 	# ayugram-desktop,
 	# swww,
@@ -53,7 +57,15 @@ outputs = {
 let
 system = "x86_64-linux";
 in {
-# nixos - system hostname
+# {_CONFIGURATION-NVF_}
+packages.${system}.default = (
+	nvf.lib.neovimConfiguration {
+		pkgs = nixpkgs.legacyPackages.${system};
+		modules = [ ./nvf/nvf-configuration.nix ];
+	}
+).neovim;
+
+# {_CONFIGURATION-NIXOS_}
 nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
 	specialArgs = {
 		pkgs-stable = import nixpkgs-stable {
@@ -64,6 +76,7 @@ nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
 	};
 	modules = [
 		./nixos/configuration.nix
+		nvf.nixosModules.default
 		(
 			{
 				pkgs,
