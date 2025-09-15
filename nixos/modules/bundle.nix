@@ -16,5 +16,7 @@ imports = [
   ./shell.nix
   
   ./devops/bundle.nix
+
+  ./nixvim/bundle.nix
 ];
 }

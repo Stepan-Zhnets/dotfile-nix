@@ -77,6 +77,7 @@ nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
 	};
 	modules = [
 		./nixos/configuration.nix
+		inputs.nixvim.nixosModules.nixvim
 		# nvf.nixosModules.default
 		(
 			{
