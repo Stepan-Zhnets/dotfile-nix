@@ -20,7 +20,6 @@
       nix.enable = true;
       python.enable = true;
       ts.enable = true;
-      json.enable = true;
     };
   };
 }
