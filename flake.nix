@@ -14,10 +14,10 @@ inputs = {
 	};
 
 # nixvim
-	#nixvim = {
-	#	url = "github:nix-community/nixvim";
-	#	inputs.nixpkgs.follows = "nixpkgs";
-	#};
+	nixvim = {
+		url = "github:nix-community/nixvim";
+		inputs.nixpkgs.follows = "nixpkgs";
+	};
 
 # hyprland
 	hyprland.url = "github:hyprwm/Hyprland";
@@ -43,6 +43,7 @@ outputs = {
 	nixpkgs-stable,
 	home-manager,
 	winapps,
+	nixvim,
 	# prism-launcher,
 	# ayugram-desktop,
 	# swww,
