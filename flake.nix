@@ -47,7 +47,7 @@ outputs = {
 	home-manager,
 	winapps,
 	nixvim,
-	nvf,
+	# nvf,
 	# prism-launcher,
 	# ayugram-desktop,
 	# swww,
@@ -57,13 +57,14 @@ outputs = {
 let
 system = "x86_64-linux";
 in {
-# {_CONFIGURATION-NVF_}
-packages.${system}.default = (
-	nvf.lib.neovimConfiguration {
-		pkgs = nixpkgs.legacyPackages.${system};
-		modules = [ ./nvf/nvf-configuration.nix ];
-	}
-).neovim;
+
+# # {_CONFIGURATION-NVF_}
+# packages.${system}.default = (
+# 	nvf.lib.neovimConfiguration {
+# 		pkgs = nixpkgs.legacyPackages.${system};
+# 		modules = [ ./nvf/nvf-configuration.nix ];
+# 	}
+# ).neovim;
 
 # {_CONFIGURATION-NIXOS_}
 nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
@@ -76,7 +77,7 @@ nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
 	};
 	modules = [
 		./nixos/configuration.nix
-		nvf.nixosModules.default
+		# nvf.nixosModules.default
 		(
 			{
 				pkgs,
