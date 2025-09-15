@@ -6,6 +6,5 @@ imports = [
   ./cava.nix
   ./librewolf.nix
   ./fastfetch.nix
-  ./fish.nix
   ];
 }
