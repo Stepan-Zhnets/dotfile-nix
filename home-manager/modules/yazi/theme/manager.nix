@@ -1,3 +1,4 @@
+# ~/home-manager/modules/yazi/theme/manager.nix
 
 {
   programs.yazi.theme.manager = {

@@ -1,3 +1,4 @@
+# ~/home-manager/modules/yazi/theme/fyletype.nix
 
 {
   programs.yazi.theme.filetype = {

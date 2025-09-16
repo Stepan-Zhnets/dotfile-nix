@@ -1,0 +1,1 @@
+# ~/home-manager/modules/yazi/theme/color.nix

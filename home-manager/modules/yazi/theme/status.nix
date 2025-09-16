@@ -1,3 +1,4 @@
+# ~/home-manager/modules/yazi/theme/status.nix
 
 {
   programs.yazi.theme.status = {

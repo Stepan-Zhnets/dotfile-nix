@@ -2,10 +2,7 @@
 
 {
   imports = [
-    ./theme/fyletype.nix
-    ./theme/help.nix
-    ./theme/manager.nix
-    ./theme/status.nix
+    ./theme/bundle.nix
   ];
 
   programs.yazi = {
