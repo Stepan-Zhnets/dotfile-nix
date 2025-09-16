@@ -55,8 +55,10 @@ outputs = {
 }@inputs:
 
 let
-system = "x86_64-linux";
+	system = "x86_64-linux";
 in {
+
+# {_CONFIGURATION-NIXVIM_}
 
 # # {_CONFIGURATION-NVF_}
 # packages.${system}.default = (

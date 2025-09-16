@@ -14,6 +14,7 @@
 				  "networkmanager"
 				  "wheel"
 				  "input"
+				  "docker"
 				  "libvirtd"
 			  ];
         packages = with pkgs; [

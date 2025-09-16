@@ -1,10 +1,14 @@
 # ~/nixos/modules/nixvim/nixvim.nix
 
-{ nixvim, ... }: {
+{
+  imports = [
+    #
+  ];
+
   programs.nixvim = {
     enable = true;
 
     defaultEditor = true;
-    colorschemes.oxocarbon.enable = true;
+    colorschemes.gruvbox.enable = true;
   };
 }
