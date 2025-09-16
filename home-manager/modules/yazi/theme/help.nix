@@ -1,11 +1,14 @@
 # ~/home-manager/modules/yazi/theme/help.nix
 
+{ lib, ... }:
+let colors = import ./color.nix;
+in
 {
   programs.yazi.theme.help = {
-    on = { fg = "#fe8019"; };
-    exec = { fg = "#83a598"; };
-    desc = { fg = "#928374"; };
-    hovered = { bg = "#504945"; bold = true; };
-    footer  = { fg = "#3c3836"; bg = "#a89984"; };
+    on      = { fg = colors.orange_l; };
+    exec    = { fg = colors.blue_l; };
+    desc    = { fg = colors.gray_l; };
+    hovered = { bg = colors.bg_2; bold = true; };
+    footer  = { fg = colors.bg_1; bg = colors.fg_4; };
   };
 }

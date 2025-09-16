@@ -1,12 +1,15 @@
 # ~/home-manager/modules/yazi/theme/which.nix
 
+{ lib, ... }:
+let colors = import ./color.nix;
+in
 {
   programs.yazi.theme.which = {
-    mask            = { bg = "#3c3836"; };
-    cand            = { fg = "#83a598"; };
-    rest            = { fg = "#928374"; };
-    desc            = { fg = "#fe8019"; };
+    mask            = { bg = colors.bg_1; };
+    cand            = { fg = colors.blue_l; };
+    rest            = { fg = colors.gray_l; };
+    desc            = { fg = colors.orange_l; };
     separator       = "  ";
-    separator_style = { fg = "#504945"; };
-  }
+    separator_style = { fg = colors.bg_2; };
+  };
 }

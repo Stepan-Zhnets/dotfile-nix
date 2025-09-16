@@ -1,20 +1,23 @@
 # ~/home-manager/modules/yazi/theme/fyletype.nix
 
+{ lib, ... }:
+let colors = import ./color.nix;
+in
 {
   programs.yazi.theme.filetype = {
     rules = [
       # Images
-      { fg = "#83a598"; mime = "image/*"; }
+      { fg = colors.blue_l; mime = "image/*"; }
 
       # Video
-      { fg = "#b8bb26"; mime = "video/*"; }
-      { fg = "#b8bb26"; mime = "audio/*"; }
+      { fg = colors.green_l; mime = "video/*"; }
+      { fg = colors.green_l; mime = "audio/*"; }
 
       # {fg = "#"; mime = "application/";}
 
       # Fallback
-      { fg = "#a89984"; name = "*"; }
-      { fg = "#83a598"; name = "*/"; }
+      { fg = colors.fg_4; name = "*"; }
+      { fg = colors.blue_l; name = "*/"; }
     ];
   };
 }

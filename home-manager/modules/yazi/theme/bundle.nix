@@ -11,5 +11,5 @@
     ./status.nix
     ./tasks.nix
     ./which.nix
-  ]
+  ];
 }
