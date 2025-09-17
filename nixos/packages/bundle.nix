@@ -6,6 +6,7 @@ imports = [
   ./desktop_app.nix
   ./code.nix
   ./games.nix
+  ./wms.nix
 ];
 environment.systemPackages = with pkgs; [
   zapret
