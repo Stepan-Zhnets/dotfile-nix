@@ -24,5 +24,5 @@
 		};
 	};
 
-	services.getty.autologinUser = "zhnets";
+	# services.getty.autologinUser = "zhnets";
 }
