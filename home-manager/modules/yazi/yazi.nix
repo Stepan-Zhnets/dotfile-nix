@@ -14,7 +14,7 @@
     settings = {
       logo.enabled = false;
 
-      tasks = {};
+      
 
       plugin = [
         # { mime = "image/heic"; run = "heic"; }
