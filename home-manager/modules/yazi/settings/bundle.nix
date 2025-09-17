@@ -3,5 +3,6 @@
 {
   imports = [
     ./mgr.nix
+    ./preview.nix
   ];
 }

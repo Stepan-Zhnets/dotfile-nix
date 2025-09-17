@@ -14,9 +14,26 @@
     settings = {
       logo.enabled = false;
 
-      preview = {
-        warp = "yes"
+      opener = {
+        play = [
+          # { run = };
+        ];
       };
+      open = [];
+
+      tasks = {};
+
+      plugin = [
+        # { mime = "image/heic"; run = "heic"; }
+        ];
+
+      input = {};
+
+      confirm = {};
+
+      pick = {};
+
+      which = {};
     };
     theme = {
       # {_./theme/*_}
