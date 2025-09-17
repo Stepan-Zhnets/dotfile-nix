@@ -3,7 +3,7 @@
 { config, pkgs, ... }:
 {
   imports = [
-    ./bundle.nix
+    ./settings/bundle.nix
   ];
 
   wayland.windowManager.hyprland = {
