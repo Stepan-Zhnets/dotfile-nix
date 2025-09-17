@@ -19,8 +19,8 @@
     # {_OPEN_}
     open = {
       # Задайте правила открытия определённых файлов.
-      prepend_rules = [
-        { name = "*.mp4"; use = "video"; }
+      rules = [
+        { mime = "video/*"; use = "video"; }
       ];
     };
   };
