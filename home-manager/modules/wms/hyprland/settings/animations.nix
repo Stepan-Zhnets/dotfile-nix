@@ -2,7 +2,7 @@
 
 { # Анимации
   wayland.windowManager.hyprland.settings.animations = {
-    enable = true;
+    # enable = true;
     
     bezier = "myBezier, 0.05, 0.9, 0.1, 1.05";
     
