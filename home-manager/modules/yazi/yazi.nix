@@ -8,6 +8,7 @@
 
   programs.yazi = {
     enable = true;
+    enableFishIntegration = true;
 
     initLua = ./init.lua;
     
