@@ -1,5 +1,6 @@
 # ~/home-manager/modules/wms/hyprland/hyprland.nix
 
+{ config, pkgs, ... }:
 {
   imports = [
     #
@@ -11,5 +12,5 @@
     settings = {
       "$mainMod" = "SUPER"; # SUPER | ALT
     };
-  }
+  };
 }

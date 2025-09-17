@@ -48,6 +48,7 @@ outputs = {
 	winapps,
 	nixvim,
 	# nvf,
+	hyprland,
 	# prism-launcher,
 	# ayugram-desktop,
 	# swww,
