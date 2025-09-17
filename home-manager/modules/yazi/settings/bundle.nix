@@ -2,8 +2,10 @@
 
 {
   imports = [
+    ./input.nix
     ./mgr.nix
     ./open_er.nix
     ./preview.nix
+    ./tasks.nix
   ];
 }

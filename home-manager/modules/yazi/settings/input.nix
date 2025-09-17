@@ -6,10 +6,12 @@
       cursor_blink = true;
     };
 
-    # То же, что и в [input] разделе. Доступно несколько вариантов: trash, delete, overwriteи quit.
+    # То же, что и в [input] разделе.
+    # Доступно несколько вариантов: trash, delete, overwriteи quit.
     confirm = {};
 
-    # То же, что и в [input] разделе. Доступные селекторы: open.
+    # То же, что и в [input] разделе.
+    # Доступные селекторы: open.
     pick = {};
   }
 }
