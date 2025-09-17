@@ -14,5 +14,5 @@
     hyprland
     hyprlock
     hypridle
-  ]
+  ];
 }
