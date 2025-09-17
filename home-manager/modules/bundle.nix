@@ -8,5 +8,7 @@ imports = [
   ./fastfetch.nix
   
   ./yazi/yazi.nix
+
+  ./wms/bundle.nix
   ];
 }
