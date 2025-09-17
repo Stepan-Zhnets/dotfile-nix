@@ -14,13 +14,6 @@
     settings = {
       logo.enabled = false;
 
-      opener = {
-        play = [
-          # { run = };
-        ];
-      };
-      open = [];
-
       tasks = {};
 
       plugin = [

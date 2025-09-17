@@ -3,6 +3,7 @@
 {
   imports = [
     ./mgr.nix
+    ./open_er.nix
     ./preview.nix
   ];
 }
