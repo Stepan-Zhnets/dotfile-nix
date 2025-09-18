@@ -4,5 +4,6 @@
 imports = [
   ./fabric/fabric.nix
   ./hyprland/hyprland.nix
+  ./waybar/waybar.nix
   ];
 }
