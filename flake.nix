@@ -105,6 +105,7 @@ nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
 homeConfigurations = {
 	zhnets = home-manager.lib.homeManagerConfiguration {
 		pkgs = nixpkgs.legacyPackages.${system};
+    extraSpecialArgs = { inherit inputs; };
 		modules = [
 			./home-manager/home.nix
 		];
