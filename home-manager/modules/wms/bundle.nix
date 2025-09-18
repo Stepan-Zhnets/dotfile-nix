@@ -2,6 +2,7 @@
 
 {
 imports = [
+  ./fabric/fabric.nix
   ./hyprland/hyprland.nix
   ];
 }

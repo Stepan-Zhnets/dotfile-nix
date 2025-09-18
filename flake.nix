@@ -30,6 +30,9 @@ inputs = {
 		inputs.nixpkgs.follows = "nixpkgs";
 	};
 
+# fabric
+	fabric.url = "github:Fabric-Development/fabric";
+
 # PrismLauncher
 	# prism-launcher.url = "github:PrismLauncher/PrismLauncher#prismlauncher";
 
@@ -49,6 +52,7 @@ outputs = {
 	nixvim,
 	# nvf,
 	hyprland,
+	fabric,
 	# prism-launcher,
 	# ayugram-desktop,
 	# swww,
