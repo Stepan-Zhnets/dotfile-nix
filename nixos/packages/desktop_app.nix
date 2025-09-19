@@ -29,6 +29,7 @@
     spotify
     vlc
     obs-studio
+    easyeffects
 
     #=> All
     youtube-music

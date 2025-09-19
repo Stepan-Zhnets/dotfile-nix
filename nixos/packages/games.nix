@@ -6,5 +6,10 @@
     #=> Minecraft
     lunar-client
     prismlauncher
+
+    #=> Steam
+    adwsteamgtk
+    
+    lutris
   ];
 }

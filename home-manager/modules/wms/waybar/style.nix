@@ -1,7 +1,9 @@
 # ~/home-manager/modules/wms/waybar/style.nix
 
 { lib, ... }:
-let colors = import ./color.nix;
+let 
+  colorThemes = import ./color_theme.nix;
+  colors = colorThemes.gruvbox_dark;
 in
 {
   programs.waybar.style = ''
@@ -54,7 +56,7 @@ window#waybar.hidden {
 
 #workspaces button.active {
     background: ${colors.bg_3};
-    color: ${colors.fg};
+    color: ${colors.fg_1};
     border-radius: inherit;
 }
 
@@ -63,7 +65,7 @@ window#waybar.hidden {
     padding-right: 8px;
     border-radius: 10px 0px 0px 10px;
     transition: none;
-    color: ${colors.fg};
+    color: ${colors.fg_1};
     background: ${colors.bg_2};
 }
 
@@ -72,7 +74,7 @@ window#waybar.hidden {
     padding-right: 16px;
     border-radius: 0px 10px 10px 0px;
     transition: none;
-    color: ${colors.fg};
+    color: ${colors.fg_1};
     background: ${colors.bg_2};
 }
 
@@ -81,7 +83,7 @@ window#waybar.hidden {
     padding-right: 8px;
     border-radius: 10px 0px 0px 10px;
     transition: none;
-    color: ${colors.fg};
+    color: ${colors.fg_1};
     background: ${colors.bg_2};
 }
 
@@ -90,7 +92,7 @@ window#waybar.hidden {
     padding-right: 16px;
     border-radius: 0px 10px 10px 0px;
     transition: none;
-    color: ${colors.fg};
+    color: ${colors.fg_1};
     background: ${colors.bg_2};
 }
 
@@ -99,7 +101,7 @@ window#waybar.hidden {
     padding-right: 16px;
     border-radius: 10px;
     transition: none;
-    color: ${colors.fg};
+    color: ${colors.fg_1};
     background: ${colors.bg_2};
 }
 
@@ -108,7 +110,7 @@ window#waybar.hidden {
     padding-right: 16px;
     border-radius: 10px 10px 10px 10px;
     transition: none;
-    color: ${colors.fg};
+    color: ${colors.fg_1};
     background: ${colors.bg_2};
 }
 
@@ -118,13 +120,13 @@ window#waybar.hidden {
     padding-right: 16px;
     border-radius: 10px;
     transition: none;
-    color: ${colors.fg};
+    color: ${colors.fg_1};
     background: ${colors.bg_2};
 }
 
 #pulseaudio.muted {
-    background-color: ${colors.gray};
-    color: ${colors.bg};
+    background-color: ${colors.gray_n};
+    color: ${colors.bg_0};
 }
 
 #custom-mem {
@@ -133,7 +135,7 @@ window#waybar.hidden {
     padding-right: 16px;
     border-radius: 10px;
     transition: none;
-    color: ${colors.fg};
+    color: ${colors.fg_1};
     background: ${colors.bg_2};
 }
 
@@ -143,7 +145,7 @@ window#waybar.hidden {
     padding-right: 16px;
     border-radius: 10px;
     transition: none;
-    color: ${colors.fg};
+    color: ${colors.fg_1};
     background: ${colors.bg_2};
 }
 
@@ -153,12 +155,12 @@ window#waybar.hidden {
     padding-right: 16px;
     border-radius: 10px;
     transition: none;
-    color: ${colors.fg};
+    color: ${colors.fg_1};
     background: ${colors.bg_2};
 }
 
 #temperature.critical {
-    background-color: ${colors.red_l};
+    background-color: ${colors.red_b};
 }
 
 #backlight {
@@ -167,7 +169,7 @@ window#waybar.hidden {
     padding-right: 16px;
     border-radius: 10px;
     transition: none;
-    color: ${colors.fg};
+    color: ${colors.fg_1};
     background: ${colors.bg_2};
 }
 
@@ -177,23 +179,23 @@ window#waybar.hidden {
     padding-right: 16px;
     border-radius: 10px;
     transition: none;
-    color: ${colors.fg};
+    color: ${colors.fg_1};
     background: ${colors.bg_2};
 }
 
 #battery.charging {
-    color: ${colors.fg};
-    background-color: ${colors.green_l};
+    color: ${colors.fg_1};
+    background-color: ${colors.green_b};
 }
 
 #battery.warning:not(.charging) {
-    background-color: ${colors.orange_l};
-    color: ${colors.bg};
+    background-color: ${colors.orange_b};
+    color: ${colors.bg_0};
 }
 
 #battery.critical:not(.charging) {
-    background-color: ${colors.red_l};
-    color: ${colors.fg};
+    background-color: ${colors.red_b};
+    color: ${colors.fg_1};
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: linear;
@@ -206,14 +208,14 @@ window#waybar.hidden {
     padding-right: 16px;
     border-radius: 10px;
     transition: none;
-    color: ${colors.fg};
+    color: ${colors.fg_1};
     background: ${colors.bg_2};
 }
 
 @keyframes blink {
     to {
-        background-color: #ffffff;
-        color: #000000;
+        background-color: ${colors.fg_1};
+        color: ${colors.bg_0};
     }
 }
   '';
