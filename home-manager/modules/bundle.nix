@@ -2,8 +2,7 @@
 
 {
 imports = [
-  ./theme.nix
-  
+  ./color_theme.nix
   ./alacritty.nix
   ./cava.nix
   ./librewolf.nix
