@@ -1,6 +1,6 @@
 # ~/home-manager/modules/yazi/theme/color.nix
 
-{
+{ # {_GruvBox-Dark_}
   orange_l = "#fe8019";
   blue_l   = "#83a598";
   gray_l   = "#928374";

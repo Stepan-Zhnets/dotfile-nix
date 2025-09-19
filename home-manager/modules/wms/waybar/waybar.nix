@@ -1,7 +1,8 @@
 # ~/home-manager/modules/wms/waybar/waybar.nix
 
+{ config, pkgs, ... }:
 {
-  import = [
+  imports = [
     ./style.nix
     ./settings.nix
   ];

@@ -14,7 +14,7 @@
       
       monitor = [
         "eDP-1,1920x1200@165,auto,1"
-        "HDMI-A-1,2560x1440@59.95,auto,1,transform,4" # Work
+        "HDMI-A-1,2560x1440@59.95,auto,1" # Work
         # "HDMI-A-1,1920x1080@60,auto,1,transform,4"
       ];
 

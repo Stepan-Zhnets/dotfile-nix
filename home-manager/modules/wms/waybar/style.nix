@@ -1,107 +1,220 @@
-{ ... }:
-let
-  custom = {
-    font = "Maple Mono";
-    font_size = "18px";
-    font_weight = "bold";
-    text_color = "#FBF1C7";
-    background_0 = "#1D2021";
-    background_1 = "#282828";
-    border_color = "#A89984";
-    red = "#CC241D";
-    green = "#98971A";
-    yellow = "#FABD2F";
-    blue = "#458588";
-    magenta = "#B16286";
-    cyan = "#689D6A";
-    orange = "#D65D0E";
-    orange_bright = "#FE8019";
-    opacity = "1";
-    indicator_height = "2px";
-  };
+# ~/home-manager/modules/wms/waybar/style.nix
+
+{ lib, ... }:
+let colors = import ./color.nix;
 in
 {
-  programs.waybar.style = with custom; ''
-    * {
-      border: none;
-      border-radius: 0px;
-      padding: 0;
-      margin: 0;
-      font-family: ${font};
-      font-weight: ${font_weight};
-      opacity: ${opacity};
-      font-size: ${font_size};
-    }
+  programs.waybar.style = ''
+* {
+    border: none;
+    border-radius: 0;
+    /* `otf-font-awesome` is required to be installed for icons */
+    font-family: JetBrains Mono;
+    font-weight: bold; 
+    min-height: 20px;
+}
 
-    window#waybar {
-      background: #282828;
-      border-top: 1px solid ${border_color};
-    }
+window#waybar {
+    background: transparent;
+}
 
-    tooltip {
-      background: ${background_1};
-      border: 1px solid ${border_color};
-    }
-    tooltip label {
-      margin: 5px;
-      color: ${text_color};
-    }
+window#waybar.hidden {
+    opacity: 0.2;
+}
 
-    #workspaces {
-      padding-left: 15px;
-    }
-    #workspaces button {
-      color: ${yellow};
-      padding-left:  5px;
-      padding-right: 5px;
-      margin-right: 10px;
-    }
-    #workspaces button.empty {
-      color: ${text_color};
-    }
-    #workspaces button.active {
-      color: ${orange_bright};
-    }
+#workspaces {
+    margin-right: 8px;
+    border-radius: 10px;
+    transition: none;
+    background: ${colors.bg_2};
+}
 
-    #clock {
-      color: ${text_color};
-    }
+#workspaces button {
+    transition: none;
+    color: ${colors.fg_3};
+    background: transparent;
+    padding: 5px;
+    font-size: 18px;
+}
 
-    #tray {
-      margin-left: 10px;
-      color: ${text_color};
-    }
-    #tray menu {
-      background: ${background_1};
-      border: 1px solid ${border_color};
-      padding: 8px;
-    }
-    #tray menuitem {
-      padding: 1px;
-    }
+#workspaces button.persistent {
+    color: ${colors.fg_3};
+    font-size: 12px;
+}
 
-    #pulseaudio, #network, #cpu, #memory, #disk, #battery, #language, #custom-notification, #custom-power-menu {
-      padding-left: 5px;
-      padding-right: 5px;
-      margin-right: 10px;
-      color: ${text_color};
-    }
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+#workspaces button:hover {
+    transition: none;
+    box-shadow: inherit;
+    text-shadow: inherit;
+    border-radius: inherit;
+    color: ${colors.bg_2};
+    background: ${colors.fg_3};
+}
 
-    #pulseaudio, #language, #custom-notification {
-      margin-left: 15px;
-    }
+#workspaces button.active {
+    background: ${colors.bg_3};
+    color: ${colors.fg};
+    border-radius: inherit;
+}
 
-    #custom-power-menu {
-      padding-right: 2px;
-      margin-right: 5px;
-    }
+#language {
+    padding-left: 16px;
+    padding-right: 8px;
+    border-radius: 10px 0px 0px 10px;
+    transition: none;
+    color: ${colors.fg};
+    background: ${colors.bg_2};
+}
 
-    #custom-launcher {
-      font-size: 20px;
-      color: ${text_color};
-      font-weight: bold;
-      margin-left: 15px;
-      padding-right: 10px;
+#keyboard-state {
+    margin-right: 8px;
+    padding-right: 16px;
+    border-radius: 0px 10px 10px 0px;
+    transition: none;
+    color: ${colors.fg};
+    background: ${colors.bg_2};
+}
+
+#custom-pacman {
+    padding-left: 16px;
+    padding-right: 8px;
+    border-radius: 10px 0px 0px 10px;
+    transition: none;
+    color: ${colors.fg};
+    background: ${colors.bg_2};
+}
+
+#custom-mail {
+    margin-right: 8px;
+    padding-right: 16px;
+    border-radius: 0px 10px 10px 0px;
+    transition: none;
+    color: ${colors.fg};
+    background: ${colors.bg_2};
+}
+
+#submap {
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 10px;
+    transition: none;
+    color: ${colors.fg};
+    background: ${colors.bg_2};
+}
+
+#clock {
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 10px 10px 10px 10px;
+    transition: none;
+    color: ${colors.fg};
+    background: ${colors.bg_2};
+}
+
+#pulseaudio {
+    margin-right: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 10px;
+    transition: none;
+    color: ${colors.fg};
+    background: ${colors.bg_2};
+}
+
+#pulseaudio.muted {
+    background-color: ${colors.gray};
+    color: ${colors.bg};
+}
+
+#custom-mem {
+    margin-right: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 10px;
+    transition: none;
+    color: ${colors.fg};
+    background: ${colors.bg_2};
+}
+
+#cpu {
+    margin-right: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 10px;
+    transition: none;
+    color: ${colors.fg};
+    background: ${colors.bg_2};
+}
+
+#temperature {
+    margin-right: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 10px;
+    transition: none;
+    color: ${colors.fg};
+    background: ${colors.bg_2};
+}
+
+#temperature.critical {
+    background-color: ${colors.red_l};
+}
+
+#backlight {
+    margin-right: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 10px;
+    transition: none;
+    color: ${colors.fg};
+    background: ${colors.bg_2};
+}
+
+#battery {
+    margin-right: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 10px;
+    transition: none;
+    color: ${colors.fg};
+    background: ${colors.bg_2};
+}
+
+#battery.charging {
+    color: ${colors.fg};
+    background-color: ${colors.green_l};
+}
+
+#battery.warning:not(.charging) {
+    background-color: ${colors.orange_l};
+    color: ${colors.bg};
+}
+
+#battery.critical:not(.charging) {
+    background-color: ${colors.red_l};
+    color: ${colors.fg};
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#tray {
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 10px;
+    transition: none;
+    color: ${colors.fg};
+    background: ${colors.bg_2};
+}
+
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: #000000;
     }
+}
   '';
 }
