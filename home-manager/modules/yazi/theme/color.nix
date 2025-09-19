@@ -1,8 +1,11 @@
 # ~/home-manager/modules/yazi/theme/color.nix
 
 { config, ... }:
-let
-  colors = config.theme.colors;
+let 
+  # Import the color theme
+  colorTheme = import ./../../color_theme.nix;
+  # Use gruvbox_dark theme by default
+  colors = colorTheme.gruvbox_dark;
 in
 {
   # Use centralized theme colors

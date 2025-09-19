@@ -2,8 +2,10 @@
 
 { config, lib, ... }:
 let 
-  # Use centralized theme
-  colors = config.theme.colors;
+  # Import the color theme
+  colorTheme = import ./../../color_theme.nix;
+  # Use gruvbox_dark theme by default
+  colors = colorTheme.gruvbox_dark;
   
   # Color variables for better organization
   bg-primary = colors.bg_0;
