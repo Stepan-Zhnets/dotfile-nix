@@ -1,16 +1,21 @@
 # ~/home-manager/modules/wms/hyprland/settings/color.nix
 
-{ # {_GruvBox-Dark_}
-  orange_l = "#fe8019";
-  blue_l   = "#83a598";
-  gray_l   = "#928374";
-  bg_2     = "#504945";
-  bg_1     = "#3c3836";
-  fg_4     = "#a89984";
-  green_l  = "#b8bb26";
-  red_l    = "#fb4934";
-  bg_3     = "#665c54"; # bg_3
-  bg       = "#282828"; # bg
-  fg       = "#ebdbb2"; # fg
-  fg_3     = "#bdae93"; # fg_3
+{ config, ... }:
+let
+  colors = config.theme.colors;
+in
+{
+  # Use centralized theme colors
+  orange_l = colors.orange_b;
+  blue_l   = colors.blue_b;
+  gray_l   = colors.gray_n;
+  bg_2     = colors.bg_2;
+  bg_1     = colors.bg_1;
+  fg_4     = colors.fg_4;
+  green_l  = colors.green_b;
+  red_l    = colors.red_b;
+  bg_3     = colors.bg_3;
+  bg       = colors.bg_0;
+  fg       = colors.fg_1;
+  fg_3     = colors.fg_3;
 }
