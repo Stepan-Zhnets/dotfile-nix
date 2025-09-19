@@ -5,7 +5,7 @@
 	];
 
 	# Выбор цветовой темы
-	theme.name = "catppuccin_mocha";
+	# theme.name = "catppuccin_mocha";
 
 	home = {
 		username = "zhnets";
