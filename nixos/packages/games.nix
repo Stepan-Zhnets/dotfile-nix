@@ -3,6 +3,9 @@
 { config, pkgs, ... }:
 {
   environment.systemPackages = with pkgs; [
+    #=> Engine
+    godot
+
     #=> Minecraft
     lunar-client
     prismlauncher

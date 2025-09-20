@@ -1,6 +1,6 @@
 # ~/home-manager/modules/yazi/theme/color.nix
 
-{ config, ... }:
+# { config, ... }:
 let 
   # Import the color theme
   colorTheme = import ./../../color_theme.nix;

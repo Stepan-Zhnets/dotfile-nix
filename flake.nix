@@ -33,6 +33,15 @@ inputs = {
 # fabric
 	fabric.url = "github:Fabric-Development/fabric";
 
+# Yandex-Browser
+yandex-browser = {
+	url = "github:Teu5us/nix-yandex-browser";
+	inputs.nixpkgs.follows = "nixpkgs";
+};
+
+# Godot_Engine
+	# godot.url = "github:godotengine/godot/4.5";
+
 # PrismLauncher
 	# prism-launcher.url = "github:PrismLauncher/PrismLauncher#prismlauncher";
 
