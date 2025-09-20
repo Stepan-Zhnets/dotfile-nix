@@ -62,6 +62,7 @@ outputs = {
 	# nvf,
 	hyprland,
 	fabric,
+	yandex-browser,
 	# prism-launcher,
 	# ayugram-desktop,
 	# swww,
@@ -105,6 +106,9 @@ nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
 				environment.systemPackages = [
 					winapps.packages."${system}".winapps
 					winapps.packages."${system}".winapps-launcher # optional
+					
+					inputs.yandex-browser.packages.x86_64-linux.yandex-browser-stable
+    			inputs.yandex-browser.packages.x86_64-linux.yandex-browser-beta
 				];
 			}
 		)
