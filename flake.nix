@@ -30,8 +30,10 @@ inputs = {
 		inputs.nixpkgs.follows = "nixpkgs";
 	};
 
-# fabric
-	fabric.url = "github:Fabric-Development/fabric";
+# # fabric
+# 	fabric.url = "github:Fabric-Development/fabric";
+# 	fabric-libgray.url = "github:Fabric-Development/gray";
+# 	fabric-libglace.url = "github:muhchaudhary/glace/hyprland";
 
 # Godot_Engine
 	# godot.url = "github:godotengine/godot/4.5";
@@ -55,7 +57,7 @@ outputs = {
 	nixvim,
 	# nvf,
 	hyprland,
-	fabric,
+	# fabric,
 	# prism-launcher,
 	# ayugram-desktop,
 	# swww,
@@ -108,7 +110,7 @@ nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
 homeConfigurations = {
 	zhnets = home-manager.lib.homeManagerConfiguration {
 		pkgs = nixpkgs.legacyPackages.${system};
-    extraSpecialArgs = { inherit inputs; };
+		extraSpecialArgs = { inherit inputs; };
 		modules = [
 			./home-manager/home.nix
 		];
