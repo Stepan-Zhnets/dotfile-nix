@@ -33,12 +33,6 @@ inputs = {
 # fabric
 	fabric.url = "github:Fabric-Development/fabric";
 
-# Yandex-Browser
-yandex-browser = {
-	url = "github:Teu5us/nix-yandex-browser";
-	inputs.nixpkgs.follows = "nixpkgs";
-};
-
 # Godot_Engine
 	# godot.url = "github:godotengine/godot/4.5";
 
@@ -62,7 +56,6 @@ outputs = {
 	# nvf,
 	hyprland,
 	fabric,
-	yandex-browser,
 	# prism-launcher,
 	# ayugram-desktop,
 	# swww,
@@ -106,9 +99,6 @@ nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
 				environment.systemPackages = [
 					winapps.packages."${system}".winapps
 					winapps.packages."${system}".winapps-launcher # optional
-					
-					inputs.yandex-browser.packages.x86_64-linux.yandex-browser-stable
-    			inputs.yandex-browser.packages.x86_64-linux.yandex-browser-beta
 				];
 			}
 		)

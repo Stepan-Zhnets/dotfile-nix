@@ -15,7 +15,6 @@ imports = [
   ./zapret_1.nix
   # ./n8n.nix
   ./shell.nix
-  ./yandex.nix
   
   ./devops/bundle.nix
 
