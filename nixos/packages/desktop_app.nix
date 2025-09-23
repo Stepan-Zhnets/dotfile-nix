@@ -30,8 +30,10 @@
     vlc
     obs-studio
     easyeffects
+    youtube-music
+    davinci-resolve
+    #davinci-resolve-studio
 
     #=> All
-    youtube-music
   ];
 }

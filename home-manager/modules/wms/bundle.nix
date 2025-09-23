@@ -2,7 +2,7 @@
 
 {
 imports = [
-  ./fabric/fabric.nix
+  # ./fabric/fabric.nix
   ./hyprland/hyprland.nix
   ./waybar/waybar.nix
   ];

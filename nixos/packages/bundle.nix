@@ -5,6 +5,7 @@ imports = [
   ./cli.nix
   ./desktop_app.nix
   ./code.nix
+  ./driver.nix
   ./games.nix
   ./wms.nix
 ];

@@ -3,9 +3,9 @@
 {
   programs.yazi.settings.mgr = {
     ratio = [
-      1
-      4
-      3
+      0
+      2
+      6
     ];
 
     # {_SORT_}

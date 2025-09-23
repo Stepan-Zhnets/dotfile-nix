@@ -11,6 +11,13 @@
     graphics = {
       enable = true;
       enable32Bit = true;
+
+      # {_DaVinci_Resolve_}
+      driSupport32bit = true;
+      extraPackages = with pkgs; [
+        intel-compute-runtime
+        rocmPackages.clr.icd
+      ];
     };
 
     #=>NVIDIA
