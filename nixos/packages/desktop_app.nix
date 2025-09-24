@@ -14,6 +14,7 @@
     vim
     vscodium
     code-cursor
+    zed-editor
 
     #=>Tools
     obsidian
@@ -32,7 +33,9 @@
     easyeffects
     youtube-music
     davinci-resolve
-    #davinci-resolve-studio
+    # davinci-resolve-studio
+    # shotcut
+    olive-editor
 
     #=> All
   ];

@@ -15,8 +15,8 @@
       # {_DaVinci_Resolve_}
       # driSupport32Bit = true;
       extraPackages = with pkgs; [
-        intel-compute-runtime
-        rocmPackages.clr.icd
+        # intel-compute-runtime
+        # rocmPackages.clr.icd
       ];
     };
 

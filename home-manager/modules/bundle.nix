@@ -7,6 +7,7 @@ imports = [
   ./librewolf.nix
   ./fastfetch.nix
   ./git.nix
+  ./zeditor.nix
   
   ./yazi/yazi.nix
 
