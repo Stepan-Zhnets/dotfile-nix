@@ -38,5 +38,6 @@
     olive-editor
 
     #=> All
+    authenticator
   ];
 }

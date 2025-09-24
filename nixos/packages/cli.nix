@@ -16,6 +16,7 @@
     htop
     btop
     nvtopPackages.v3d
+    duf # disk
     
     #=> 
     cava
@@ -24,5 +25,9 @@
     #=> Terminal
     alacritty
     yazi
+
+    #=> ALL
+    jq # Легкий и гибкий JSON-процессор командной строки
+    fd # Простая, быстрая и удобная альтернатива для поиска
   ];
 }
