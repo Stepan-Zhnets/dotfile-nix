@@ -15,6 +15,7 @@
     vscodium
     code-cursor
     zed-editor
+    android-studio
 
     #=>Tools
     obsidian
