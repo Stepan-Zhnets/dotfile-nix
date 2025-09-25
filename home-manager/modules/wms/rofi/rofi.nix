@@ -8,7 +8,7 @@
     enable = true;
     package = pkgs.rofi-wayland;
     font = "DejaVu Sans Mono 10";
-    location = "bottom" # center, right, left, top, bottom
+    location = "bottom"; # center, right, left, top, bottom
     # modules = [];
 
     terminal = "${pkgs.alacritty}/bin/alacritty";
@@ -23,6 +23,6 @@
       hide-scrollbar = true;
       display-drun = "Apps";
     };
-      sidebar-mode = true;
+      # sidebar-mode = true;
   };
 }

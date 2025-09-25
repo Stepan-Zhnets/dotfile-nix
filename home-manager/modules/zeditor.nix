@@ -116,8 +116,8 @@
       base_keymap = "VSCode";
       theme = {
         mode = "system";
-        light = "One Light";
-        dark = "One Dark";
+        light = "Gruvbox Light Soft";
+        dark = "Gruvbox Dark Soft";
       };
       show_whitespaces = "all" ;
       ui_font_size = 16;
