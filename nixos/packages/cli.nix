@@ -8,17 +8,25 @@
 
     wget
 
+    #=> Lazy
+    lazycli
+    lazygit
+    lazydocker
+    lazyssh
+
     #=> Fetch
     neofetch
     fastfetch
+    cpufetch
 
     #=> Top
     htop
     btop
+    neohtop
     nvtopPackages.v3d
     duf # disk
-    
-    #=> 
+
+    #=>
     cava
     git
 
@@ -29,5 +37,7 @@
     #=> ALL
     jq # Легкий и гибкий JSON-процессор командной строки
     fd # Простая, быстрая и удобная альтернатива для поиска
+    lsd # ls
+    bat # cat
   ];
 }
