@@ -8,14 +8,14 @@
     inherit (config.lib.formats.rasi) mkLiteral;
   in {
     "*" = {
-      bg = "#282828";
-      fg = "#ebdbb2";
-      bg-l = "#3c3836";
+      background-color = mkLiteral "#282828";
+      foreground-color = mkLiteral "#ebdbb2";
+      bg-l = mkLiteral "#3c3836";
     };
     "window" = {
       border = 5;
       y-offset = -5;
-      border-color = "#ebdbb2";
+      border-color = mkLiteral "#ebdbb2";
     };
   };
 }

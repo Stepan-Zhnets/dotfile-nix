@@ -8,7 +8,8 @@
     eww
 
     # {_APP_LAUNCHER_}
-    rofi-wayland
+    rofi
+    # rofi-wayland
 
     # {_HHYPR_}
     hyprland

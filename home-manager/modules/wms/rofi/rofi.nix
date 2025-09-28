@@ -6,7 +6,7 @@
   ];
   programs.rofi = {
     enable = true;
-    package = pkgs.rofi-wayland;
+    # package = pkgs.rofi-wayland;
     font = "DejaVu Sans Mono 10";
     location = "bottom"; # center, right, left, top, bottom
     # modules = [];

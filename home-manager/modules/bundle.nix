@@ -10,6 +10,7 @@ imports = [
   ./zeditor.nix
   
   ./yazi/yazi.nix
+  ./neovim/neovim.nix
 
   ./wms/bundle.nix
   ];
