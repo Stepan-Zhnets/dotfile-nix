@@ -38,6 +38,12 @@
     # shotcut
     olive-editor
 
+    #=> AI
+    lmstudio
+
+    #=> WinApps
+    freerdp
+
     #=> All
     authenticator
   ];

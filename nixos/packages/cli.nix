@@ -18,6 +18,7 @@
     neofetch
     fastfetch
     cpufetch
+    nerdfetch
 
     #=> Top
     htop

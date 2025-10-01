@@ -6,6 +6,7 @@ imports = [
   ./desktop_app.nix
   ./code.nix
   ./driver.nix
+  ./fonts.nix
   ./games.nix
   ./wms.nix
 ];
