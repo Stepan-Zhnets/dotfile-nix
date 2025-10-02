@@ -4,7 +4,6 @@
 imports = [
   ./alacritty.nix
   ./cava.nix
-  ./caelestia.nix
   ./librewolf.nix
   ./fastfetch.nix
   ./git.nix

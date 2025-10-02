@@ -36,12 +36,6 @@ inputs = {
 		inputs.nixpkgs.follows = "nixpkgs";
 	};
 
-# Caelestia-shell
-	caelestia-shell = {
-		url = "github:caelestia-dots/shell";
-		inputs.nixpkgs.follows = "nixpkgs";
-	};
-
 # # fabric
 # 	fabric.url = "github:Fabric-Development/fabric";
 # 	fabric-libgray.url = "github:Fabric-Development/gray";
