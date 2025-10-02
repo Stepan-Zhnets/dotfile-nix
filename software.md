@@ -10,14 +10,18 @@
 </tr>
 <tr>
     <td rowspan=3>Browser</td>
-    <td><img src="./assets/soft-icon/firefox.png" width=30></td>
-    <td>firefox</td>
-    <td></td>
+    <a href="https://www.firefox.com/en-US/">
+        <td><img src="./assets/soft-icon/firefox.png" width=30></td>
+        <td>firefox</td>
+        <td>Веб-браузер, построенный из дерева источников Firefox</td>
+    </a>
 </tr>
 <tr>
-    <td><img src="./assets/soft-icon/librewolf.png" width=30></td>
-    <td>librewolf</td>
-    <td></td>
+    <a href="https://librewolf.net/">
+        <td><img src="./assets/soft-icon/librewolf.png" width=30></td>
+        <td>librewolf</td>
+        <td>Форк Firefox, ориентированный на неприкосновенность частной жизни, безопасность и свободу</td>
+    </a>
 </tr>
 <tr>
     <td><img src="./assets/soft-icon/chromium.png" width=30></td>
@@ -128,6 +132,12 @@
     <td rowspan=1>WinApps</td>
     <td><img src="./assets/soft-icon/freerdp.png" width=30></td>
     <td>freerdp</td>
+    <td></td>
+</tr>
+<tr>
+    <td rowspan=1>Training_programs</td>
+    <td><img src="./assets/soft-icon/logisim.png" width=30></td>
+    <td>logisim</td>
     <td></td>
 </tr>
 <tr>

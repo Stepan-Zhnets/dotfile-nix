@@ -16,6 +16,7 @@
     # android-studio
 
     #=>Tools
+    libreoffice
     obsidian
     github-desktop
 
@@ -40,6 +41,9 @@
 
     #=> WinApps
     freerdp
+
+    #=> {_Training_programs_}
+    logisim
 
     #=> All
     authenticator
