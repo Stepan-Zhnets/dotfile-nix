@@ -16,5 +16,8 @@ environment.systemPackages = with pkgs; [
 
   #=> NIX
   home-manager
+
+  #=> Color-schemes
+  base16-schemes
 ];
 }
