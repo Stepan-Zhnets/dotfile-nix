@@ -11,7 +11,7 @@
     rofi
     # rofi-wayland
 
-    # {_HHYPR_}
+    # {_HYPR_}
     hyprland
     hyprlock
     hypridle

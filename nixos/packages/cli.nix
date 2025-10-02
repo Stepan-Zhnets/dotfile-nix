@@ -6,7 +6,9 @@
     #=> Bash
     fish
 
-    wget
+    #=> Editor
+    vim
+    neovim
 
     #=> Lazy
     lazycli
@@ -24,12 +26,8 @@
     htop
     btop
     neohtop
-    nvtopPackages.v3d
+    nvtopPackages.full
     duf # disk
-
-    #=>
-    cava
-    git
 
     #=> Terminal
     alacritty
@@ -40,5 +38,8 @@
     fd # Простая, быстрая и удобная альтернатива для поиска
     lsd # ls
     bat # cat
+    wget
+    cava
+    git
   ];
 }

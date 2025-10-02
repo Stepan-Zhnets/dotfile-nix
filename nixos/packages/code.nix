@@ -9,12 +9,12 @@
     uv
 
     #=> N8N
-    n8n
+    # n8n
 
     #=> JS
     nodejs_22
 
-    #=> Devops
+    #=> DevOps
     docker
   ];
 }

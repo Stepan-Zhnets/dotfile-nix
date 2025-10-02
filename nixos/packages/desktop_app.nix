@@ -10,12 +10,10 @@
     chromium
 
     #=>Editors
-    neovim
-    vim
     vscodium
     code-cursor
     zed-editor
-    android-studio
+    # android-studio
 
     #=>Tools
     obsidian
@@ -28,15 +26,14 @@
     thunderbird
 
     #=>Media
-    spotify
+    # spotify
     vlc
     obs-studio
     easyeffects
     youtube-music
     davinci-resolve
-    # davinci-resolve-studio
     # shotcut
-    olive-editor
+    # olive-editor
 
     #=> AI
     lmstudio

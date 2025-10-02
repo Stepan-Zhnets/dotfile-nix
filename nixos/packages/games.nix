@@ -7,12 +7,13 @@
     godot
 
     #=> Minecraft
-    lunar-client
-    prismlauncher
+    # lunar-client
+    # prismlauncher
 
     #=> Steam
+    steam
     adwsteamgtk
-    
-    lutris
+
+    # lutris
   ];
 }
