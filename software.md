@@ -261,7 +261,7 @@
     <td></td>
 </tr>
 <tr>
-    <td><img src="./assets/soft-icon/.png" width=30></td>
+    <td><img src="./assets/soft-icon/bat.png" width=30></td>
     <td>bat</td>
     <td></td>
 </tr>
