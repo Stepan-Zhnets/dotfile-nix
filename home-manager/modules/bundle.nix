@@ -4,11 +4,12 @@
 imports = [
   ./alacritty.nix
   ./cava.nix
+  ./caelestia.nix
   ./librewolf.nix
   ./fastfetch.nix
   ./git.nix
   ./zeditor.nix
-  
+
   ./yazi/yazi.nix
   ./neovim/neovim.nix
 

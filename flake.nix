@@ -4,7 +4,7 @@
 inputs = {
 
 # nixpkgs
-	nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+	nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 	nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-25.05";
 
 # home-manager
@@ -12,6 +12,12 @@ inputs = {
 		url = "github:nix-community/home-manager";
 		inputs.nixpkgs.follows = "nixpkgs";
 	};
+
+# stylix
+  stylix = {
+    url = "github:danth/stylix";
+    # inputs.nixpkgs.follows = "nixpkgs";
+  };
 
 # nixvim
 	nixvim = {
@@ -27,6 +33,12 @@ inputs = {
 
 	winapps = {
 		url = "github:winapps-org/winapps";
+		inputs.nixpkgs.follows = "nixpkgs";
+	};
+
+# Caelestia-shell
+	caelestia-shell = {
+		url = "github:caelestia-dots/shell";
 		inputs.nixpkgs.follows = "nixpkgs";
 	};
 
@@ -50,9 +62,7 @@ inputs = {
 
 outputs = {
 	self,
-	nixpkgs,
-	nixpkgs-stable,
-	home-manager,
+	nixpkgs, nixpkgs-stable, home-manager, stylix,
 	winapps,
 	nixvim,
 	# nvf,
@@ -90,6 +100,7 @@ nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
 	modules = [
 		./nixos/configuration.nix
 		inputs.nixvim.nixosModules.nixvim
+		inputs.stylix.nixosModules.stylix
 		# nvf.nixosModules.default
 		(
 			{
@@ -113,6 +124,7 @@ homeConfigurations = {
 		extraSpecialArgs = { inherit inputs; };
 		modules = [
 			./home-manager/home.nix
+			stylix.homeManagerModules.stylix
 		];
 	};
 };
