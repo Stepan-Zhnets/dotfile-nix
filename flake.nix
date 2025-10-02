@@ -13,12 +13,6 @@ inputs = {
 		inputs.nixpkgs.follows = "nixpkgs";
 	};
 
-# stylix
-  stylix = {
-    url = "github:danth/stylix";
-    # inputs.nixpkgs.follows = "nixpkgs";
-  };
-
 # nixvim
 	nixvim = {
 		url = "github:nix-community/nixvim";
@@ -56,7 +50,7 @@ inputs = {
 
 outputs = {
 	self,
-	nixpkgs, nixpkgs-stable, home-manager, stylix,
+	nixpkgs, nixpkgs-stable, home-manager,
 	winapps,
 	nixvim,
 	# nvf,
@@ -94,7 +88,6 @@ nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
 	modules = [
 		./nixos/configuration.nix
 		inputs.nixvim.nixosModules.nixvim
-		inputs.stylix.nixosModules.stylix
 		# nvf.nixosModules.default
 		(
 			{
@@ -118,7 +111,6 @@ homeConfigurations = {
 		extraSpecialArgs = { inherit inputs; };
 		modules = [
 			./home-manager/home.nix
-			stylix.homeManagerModules.stylix
 		];
 	};
 };

@@ -12,7 +12,6 @@ imports = [
   ./user.nix
   ./xserver.nix
   ./steam.nix
-  ./stylix.nix
   ./zapret_1.nix
   # ./n8n.nix
   ./shell.nix
