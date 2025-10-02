@@ -17,7 +17,8 @@ environment.systemPackages = with pkgs; [
   #=> NIX
   home-manager
 
-  #=> Color-schemes
+  #=> Style
   base16-schemes
+  bibata-cursors
 ];
 }
