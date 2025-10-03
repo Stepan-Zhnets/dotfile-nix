@@ -4,7 +4,7 @@
 inputs = {
 
 # nixpkgs
-	nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+	nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 	nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-25.05";
 
 # home-manager
@@ -19,45 +19,64 @@ inputs = {
 		inputs.nixpkgs.follows = "nixpkgs";
 	};
 
+# NVF
+	nvf.url = "github:notashelf/nvf";
+
 # hyprland
 	hyprland.url = "github:hyprwm/Hyprland";
-	hyprland-plugins = {
-		url = "github:hyprwm/hyprland-plugins";
-		inputs.hyprland.follows = "hyprland";
+
+	winapps = {
+		url = "github:winapps-org/winapps";
+		inputs.nixpkgs.follows = "nixpkgs";
 	};
 
+# # fabric
+# 	fabric.url = "github:Fabric-Development/fabric";
+# 	fabric-libgray.url = "github:Fabric-Development/gray";
+# 	fabric-libglace.url = "github:muhchaudhary/glace/hyprland";
+
+# Godot_Engine
+	# godot.url = "github:godotengine/godot/4.5";
+
+# PrismLauncher
+	# prism-launcher.url = "github:PrismLauncher/PrismLauncher#prismlauncher";
+
 # ayugram-desktop
-	ayugram-desktop.url = "github:ayugram-port/ayugram-desktop/release?submodules=1";
+	# ayugram-desktop.url = "github:ayugram-port/ayugram-desktop/release?submodules=1";
 
 # swww
-	swww.url = "github:LGFae/swww";
-
-# Python-Bar Fabric
-	pybar-fabric.url = "github:Fabric-Development/fabric";
-
-# GoodbyeDPI-UI
-	# goodbye-dpi-ui.url = "https://github.com/Storik4pro/goodbyeDPI-UI/";
-
-# catppuccin
-# catppuccin.url = "github:catppuccin/nix";
+	# swww.url = "github:LGFae/swww";
 };
 
 outputs = {
 	self,
-	nixpkgs,
-	nixpkgs-stable,
-	home-manager,
-	ayugram-desktop,
-	pybar-fabric,
-	# goodbye-dpi-ui,
-	# catppuccin,
+	nixpkgs, nixpkgs-stable, home-manager,
+	winapps,
+	nixvim,
+	# nvf,
+	hyprland,
+	# fabric,
+	# prism-launcher,
+	# ayugram-desktop,
+	# swww,
 	...
 }@inputs:
 
 let
-system = "x86_64-linux";
+	system = "x86_64-linux";
 in {
-# nixos - system hostname
+
+# {_CONFIGURATION-NIXVIM_}
+
+# # {_CONFIGURATION-NVF_}
+# packages.${system}.default = (
+# 	nvf.lib.neovimConfiguration {
+# 		pkgs = nixpkgs.legacyPackages.${system};
+# 		modules = [ ./nvf/nvf-configuration.nix ];
+# 	}
+# ).neovim;
+
+# {_CONFIGURATION-NIXOS_}
 nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
 	specialArgs = {
 		pkgs-stable = import nixpkgs-stable {
@@ -69,33 +88,30 @@ nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
 	modules = [
 		./nixos/configuration.nix
 		inputs.nixvim.nixosModules.nixvim
-		# catppuccin.nixosModules.catppuccin
-		# home-manager.nixosModules.home-manager
-
-          #{
-          #  home-manager.users = {
-          #    zhnets = {
-          #      imports = [
-          #        ./home-manager/home.nix
-          #        catppuccin.homeModules.catppuccin
-          #      ];
-          #    };
-          #  };
-          #}
+		# nvf.nixosModules.default
+		(
+			{
+				pkgs,
+				system ? pkgs.system,
+				...
+			}:
+			{
+				environment.systemPackages = [
+					winapps.packages."${system}".winapps
+					winapps.packages."${system}".winapps-launcher # optional
+				];
+			}
+		)
 	];
 };
 
 homeConfigurations = {
 	zhnets = home-manager.lib.homeManagerConfiguration {
 		pkgs = nixpkgs.legacyPackages.${system};
+		extraSpecialArgs = { inherit inputs; };
 		modules = [
 			./home-manager/home.nix
-			#catppuccin.homeModules.catppuccin
 		];
-	};
-	apterm = home-manager.lib.homeManagerConfiguration {
-		pkgs = nixpkgs.legacyPackages.${system};
-		modules = [ ./home-manager-apterm/home.nix ];
 	};
 };
 };

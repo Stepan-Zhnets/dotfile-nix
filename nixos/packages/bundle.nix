@@ -1,63 +1,24 @@
 # ~/nix/nixos/packages/bundle.nix
 
-# Связка всех соседних nix файлов
-
 { pkgs, inputs, ... }: {
 imports = [
-	./anti-rkn.nix
-	./desktop-apps.nix
-	./coding-stuff.nix
-	./cli-utils.nix
-	./gui-utils.nix
-	./wayland-stuff.nix
-	./wms-and-stuff.nix
-	./sound.nix
-	# ./gpu-stuff.nix
-	./screenshotting.nix
-	#./games.nix
-	# ./python-pkg.nix
-	# ./python.nix
-	./rpi.nix
+  ./cli.nix
+  ./desktop_app.nix
+  ./code.nix
+  ./driver.nix
+  ./fonts.nix
+  ./games.nix
+  ./wms.nix
 ];
-
-nixpkgs.config = {
-	allowUnfree = true;
-	permittedInsecurePackages = [
-		"python-2.7.18.8"
-		"electron-25.9.0"
-	];
-};
-
 environment.systemPackages = with pkgs; [
+  zapret
+  blueman
 
-inputs.ayugram-desktop.packages.${pkgs.system}.ayugram-desktop
+  #=> NIX
+  home-manager
 
-# Other
-home-manager
-# spice-vdagent
-
-# libsForQt5.qtstyleplugin-kvantum
-# libsForQt5.qt5ct
-papirus-nord
-
-];
-
-# Шрифты
-
-fonts.packages = with pkgs; [
-	jetbrains-mono
-	noto-fonts
-	noto-fonts-emoji
-	twemoji-color-font
-	font-awesome
-	powerline-fonts
-	powerline-symbols
-
-	#nerdfonts.symbols-only
-	#(nerdfonts.override {
-	#	fonts = [
-	#		"NerdFontsSymbolsOnly"
-	#	];
-	#})
+  #=> Style
+  base16-schemes
+  bibata-cursors
 ];
 }

@@ -1,14 +1,8 @@
-# ~/nix/nixos/modules/bluetooth.nix
+# ~/nixos/modules/bluetooth.nix
+
+# https://wiki.nixos.org/wiki/Bluetooth
 
 {
-	hardware.bluetooth = {
-		enable = true;
-		powerOnBoot = true;
-		settings = {
-			General = {
-				Enable = "Source,Sink,Media,Socket";
-				Experimental = true;
-			};
-		};
-	};
+  hardware.bluetooth.enable = true;
+  services.blueman.enable = true;
 }

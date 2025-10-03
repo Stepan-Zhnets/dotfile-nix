@@ -1,34 +1,25 @@
-# ~/nix/nixos/modules/user.nix
+# ~/nixos/modules/user.nix
 
 { pkgs, ... }: {
-	programs.zsh.enable = true;
+	# Enable fish shell
+	programs.fish.enable = true;
 
 	users = {
-		# defaultUserShell = pkgs.zsh;
-
     users = {
       zhnets = {
 			  isNormalUser = true;
 			  description = "zhnets";
+			  shell = pkgs.fish;  # Set fish as default shell
 			  extraGroups = [
 				  "networkmanager"
 				  "wheel"
 				  "input"
+				  "docker"
 				  "libvirtd"
-				  "cron"
 			  ];
-        packages = with pkgs; [];
-      };
-      apterm = {
-        isNormalUser = true;
-        description = "apterm";
-        extraGroups = [
-          "networkmanager"
-          "whell"
-          "input"
-          "libvirtd"
+        packages = with pkgs; [
+          kdePackages.kate
         ];
-        packages = with pkgs; [];
       };
 		};
 	};

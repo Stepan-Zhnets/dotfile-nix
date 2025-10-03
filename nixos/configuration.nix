@@ -1,3 +1,5 @@
+# ~/nix/nixos/configuration.nix
+
 { config, pkgs, ... }:
 {
 	imports = [ # Include the results of the hardware scan.
@@ -29,11 +31,20 @@
 		LC_TIME = "ru_RU.UTF-8";
 	};
 
+  # Configure keymap in X11
+  services.xserver.xkb = {
+    layout = "us,ru";
+    variant = " ";
+  };
+
 	# Enable CUPS to print documents.
 	services.printing.enable = true;
 
 	# Install firefox.
 	programs.firefox.enable = true;
+
+  # Allow unfree packages
+  nixpkgs.config.allowUnfree = true;
 
 	system.stateVersion = "24.11"; # Did you read the comment?
 }

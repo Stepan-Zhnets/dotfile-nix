@@ -1,17 +1,14 @@
-# ~/nix/nixos/modules/nixvim/nixvim.nix
+# ~/nixos/modules/nixvim/nixvim.nix
 
 {
-	imports = [
-		./opts.nix
-		./keymaps.nix
-		./autocmds.nix
-		./plugins/plugins-bundle.nix
-	];
+  imports = [
+    #
+  ];
 
-	programs.nixvim = {
-		enable = true;
+  programs.nixvim = {
+    enable = true;
 
-		defaultEditor = true;
-		colorschemes.catppuccin.enable = true;
-	};
+    defaultEditor = true;
+    colorschemes.gruvbox.enable = true;
+  };
 }

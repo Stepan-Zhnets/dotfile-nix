@@ -1,30 +1,56 @@
 # ~/nix/nixos/modules/drivers.nix
 
-{ pkgs, ... }: {
-	hardware = {
-		graphics = { # OpenGL
-			enable = true;
-			# driSupport = true;
-			# driSupport32Bit = true;
-			enable32Bit = true;
-		};
+{ config, lib, pkgs, ... }:
+{
+  #=>Video Drivers
+  services.xserver.videoDrivers = [ "nvidia" ];
 
-		nvidia = {
-			open = true;
+  #=>Drivers
+  hardware = {
+    #=>OpenGL
+    graphics = {
+      enable = true;
+      enable32Bit = true;
 
-			modesetting.enable = true;
+      # {_DaVinci_Resolve_}
+      # driSupport32Bit = true;
+      extraPackages = with pkgs; [
+        # intel-compute-runtime
+        # rocmPackages.clr.icd
+      ];
+    };
 
-			prime = {
-				sync.enable = true;
+    #=>NVIDIA
+    nvidia = {
+      #=>Open Source
+      open = true;
+      modesetting.enable = true;
 
-				# Integrated
-				intelBusId = "PCI:0:2:0";
+      #=>Power Management
+      powerManagement = {
+        enable = true;
+        finegrained = true;
+      };
 
-				# Dedicated
-				nvidiaBusId = "PCI:1:0:0";
-			};
-		};
-	};
+      #=>Prime
+      prime = {
+        offload = {
+          enable = true;
+          enableOffloadCmd = true;
+        };
 
-	services.xserver.videoDrivers = ["nvidia"];
+        #=>Inregrated
+        intelBusId = "PCI:0:2:0";
+
+        #=>Dedicated
+        nvidiaBusId = "PCI:1:0:0";
+      };
+      
+      #=>Settings
+      nvidiaSettings = true;
+
+      #=>Package
+      package = config.boot.kernelPackages.nvidiaPackages.stable;
+    };
+  };
 }

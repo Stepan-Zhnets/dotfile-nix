@@ -1,12 +1,19 @@
-# ~/nix/nixos/packages/games.nix
+# ~/nix/packages/games.nix
 
-{ pkgs, ... }: {
-environment.systemPackages = with pkgs; [
-	
-	#vitetris
+{ config, pkgs, ... }:
+{
+  environment.systemPackages = with pkgs; [
+    #=> Engine
+    godot
 
-	#-Rogue-like
-	# nethack
-	# unnethack
-	];
+    #=> Minecraft
+    # lunar-client
+    # prismlauncher
+
+    #=> Steam
+    steam
+    adwsteamgtk
+
+    # lutris
+  ];
 }

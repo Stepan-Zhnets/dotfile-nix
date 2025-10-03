@@ -1,34 +1,18 @@
 # ~/nix/nixos/modules/xserver.nix
 
+{ config, pkgs, ... }:
 {
-services = {
-	displayManager.gdm.enable = true;
-	desktopManager.gnome.enable = true;
+  #=>XServer
+  services = {
+      #=>Enable the KDE Plasma Desktop Environment.
+      displayManager.sddm.enable = true;
+      desktopManager.plasma6.enable = true;
 
-	libinput = {
-		enable = true;
-		mouse.accelProfile = "flat";
-		touchpad.accelProfile = "flat";
-	};
-
-	xserver = {
-		enable = true;
-		windowManager.herbstluftwm.enable = true;
-
-		# displayManager = {
-		#	autoLogin = {
-		#		enable = true;
-		#		user = "zhnets";
-		#	};
-		#	lightdm.enable = true;
-		# };
-
-		xkb = {
-			layout = "us";
-			variant = "";
-		};
-		videoDrivers = [ "nvidia" ];
-		# deviceSection = '' "" '';
-	};
-};
+    xserver = {
+      enable = true;
+      # #=>Enable the KDE Plasma Desktop Environment. (XServer)
+      # displayManager.sddm.enable = true;
+      # desktopManager.plasma6.enable = true;
+    };
+  };
 }

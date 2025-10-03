@@ -2,21 +2,22 @@
 
 {
 imports = [
-	# ./theme/catppuccin.nix
-	./bootloader.nix
-	./sound.nix
-	./user.nix
-	./xserver.nix
-	./nm.nix
-	./hyprland.nix
-	./bluetooth.nix
-	# ./openssh.nix
-	# ./cron.nix
-	# ./nixvim/nixvim.nix
-	# ./virtual-box.nix
-	# ./devops/devops-bundle.nix
-	./drivers.nix
-	# ./steam.nix
-	# ./zapret.nix
+  ./nm.nix
+  ./bootloader.nix
+  ./bluetooth.nix
+  ./drivers.nix
+  ./hyprland.nix
+  # ./fonts.nix
+  ./sound.nix
+  ./user.nix
+  ./xserver.nix
+  ./steam.nix
+  ./zapret_1.nix
+  # ./n8n.nix
+  ./shell.nix
+
+  ./devops/bundle.nix
+
+  ./nixvim/nixvim.nix
 ];
 }
