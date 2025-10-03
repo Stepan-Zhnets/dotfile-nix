@@ -223,7 +223,7 @@
     <td>Клиент протокола удаленных рабочих столов</td>
 </tr>
 <tr>
-    <td rowspan=1>Training_programs</td>
+    <td rowspan=1>Training programs</td>
     <td>
         <a href = "https://www.cburch.com/logisim/">
             <img src="./assets/soft-icon/logisim.png" width=30>
