@@ -10,6 +10,5 @@
 
     #=> All
     intel-ocl
-    cudatext
   ];
 }

@@ -330,7 +330,7 @@
     <td>Кросс-платформенный инструмент управления базой данных TUI, написанный в Go</td>
 </tr>
 <tr>
-    <td rowspan=4>Fetch</td>
+    <td rowspan=5>Fetch</td>
     <td>
         <a href="https://github.com/dylanaraps/neofetch">
             <img src="./assets/soft-icon/neofetch.png" width=30>
@@ -518,26 +518,42 @@
 </tr>
 <tr>
     <td rowspan=2>Python</td>
-    <td><img src="./assets/soft-icon/python.png" width=30></td>
+    <td>
+        <a href="https://www.python.org/">
+            <img src="./assets/soft-icon/python.png" width=30>
+        </a>
+    </td>
     <td>python3</td>
-    <td></td>
+    <td>Высокопоставленный динамически набранный язык программирования</td>
 </tr>
 <tr>
-    <td><img src="./assets/soft-icon/uv.svg" width=30></td>
+    <td>
+        <a href="https://github.com/astral-sh/uv">
+            <img src="./assets/soft-icon/uv.svg" width=30>
+        </a>
+    </td>
     <td>uv</td>
-    <td></td>
+    <td>Чрезвычайно быстрый установщик пакетов Python и разрешение, написанный в Rust</td>
 </tr>
 <tr>
     <td rowspan=1>JS</td>
-    <td><img src="./assets/soft-icon/nodejs.png" width=30></td>
+    <td>
+        <a href="https://nodejs.org/en">
+            <img src="./assets/soft-icon/nodejs.png" width=30>
+        </a>
+    </td>
     <td>nodejs_22</td>
-    <td></td>
+    <td>Резервная система ввода/вывода для устройства V8 JavaScript</td>
 </tr>
 <tr>
     <td rowspan=1>DevOps</td>
-    <td><img src="./assets/soft-icon/docker.png" width=30></td>
+    <td>
+        <a href="https://www.docker.com/">
+            <img src="./assets/soft-icon/docker.png" width=30>
+        </a>
+    </td>
     <td>docker</td>
-    <td></td>
+    <td>Проект с открытым исходным кодом для упаковки, отправки и запуска любого приложения в качестве легкого контейнера</td>
 </tr>
 </table>
 </details>
@@ -553,30 +569,41 @@
 </tr>
 <tr>
     <td rowspan=3>FFmpeg</td>
-    <td><img src="./assets/soft-icon/ffmpeg.png" width=30></td>
+    <td>
+        <a href="https://github.com/jellyfin/jellyfin-ffmpeg">
+            <img src="./assets/soft-icon/ffmpeg.png" width=30>
+        </a>
+    </td>
     <td>jellyfin-ffmpeg</td>
-    <td></td>
+    <td>Завершение кросс-платформенного решения для записи, преобразования и потокового аудио и видео (Jellyfin fork)</td>
 </tr>
 <tr>
-    <td><img src="./assets/soft-icon/ffmpeg.png" width=30></td>
+    <td>
+        <a href="https://www.ffmpeg.org/">
+            <img src="./assets/soft-icon/ffmpeg.png" width=30>
+        </a>
+    </td>
     <td>ffmpeg_6-full</td>
-    <td></td>
+    <td>Завершение, кросс-платформенное решение для записи, преобразования и потоков аудио и видео</td>
 </tr>
 <tr>
-    <td><img src="./assets/soft-icon/ffmpeg.png" width=30></td>
+    <td>
+        <a href="https://www.ffmpeg.org/">
+            <img src="./assets/soft-icon/ffmpeg.png" width=30>
+        </a>
+    </td>
     <td>ffmpeg_6</td>
-    <td></td>
+    <td>Завершение, кросс-платформенное решение для записи, преобразования и потоков аудио и видео</td>
 </tr>
 <tr>
-    <td rowspan=2>All</td>
-    <td><img src="./assets/soft-icon/intel-ocl.png" width=30></td>
+    <td rowspan=1>All</td>
+    <td>
+        <a href="https://www.intel.com/content/www/us/en/support/ru-banner-inside.html">
+            <img src="./assets/soft-icon/intel-ocl.png" width=30>
+        </a>
+    </td>
     <td>intel-ocl</td>
-    <td></td>
-</tr>
-<tr>
-    <td><img src="./assets/soft-icon/cudatext.png" width=30></td>
-    <td>cudatext</td>
-    <td></td>
+    <td>Официальная эксплуатация OpenCL для процессоров Intel</td>
 </tr>
 </table>
 </details>
@@ -592,7 +619,11 @@
 </tr>
 <tr>
     <td rowspan=4>Editors</td>
-    <td><img src="./assets/soft-icon/.png" width=30></td>
+    <td>
+        <a href="">
+            <img src="./assets/soft-icon/.png" width=30>
+        </a>
+    </td>
     <td></td>
     <td></td>
 </tr>
@@ -610,36 +641,60 @@
 </tr>
 <tr>
     <td rowspan=1>Engine</td>
-    <td><img src="./assets/soft-icon/godot.png" width=30></td>
+    <td>
+        <a href="https://godotengine.org/">
+            <img src="./assets/soft-icon/godot.png" width=30>
+        </a>
+    </td>
     <td>godot</td>
-    <td></td>
+    <td>Свободный и открытый 2D и 3D игровой движок</td>
 </tr>
 <tr>
     <td rowspan=2>Minecraft</td>
-    <td><img src="./assets/soft-icon/lunar-client.png" width=30></td>
+    <td>
+        <a href="https://www.lunarclient.com/">
+            <img src="./assets/soft-icon/lunar-client.png" width=30>
+        </a>
+    </td>
     <td><del>unar-client</td>
-    <td></td>
+    <td>Клиент Free Minecraft с модами, косметикой и повышением производительности</td>
 </tr>
 <tr>
-    <td><img src="./assets/soft-icon/prismlauncher.png" width=30></td>
+    <td>
+        <a href="https://prismlauncher.org/">
+            <img src="./assets/soft-icon/prismlauncher.png" width=30>
+        </a>
+    </td>
     <td><del>prismlauncher</td>
-    <td></td>
+    <td>Бесплатная пусковая установка с открытым исходным кодом для Minecraft</td>
 </tr>
 <tr>
     <td rowspan=3>Steam</td>
-    <td><img src="./assets/soft-icon/steam.png" width=30></td>
+    <td>
+        <a href="https://store.steampowered.com/">
+            <img src="./assets/soft-icon/steam.png" width=30>
+        </a>
+    </td>
     <td>steam</td>
-    <td></td>
+    <td>Истекающие состояния пара (пустышка пакета, не используйте)</td>
 </tr>
 <tr>
-    <td><img src="./assets/soft-icon/steam.png" width=30></td>
+    <td>
+        <a href="https://github.com/Foldex/AdwSteamGtk">
+            <img src="./assets/soft-icon/steam.png" width=30>
+        </a>
+    </td>
     <td>adwsteamgtk</td>
-    <td></td>
+    <td>Простая обертка Gtk для Adwaita-for-Steam</td>
 </tr>
 <tr>
-    <td><img src="./assets/soft-icon/lutris.png" width=30></td>
+    <td>
+        <a href="https://lutris.net/">
+            <img src="./assets/soft-icon/lutris.png" width=30>
+        </a>
+    </td>
     <td><del>lutris</td>
-    <td></td>
+    <td>Игровая платформа с открытым исходным кодом для GNU/Linux</td>
 </tr>
 </table>
 </details>
@@ -655,36 +710,62 @@
 </tr>
 <tr>
     <td rowspan=2>Bar</td>
-    <td><img src="./assets/soft-icon/.png" width=30></td>
+    <td>
+        <a href="https://github.com/alexays/waybar">
+            <img src="./assets/soft-icon/.png" width=30>
+        </a>
+    </td>
     <td>waybar</td>
-    <td></td>
+    <td>Высоконастраиваемый бар Wayland для композиторов на основе Sway и Wlroots
+
+</td>
 </tr>
 <tr>
-    <td><img src="./assets/soft-icon/eww.svg" width=50></td>
+    <td>
+        <a href="https://github.com/elkowar/eww">
+            <img src="./assets/soft-icon/eww.svg" width=50>
+        </a>
+    </td>
     <td>eww</td>
-    <td></td>
+    <td>Система виджетов, сделанная в Rust, для создания виджетов для любого WM</td>
 </tr>
 <tr>
     <td rowspan=1>Launcher</td>
-    <td><img src="./assets/soft-icon/.png" width=30></td>
+    <td>
+        <a href="https://github.com/davatorium/rofi">
+            <img src="./assets/soft-icon/.png" width=30>
+        </a>
+    </td>
     <td>rofi</td>
-    <td></td>
+    <td>Оконный коммутатор, запуск диалоговой версии и замены dmenu</td>
 </tr>
 <tr>
     <td rowspan=3>Hypr</td>
-    <td><img src="./assets/soft-icon/hyprland.png" width=30></td>
+    <td>
+        <a href="https://github.com/hyprwm/Hyprland">
+            <img src="./assets/soft-icon/hyprland.png" width=30>
+        </a>
+    </td>
     <td>hyprland</td>
-    <td></td>
+    <td>Динамический композитор Wayland, который не жертвует своей внешностью</td>
 </tr>
 <tr>
-    <td><img src="./assets/soft-icon/hyprland.png" width=30></td>
+    <td>
+        <a href="https://github.com/hyprwm/hyprlock">
+            <img src="./assets/soft-icon/hyprland.png" width=30>
+        </a>
+    </td>
     <td>hyprlock</td>
-    <td></td>
+    <td>Утилита блокировки экрана Hyprland с GPU-ускоренным экраном</td>
 </tr>
 <tr>
-    <td><img src="./assets/soft-icon/hyprland.png" width=30></td>
+    <td>
+        <a href="https://github.com/hyprwm/hypridle">
+            <img src="./assets/soft-icon/hyprland.png" width=30>
+        </a>
+    </td>
     <td>hypridle</td>
-    <td></td>
+    <td>праздный демоны Гипрской области</td>
 </tr>
 </table>
 </details>
