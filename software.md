@@ -4,147 +4,243 @@
 <table>
 <tr>
     <td>Type</td>
-    <td>Icon</td>
+    <td>Icon Link</td>
     <td>NixOS-Configuration Name</td>
     <td>Info</td>
 </tr>
 <tr>
     <td rowspan=3>Browser</td>
-    <a href="https://www.firefox.com/en-US/">
-        <td><img src="./assets/soft-icon/firefox.png" width=30></td>
-        <td>firefox</td>
-        <td>Веб-браузер, построенный из дерева источников Firefox</td>
-    </a>
+    <td>
+        <a href="https://www.firefox.com/en-US/">
+            <img src="./assets/soft-icon/firefox.png" width=30>
+        </a>
+    </td>
+    <td>firefox</td>
+    <td>Веб-браузер, построенный из дерева источников Firefox</td>
 </tr>
 <tr>
-    <a href="https://librewolf.net/">
-        <td><img src="./assets/soft-icon/librewolf.png" width=30></td>
-        <td>librewolf</td>
-        <td>Форк Firefox, ориентированный на неприкосновенность частной жизни, безопасность и свободу</td>
-    </a>
+    <td>
+        <a href="https://librewolf.net/">
+            <img src="./assets/soft-icon/librewolf.png" width=30>
+        </a>
+    </td>
+    <td>librewolf</td>
+    <td>Форк Firefox, ориентированный на неприкосновенность частной жизни, безопасность и свободу</td>
 </tr>
 <tr>
-    <td><img src="./assets/soft-icon/chromium.png" width=30></td>
+    <td>
+        <a href="https://www.chromium.org/chromium-projects/">
+            <img src="./assets/soft-icon/chromium.png" width=30>
+        </a>
+    </td>
     <td>chromium</td>
-    <td></td>
+    <td>Веб-браузер с открытым исходным кодом от Google</td>
 </tr>
 <tr>
     <td rowspan=4>Editors</td>
-    <td><img src="./assets/soft-icon/vscodium.png" width=30></td>
+    <td>
+        <a href = "https://github.com/VSCodium/vscodium">
+            <img src="./assets/soft-icon/vscodium.png" width=30>
+        </a>
+    </td>
     <td>vscodium</td>
-    <td></td>
+    <td>Редактор исходного кода с открытым исходным кодом, разработанный Microsoft для Windows, Linux и macOS (VS Code без MS-брендинга/телеметрии/лицензионного управления) </td>
 </tr>
 <tr>
-    <td><img src="./assets/soft-icon/code-cursor.png" width=30></td>
+    <td>
+        <a href = "">
+            <img src="./assets/soft-icon/code-cursor.png" width=30>
+        </a>
+    </td>
     <td>code-cursor</td>
-    <td></td>
+    <td>Редактор кода на базе AI, построенный на vscode</td>
 </tr>
 <tr>
-    <td><img src="./assets/soft-icon/zed-editor.png" width=30></td>
+    <td>
+        <a href = "https://zed.dev/">
+            <img src="./assets/soft-icon/zed-editor.png" width=30>
+        </a>
+    </td>
     <td>zed-editor</td>
-    <td></td>
+    <td>Высокопроизводительный, многопользовательский редактор кода от создателей Atom и Tree-sitter</td>
 </tr>
 <tr>
-    <td><img src="./assets/soft-icon/android-studio.png" width=30></td>
+    <td>
+        <a href = "https://developer.android.com/studio?hl=ru">
+            <img src="./assets/soft-icon/android-studio.png" width=30>
+        </a>
+    </td>
     <td><del>android-studio</td>
-    <td></td>
+    <td>Официальная IDE для Android (стабильный канал)</td>
 </tr>
 <tr>
     <td rowspan=2>Tools</td>
-    <td><img src="./assets/soft-icon/obsidian.png" width=30></td>
+    <td>
+        <a href = "https://obsidian.md/">
+            <img src="./assets/soft-icon/obsidian.png" width=30>
+        </a>
+    </td>
     <td>obsidian</td>
-    <td></td>
+    <td>Мощная база знаний, которая работает поверх локальной папки простых текстовых файлов Markdown</td>
 </tr>
 <tr>
-    <td><img src="./assets/soft-icon/github-desktop.png" width=30></td>
+    <td>
+        <a href = "https://github.com/apps/desktop">
+            <img src="./assets/soft-icon/github-desktop.png" width=30>
+        </a>
+    </td>
     <td>github-desktop</td>
-    <td></td>
+    <td>GUI для управления Git и GitHub</td>
 </tr>
 <tr>
     <td rowspan=4>Chat</td>
-    <td><img src="./assets/soft-icon/discord.png" width=30></td>
-    <td>diskord</td>
-    <td></td>
+    <td>
+        <a href = "https://discord.com/">
+            <img src="./assets/soft-icon/discord.png" width=30>
+        </a>
+    </td>
+    <td>discord</td>
+    <td>Все-в-одном кросс-платформенный голосовой и текстовый чат для геймеров</td>
 </tr>
 <tr>
-    <td><img src="./assets/soft-icon/telegram-desktop.png" width=30></td>
+    <td>
+        <a href = "https://desktop.telegram.org/">
+            <img src="./assets/soft-icon/telegram-desktop.png" width=30>
+        </a>
+    </td>
     <td>telegram-desktop</td>
-    <td></td>
+    <td>Приложение для обмена сообщениями Telegram Desktop</td>
 </tr>
 <tr>
-    <td><img src="./assets/soft-icon/simplex-chat-desktop.png" width=30></td>
+    <td>
+        <a href = "https://simplex.chat/">
+            <img src="./assets/soft-icon/simplex-chat-desktop.png" width=30>
+        </a>
+    </td>
     <td>simplex-chat-desktop</td>
-    <td></td>
+    <td>Настольная заявка для SimpleX Chat</td>
 </tr>
 <tr>
-    <td><img src="./assets/soft-icon/thunderbird.png" width=30></td>
+    <td>
+        <a href = "https://www.thunderbird.net/ru/">
+            <img src="./assets/soft-icon/thunderbird.png" width=30>
+        </a>
+    </td>
     <td>thunderbird</td>
-    <td></td>
+    <td>Полнофункциональный электронный почтовый клиент</td>
 </tr>
 <tr>
     <td rowspan=8>Media</td>
-    <td><img src="./assets/soft-icon/spotify.png" width=30></td>
+    <td>
+        <a href = "https://www.spotify.com">
+            <img src="./assets/soft-icon/spotify.png" width=30>
+        </a>
+    </td>
     <td><del>spotify</td>
-    <td></td>
+    <td>Воспроизвести музыку из музыкального сервиса Spotify</td>
 </tr>
 <tr>
-    <td><img src="./assets/soft-icon/vlc.png" width=30></td>
+    <td>
+        <a href = "https://www.videolan.org/vlc/">
+            <img src="./assets/soft-icon/vlc.png" width=30>
+        </a>
+    </td>
     <td>vlc</td>
-    <td></td>
+    <td>Кросс-платформенный медиаплеер и потоковый сервер</td>
 </tr>
 <tr>
-    <td><img src="./assets/soft-icon/obs-studio.png" width=30></td>
+    <td>
+        <a href = "https://obsproject.com/">
+            <img src="./assets/soft-icon/obs-studio.png" width=30>
+        </a>
+    </td>
     <td>obs-studio</td>
-    <td></td>
+    <td>Бесплатное и открытое программное обеспечение для записи видео и прямой трансляции</td>
 </tr>
 <tr>
-    <td><img src="./assets/soft-icon/easyeffects.png" width=30></td>
+    <td>
+        <a href = "https://github.com/wwmm/easyeffects">
+            <img src="./assets/soft-icon/easyeffects.png" width=30>
+        </a>
+    </td>
     <td>easyeffects</td>
-    <td></td>
+    <td>Аудиоэффекты для приложений PipeWire</td>
 </tr>
 <tr>
-    <td><img src="./assets/soft-icon/youtube-music.png" width=30></td>
+    <td>
+        <a href = "https://th-ch.github.io/youtube-music/">
+            <img src="./assets/soft-icon/youtube-music.png" width=30>
+        </a>
+    </td>
     <td>youtube-music</td>
-    <td></td>
+    <td>Электронная обертка вокруг YouTube Music</td>
 </tr>
 <tr>
-    <td><img src="./assets/soft-icon/davinci-resolve.png" width=30></td>
+    <td>
+        <a href = "https://www.blackmagicdesign.com/products/davinciresolve">
+            <img src="./assets/soft-icon/davinci-resolve.png" width=30>
+        </a>
+    </td>
     <td>davinci-resolve</td>
-    <td></td>
+    <td>Профессиональное редактирование видео, цвет, эффекты и аудио постобработка</td>
 </tr>
 <tr>
-    <td><img src="./assets/soft-icon/shotcut.png" width=30></td>
+    <td>
+        <a href = "https://shotcut.org/">
+            <img src="./assets/soft-icon/shotcut.png" width=30>
+        </a>
+    </td>
     <td><del>shotcut</td>
-    <td></td>
+    <td>Бесплатный, открытый, кросс-платформенный видеоредактор</td>
 </tr>
 <tr>
-    <td><img src="./assets/soft-icon/olive-editor.png" width=30></td>
+    <td>
+        <a href = "https://www.olivevideoeditor.org/">
+            <img src="./assets/soft-icon/olive-editor.png" width=30>
+        </a>
+    </td>
     <td><del>olive-editor</td>
-    <td></td>
+    <td>Профессиональный видеоредактор NLE с открытым исходным кодом</td>
 </tr>
 <tr>
     <td rowspan=1>AI</td>
-    <td><img src="./assets/soft-icon/lmstudio.png" width=30></td>
+    <td>
+        <a href = "https://lmstudio.ai/">
+            <img src="./assets/soft-icon/lmstudio.png" width=30>
+        </a>
+    </td>
     <td>lmstudio</td>
-    <td></td>
+    <td>LM Studio - это простое в использовании настольное приложение для экспериментов с локальными и открытыми моделями большого языка (LM)</td>
 </tr>
 <tr>
     <td rowspan=1>WinApps</td>
-    <td><img src="./assets/soft-icon/freerdp.png" width=30></td>
+    <td>
+        <a href = "https://www.freerdp.com/">
+            <img src="./assets/soft-icon/freerdp.png" width=30>
+        </a>
+    </td>
     <td>freerdp</td>
-    <td></td>
+    <td>Клиент протокола удаленных рабочих столов</td>
 </tr>
 <tr>
     <td rowspan=1>Training_programs</td>
-    <td><img src="./assets/soft-icon/logisim.png" width=30></td>
+    <td>
+        <a href = "https://www.cburch.com/logisim/">
+            <img src="./assets/soft-icon/logisim.png" width=30>
+        </a>
+    </td>
     <td>logisim</td>
-    <td></td>
+    <td>Образовательный инструмент для проектирования и моделирования цифровых логических схем</td>
 </tr>
 <tr>
     <td rowspan=8>All</td>
-    <td><img src="./assets/soft-icon/authenticator.png" width=30></td>
+    <td>
+        <a href = "https://gitlab.gnome.org/World/Authenticator">
+            <img src="./assets/soft-icon/authenticator.png" width=30>
+        </a>
+    </td>
     <td>authenticator</td>
-    <td></td>
+    <td>Двухфакторный генератор кода аутентификации для GNOME</td>
 </tr>
 </table>
 </details>
