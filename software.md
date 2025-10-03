@@ -256,135 +256,253 @@
 </tr>
 <tr>
     <td rowspan=1>Bash</td>
-    <td><img src="./assets/soft-icon/fish.png" width=30></td>
+    <td>
+        <a href="https://fishshell.com/">
+            <img src="./assets/soft-icon/fish.png" width=30>
+        </a>
+    </td>
     <td>fish</td>
-    <td></td>
+    <td>Умная и удобная для пользователя оболочка командной строки</td>
 </tr>
 <tr>
     <td rowspan=2>Editors</td>
-    <td><img src="./assets/soft-icon/vim.png" width=30></td>
+    <td>
+        <a href="https://www.vim.org/">
+            <img src="./assets/soft-icon/vim.png" width=30>
+        </a>
+    </td>
     <td>vim</td>
-    <td></td>
+    <td>Самый популярный клон VI редактора</td>
 </tr>
 <tr>
-    <td><img src="./assets/soft-icon/neovim.png" width=30></td>
+    <td>
+        <a href="https://neovim.io/">
+            <img src="./assets/soft-icon/neovim.png" width=30>
+        </a>
+    </td>
     <td>neovim</td>
-    <td></td>
+    <td>Вилка текстового редактора Vim ориентирована на растяжимость и гибкость</td>
 </tr>
 <tr>
-    <td rowspan=4>Lazy</td>
-    <td><img src="./assets/soft-icon/warp.png" width=30></td>
+    <td rowspan=5>Lazy</td>
+    <td>
+        <a href="https://github.com/jesseduffield/lazycli">
+            <img src="./assets/soft-icon/warp.png" width=30>
+        </a>
+    </td>
     <td>lazycli</td>
-    <td></td>
+    <td>Инструмент для статического превращения команд CLI в TUI</td>
 </tr>
 <tr>
-    <td><img src="./assets/soft-icon/warp.png" width=30></td>
+    <td>
+        <a href="https://github.com/jesseduffield/lazygit">
+            <img src="./assets/soft-icon/warp.png" width=30>
+        </a>
+    </td>
     <td>lazygit</td>
-    <td></td>
+    <td>Простой интерфейс терминала для git-команд</td>
 </tr>
 <tr>
-    <td><img src="./assets/soft-icon/warp.png" width=30></td>
+    <td>
+        <a href="https://github.com/jesseduffield/lazydocker">
+            <img src="./assets/soft-icon/warp.png" width=30>
+        </a>
+    </td>
     <td>lazydocker</td>
-    <td></td>
+    <td>Простой интерфейс терминала как для докера, так и для докер-композиции</td>
 </tr>
 <tr>
-    <td><img src="./assets/soft-icon/warp.png" width=30></td>
+    <td>
+        <a href="https://github.com/Adembc/lazyssh">
+            <img src="./assets/soft-icon/warp.png" width=30>
+        </a>
+    </td>
     <td>lazyssh</td>
-    <td></td>
+    <td>Менеджер SSH на базе терминала</td>
+</tr>
+<tr>
+    <td>
+        <a href="https://github.com/jorgerojas26/lazysql">
+            <img src="./assets/soft-icon/warp.png" width=30>
+        </a>
+    </td>
+    <td>lazysql</td>
+    <td>Кросс-платформенный инструмент управления базой данных TUI, написанный в Go</td>
 </tr>
 <tr>
     <td rowspan=4>Fetch</td>
-    <td><img src="./assets/soft-icon/neofetch.png" width=30></td>
+    <td>
+        <a href="https://github.com/dylanaraps/neofetch">
+            <img src="./assets/soft-icon/neofetch.png" width=30>
+        </a>
+    </td>
     <td>neofetch</td>
-    <td></td>
+    <td>Быстрый, высоко настраиваемый системный информационный скрипт</td>
 </tr>
 <tr>
-    <td><img src="./assets/soft-icon/.png" width=30></td>
+    <td>
+        <a href="https://github.com/fastfetch-cli/fastfetch">
+            <img src="./assets/soft-icon/.png" width=30>
+        </a>
+    </td>
     <td>fastfetch</td>
-    <td></td>
+    <td>Активно обслуживаемый, многофункциональный и ориентированный на производительность, необъект, как инструмент информации системы</td>
 </tr>
 <tr>
-    <td><img src="./assets/soft-icon/.png" width=30></td>
+    <td>
+        <a href="https://github.com/Dr-Noob/cpufetch">
+            <img src="./assets/soft-icon/.png" width=30>
+        </a>
+    </td>
     <td>cpufetch</td>
-    <td></td>
+    <td>Упрощенный, но причудливый инструмент для привлечения архитектуры процессора</td>
 </tr>
 <tr>
-    <td><img src="./assets/soft-icon/.png" width=30></td>
+    <td>
+        <a href="https://github.com/ThatOneCalculator/NerdFetch">
+            <img src="./assets/soft-icon/nerdfetch.png" width=30>
+        </a>
+    </td>
     <td>nerdfetch</td>
-    <td></td>
+    <td>POSIX *nix (Linux, macOS, Android, *BSD и т. Д.) Приносят скрипт с помощью Nerdfonts</td>
+</tr>
+<tr>
+    <td>
+        <a href="https://github.com/trakBan/ipfetch">
+            <img src="./assets/soft-icon/.png" width=30>
+        </a>
+    </td>
+    <td>ipfetch</td>
+    <td>Neofetch но для ip адресов</td>
 </tr>
 <tr>
     <td rowspan=5>Top</td>
-    <td><img src="./assets/soft-icon/htop.png" width=30></td>
+    <td>
+        <a href="https://htop.dev/">
+            <img src="./assets/soft-icon/htop.png" width=30>
+        </a>
+    </td>
     <td>htop</td>
-    <td></td>
+    <td>Интерактивный просмотрщик процессов</td>
 </tr>
 <tr>
-    <td><img src="./assets/soft-icon/btop.png" width=30></td>
+    <td>
+        <a href="https://github.com/aristocratos/btop">
+            <img src="./assets/soft-icon/btop.png" width=30>
+        </a>
+    </td>
     <td>btop</td>
-    <td></td>
+    <td>Мониторинг ресурсов</td>
 </tr>
 <tr>
-    <td><img src="./assets/soft-icon/neohtop.png" width=30></td>
-    <td>neohtop</td>
-    <td></td>
+    <td>
+        <a href="https://github.com/Abdenasser/neohtop">
+            <img src="./assets/soft-icon/neohtop.png" width=30>
+        </a>
+    </td>
+    <td><del>neohtop</td>
+    <td>Пылающий быстрой системный мониторинг для вашего рабочего стола</td>
 </tr>
 <tr>
-    <td><img src="./assets/soft-icon/nvtop.png" width=30></td>
+    <td>
+        <a href="https://github.com/Syllo/nvtop">
+            <img src="./assets/soft-icon/nvtop.png" width=30>
+        </a>
+    </td>
     <td>nvtopPackages.full</td>
-    <td></td>
+    <td>Хтоп-подобный монитор задач для графических процессоров AMD, Adreno, Intel и NVIDIA</td>
 </tr>
 <tr>
-    <td><img src="./assets/soft-icon/duf.png" width=30></td>
+    <td>
+        <a href="https://github.com/muesli/duf/">
+            <img src="./assets/soft-icon/duf.png" width=30>
+        </a>
+    </td>
     <td>duf</td>
-    <td></td>
+    <td>Использование диска/бесплатная утилита</td>
 </tr>
 <tr>
     <td rowspan=2>Terminal</td>
-    <td><img src="./assets/soft-icon/alacritty.png" width=30></td>
+    <td>
+        <a href="https://github.com/alacritty/alacritty">
+            <img src="./assets/soft-icon/alacritty.png" width=30>
+        </a>
+    </td>
     <td>alacritty</td>
-    <td></td>
+    <td>Кроссплатформенный, графический-ускоренный эмулятор терминала</td>
 </tr>
 <tr>
-    <td><img src="./assets/soft-icon/yazi.png" width=30></td>
+    <td>
+        <a href="https://github.com/sxyazi/yazi">
+            <img src="./assets/soft-icon/yazi.png" width=30>
+        </a>
+    </td>
     <td>yazi</td>
-    <td></td>
+    <td>Быстрый терминалный файловый менеджер написан в Rust, основанный на async I/O</td>
 </tr>
 <tr>
     <td rowspan=7>All</td>
-    <td><img src="./assets/soft-icon/jq.svg" width=30></td>
+    <td>
+        <a href="https://jqlang.org/">
+            <img src="./assets/soft-icon/jq.svg" width=30>
+        </a>
+    </td>
     <td>jq</td>
-    <td></td>
+    <td>Легкий и гибкий процессор командной линии JSON</td>
 </tr>
 <tr>
-    <td><img src="./assets/soft-icon/.png" width=30></td>
+    <td>
+        <a href="https://github.com/sharkdp/fd">
+            <img src="./assets/soft-icon/.png" width=30>
+        </a>
+    </td>
     <td>fd</td>
-    <td></td>
+    <td>Простая, быстрая и удобная альтернатива для поиска</td>
 </tr>
 <tr>
-    <td><img src="./assets/soft-icon/warp.png" width=30></td>
+    <td>
+        <a href="https://github.com/lsd-rs/lsd">
+            <img src="./assets/soft-icon/warp.png" width=30>
+        </a>
+    </td>
     <td>lsd</td>
-    <td></td>
+    <td>следующий поколение ls команда</td>
 </tr>
 <tr>
-    <td><img src="./assets/soft-icon/bat.png" width=30></td>
+    <td>
+        <a href="https://github.com/sharkdp/bat">
+            <img src="./assets/soft-icon/bat.png" width=30>
+        </a>
+    </td>
     <td>bat</td>
-    <td></td>
+    <td>Cat(1) клон с синтаксисом и интеграцией Git</td>
 </tr>
 <tr>
-    <td><img src="./assets/soft-icon/.png" width=30></td>
+    <td>
+        <a href="https://www.gnu.org/software/wget/">
+            <img src="./assets/soft-icon/.png" width=30>
+        </a>
+    </td>
     <td>wget</td>
-    <td></td>
+    <td>Инструмент для извлечения файлов с помощью HTTP, HTTPS и FTP</td>
 </tr>
 <tr>
-    <td><img src="./assets/soft-icon/.png" width=30></td>
+    <td>
+        <a href="https://github.com/karlstav/cava">
+            <img src="./assets/soft-icon/.png" width=30>
+        </a>
+    </td>
     <td>cava</td>
-    <td></td>
+    <td>Консольный аудио визуализатор для Alsa</td>
 </tr>
 <tr>
-    <td><img src="./assets/soft-icon/git.png" width=30></td>
+    <td>
+        <a href="https://git-scm.com/">
+            <img src="./assets/soft-icon/git.png" width=30>
+        </a>
+    </td>
     <td>git</td>
-    <td></td>
+    <td>Распределенная система управления версией</td>
 </tr>
 </table>
 </details>

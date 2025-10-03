@@ -15,17 +15,19 @@
     lazygit
     lazydocker
     lazyssh
+    lazysql
 
     #=> Fetch
     neofetch
     fastfetch
     cpufetch
     nerdfetch
+    ipfetch
 
     #=> Top
     htop
     btop
-    neohtop
+    # neohtop
     nvtopPackages.full
     duf # disk
 
