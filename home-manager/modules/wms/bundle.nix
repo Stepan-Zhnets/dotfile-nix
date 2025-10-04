@@ -2,7 +2,7 @@
 
 {
 imports = [
-  # ./fabric/fabric.nix
+  ./eww/eww.nix
   ./hyprland/hyprland.nix
   ./waybar/waybar.nix
   ./rofi/rofi.nix
