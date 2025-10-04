@@ -8,6 +8,13 @@
     python3
     uv
 
+    #=> Fabric
+    gtk
+    cairo
+    gtk-layer-shell
+    gobject-introspection
+    pkgconf
+
     #=> N8N
     # n8n
 
