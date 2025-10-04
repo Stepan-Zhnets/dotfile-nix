@@ -5,6 +5,6 @@ programs.eww = {
   enable = true;
   package = pkgs.eww;
   enableBashFishIntegration = true;
-  config.Dir = ./*;
+  config.Dir = ./wms/eww/;
 };
 }
