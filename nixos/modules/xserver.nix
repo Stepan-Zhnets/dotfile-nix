@@ -8,6 +8,9 @@
       displayManager.sddm.enable = true;
       desktopManager.plasma6.enable = true;
 
+	#=>Enable thee Gnome Desktop Environment.
+	# desktopManager.gnome.enable = true;
+
     xserver = {
       enable = true;
       # #=>Enable the KDE Plasma Desktop Environment. (XServer)

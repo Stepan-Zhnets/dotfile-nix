@@ -2,12 +2,21 @@
 
 { config, lib, ... }:
 let 
-  # Import the color theme
-  colorTheme = import ./../../color_theme.nix;
-  # Use gruvbox_dark theme by default
-  colors = colorTheme.gruvbox_dark;
+  # Используем тему gruvbox_dark по умолчанию
+  colors = {
+    bg_0 = "#1d2021";
+    bg_1 = "#3c3836";
+    bg_2 = "#504945";
+    bg_3 = "#665c54";
+    fg_1 = "#fbf1c7";
+    fg_3 = "#bdae93";
+    gray_n = "#928374";
+    red_b = "#fb4934";
+    green_b = "#b8bb26";
+    orange_b = "#fe8019";
+  };
   
-  # Color variables for better organization
+  # Цветовые переменные для лучшей организации
   bg-primary = colors.bg_0;
   bg-secondary = colors.bg_2;
   bg-tertiary = colors.bg_3;
@@ -20,216 +29,90 @@ let
 in
 {
   programs.waybar.style = ''
-* {
-    border: none;
-    border-radius: 0;
-    /* `otf-font-awesome` is required to be installed for icons */
-    font-family: JetBrains Mono;
-    font-weight: bold; 
-    min-height: 20px;
-}
-
-window#waybar {
-    background: transparent;
-}
-
-window#waybar.hidden {
-    opacity: 0.2;
-}
-
-#workspaces {
-    margin-right: 8px;
-    border-radius: 10px;
-    transition: none;
-    background: ${bg-secondary};
-}
-
-#workspaces button {
-    transition: none;
-    color: ${fg-secondary};
-    background: transparent;
-    padding: 5px;
-    font-size: 18px;
-}
-
-#workspaces button.persistent {
-    color: ${fg-secondary};
-    font-size: 12px;
-}
-
-/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
-#workspaces button:hover {
-    transition: none;
-    box-shadow: inherit;
-    text-shadow: inherit;
-    border-radius: inherit;
-    color: ${bg-secondary};
-    background: ${fg-secondary};
-}
-
-#workspaces button.active {
-    background: ${bg-tertiary};
-    color: ${fg-primary};
-    border-radius: inherit;
-}
-
-#language {
-    padding-left: 16px;
-    padding-right: 8px;
-    border-radius: 10px 0px 0px 10px;
-    transition: none;
-    color: ${fg-primary};
-    background: ${bg-secondary};
-}
-
-#keyboard-state {
-    margin-right: 8px;
-    padding-right: 16px;
-    border-radius: 0px 10px 10px 0px;
-    transition: none;
-    color: ${fg-primary};
-    background: ${bg-secondary};
-}
-
-#custom-pacman {
-    padding-left: 16px;
-    padding-right: 8px;
-    border-radius: 10px 0px 0px 10px;
-    transition: none;
-    color: ${fg-primary};
-    background: ${bg-secondary};
-}
-
-#custom-mail {
-    margin-right: 8px;
-    padding-right: 16px;
-    border-radius: 0px 10px 10px 0px;
-    transition: none;
-    color: ${fg-primary};
-    background: ${bg-secondary};
-}
-
-#submap {
-    padding-left: 16px;
-    padding-right: 16px;
-    border-radius: 10px;
-    transition: none;
-    color: ${fg-primary};
-    background: ${bg-secondary};
-}
-
-#clock {
-    padding-left: 16px;
-    padding-right: 16px;
-    border-radius: 10px 10px 10px 10px;
-    transition: none;
-    color: ${fg-primary};
-    background: ${bg-secondary};
-}
-
-#pulseaudio {
-    margin-right: 8px;
-    padding-left: 16px;
-    padding-right: 16px;
-    border-radius: 10px;
-    transition: none;
-    color: ${fg-primary};
-    background: ${bg-secondary};
-}
-
-#pulseaudio.muted {
-    background-color: ${gray-neutral};
-    color: ${bg-primary};
-}
-
-#custom-mem {
-    margin-right: 8px;
-    padding-left: 16px;
-    padding-right: 16px;
-    border-radius: 10px;
-    transition: none;
-    color: ${fg-primary};
-    background: ${bg-secondary};
-}
-
-#cpu {
-    margin-right: 8px;
-    padding-left: 16px;
-    padding-right: 16px;
-    border-radius: 10px;
-    transition: none;
-    color: ${fg-primary};
-    background: ${bg-secondary};
-}
-
-#temperature {
-    margin-right: 8px;
-    padding-left: 16px;
-    padding-right: 16px;
-    border-radius: 10px;
-    transition: none;
-    color: ${fg-primary};
-    background: ${bg-secondary};
-}
-
-#temperature.critical {
-    background-color: ${red-bright};
-}
-
-#backlight {
-    margin-right: 8px;
-    padding-left: 16px;
-    padding-right: 16px;
-    border-radius: 10px;
-    transition: none;
-    color: ${fg-primary};
-    background: ${bg-secondary};
-}
-
-#battery {
-    margin-right: 8px;
-    padding-left: 16px;
-    padding-right: 16px;
-    border-radius: 10px;
-    transition: none;
-    color: ${fg-primary};
-    background: ${bg-secondary};
-}
-
-#battery.charging {
-    color: ${fg-primary};
-    background-color: ${green-bright};
-}
-
-#battery.warning:not(.charging) {
-    background-color: ${orange-bright};
-    color: ${bg-primary};
-}
-
-#battery.critical:not(.charging) {
-    background-color: ${red-bright};
-    color: ${fg-primary};
-    animation-name: blink;
-    animation-duration: 0.5s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-}
-
-#tray {
-    padding-left: 16px;
-    padding-right: 16px;
-    border-radius: 10px;
-    transition: none;
-    color: ${fg-primary};
-    background: ${bg-secondary};
-}
-
-@keyframes blink {
-    to {
-        background-color: ${fg-primary};
-        color: ${bg-primary};
+    * {
+      border: none;
+      border-radius: 0px;
+      font-family: "JetBrainsMono Nerd Font";
+      font-size: 12px;
     }
-}
+
+    window#waybar {
+      background-color: ${bg-primary};
+      color: ${fg-primary};
+      border-bottom: 1px solid ${fg-secondary};
+    }
+
+    .modules {
+      margin: 0 5px;
+    }
+
+    .module {
+      background-color: ${bg-secondary};
+      color: ${fg-primary};
+      padding: 0 8px;
+      margin: 3px 2px;
+      border-radius: 4px;
+    }
+
+    .module:hover {
+      background-color: ${bg-tertiary};
+    }
+
+    #clock {
+      background-color: ${bg-secondary};
+      color: ${fg-primary};
+      padding: 0 10px;
+      margin: 3px 2px;
+      border-radius: 4px;
+    }
+
+    #battery {
+      background-color: ${bg-secondary};
+      color: ${fg-primary};
+      padding: 0 10px;
+      margin: 3px 2px;
+      border-radius: 4px;
+    }
+
+    #cpu {
+      background-color: ${bg-secondary};
+      color: ${fg-primary};
+      padding: 0 10px;
+      margin: 3px 2px;
+      border-radius: 4px;
+    }
+
+    #memory {
+      background-color: ${bg-secondary};
+      color: ${fg-primary};
+      padding: 0 10px;
+      margin: 3px 2px;
+      border-radius: 4px;
+    }
+
+    #pulseaudio {
+      background-color: ${bg-secondary};
+      color: ${fg-primary};
+      padding: 0 10px;
+      margin: 3px 2px;
+      border-radius: 4px;
+    }
+
+    #backlight {
+      background-color: ${bg-secondary};
+      color: ${fg-primary};
+      padding: 0 10px;
+      margin: 3px 2px;
+      border-radius: 4px;
+    }
+
+    #tray {
+      background-color: ${bg-secondary};
+      color: ${fg-primary};
+      padding: 0 10px;
+      margin: 3px 2px;
+      border-radius: 4px;
+    }
   '';
 }
+

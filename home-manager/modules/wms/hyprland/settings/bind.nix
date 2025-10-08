@@ -16,7 +16,7 @@
 		"$mainMod, J, togglesplit, # dwindle"
     "$mainMod, R, exec, rofi -show drun"
     "$mainMod, L, exec, wlogout" # hyprlock
-
+		"$mainMod SHIFT, S, exec, ferrishot"
 		# {_ПЕРЕМЕЩЕНИЕ_ФОКУСА_}
 		"$mainMod, left,  movefocus, l"
 		"$mainMod, right, movefocus, r"

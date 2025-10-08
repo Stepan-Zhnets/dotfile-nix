@@ -8,7 +8,7 @@
       inactive_opacity = 1.0;
 
       blur = {
-        enabled = true;
+        enabled = false;
         size = 8;
         passes = 1;
 

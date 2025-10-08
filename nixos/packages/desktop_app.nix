@@ -35,6 +35,8 @@
     davinci-resolve
     # shotcut
     # olive-editor
+    # flameshot
+    ferrishot
 
     #=> AI
     lmstudio
