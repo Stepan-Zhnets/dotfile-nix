@@ -3,9 +3,9 @@
 {
   programs.waybar.settings = {
     mainBar = {
-      layer = "top"; # bottom
-      position = "top";
-      margin = "9 13 10 18";
+      layer = "top";
+      position = "bottom";
+      margin = "1 250 1 250";
 
       modules-left = [
         "hyprland/workspaces"
@@ -47,13 +47,11 @@
       };
 
       "clock" = {
-        # timezone = "Europe/Moscow";
         tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
         format = "{:%a; %d %b, %I:%M %p}";
       };
 
       "pulseaudio" = {
-        # scroll-step = 1; # %, can be a float
         reverse-scrolling = 1;
         format = "{volume}% {icon} {format_source}";
         format-bluetooth = "{volume}% {icon} {format_source}";
@@ -84,15 +82,11 @@
       "cpu" = {
         interval = 2;
         format = "{usage}% ";
-        #format = "{usage}% 󰘚";
         min-length = 6;
       };
 
       "temperature" = {
-        # thermal-zone = 2;
-        # hwmon-path = "/sys/class/hwmon/hwmon2/temp1_input";
         critical-threshold = 80;
-        # format-critical = "{temperatureC}°C {icon}";
         format = "{temperatureC}°C {icon}";
         format-icons = ["" "" "" "" ""];
         tooltip = false;
@@ -122,6 +116,6 @@
         icon-size = 16;
         spacing = 0;
       };
-		};
+    };
   };
 }

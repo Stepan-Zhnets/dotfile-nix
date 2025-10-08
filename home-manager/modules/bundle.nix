@@ -5,6 +5,7 @@ imports = [
   ./alacritty.nix
   ./cava.nix
   ./librewolf.nix
+  ./eww.nix
   ./fastfetch.nix
   ./git.nix
   ./zeditor.nix

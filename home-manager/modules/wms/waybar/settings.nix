@@ -22,6 +22,7 @@
         "cpu"
         "backlight"
         "battery"
+        "network"
         "tray"
       ];
 
@@ -116,6 +117,18 @@
         format-alt = "{time} {icon}";
         format-icons = ["" "" "" "" "" "" "" "" "" ""];
         on-update = "$HOME/.config/waybar/scripts/check_battery.sh";
+      };
+
+      network = {
+        # interface = "wlp0s20f3";
+        format-ethernet = "\\udb83\\udc9d ";
+        format-wifi = "{icon}";
+        format-disconnected = "\\udb83\\udc9c ";
+        format-icons = ["\\udb82\\udd2f" "\\udb82\\udd1f" "\\udb82\\udd22" "\\udb82\\udd25" "\\udb82\\udd28"];
+        tooltip-format-wifi = "{essid} ({signalStrength}%)";
+        tooltip-format-ethernet = "{ifname} {ipaddr}";
+        tooltip-format-disconnected = "Отключено";
+        format-alt = "{ifname}: {ipaddr}/{cidr}";
       };
 
       tray = {

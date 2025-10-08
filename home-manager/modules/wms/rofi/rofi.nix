@@ -22,6 +22,7 @@
       disable-history = false;
       hide-scrollbar = true;
       display-drun = "Apps";
+      display-window = "Window";
     };
       # sidebar-mode = true;
   };
