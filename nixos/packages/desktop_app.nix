@@ -46,6 +46,7 @@
 
     #=> {_Training_programs_}
     logisim
+    logisim-evolution
 
     #=> All
     authenticator
