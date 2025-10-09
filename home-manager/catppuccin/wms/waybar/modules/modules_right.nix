@@ -8,6 +8,7 @@
       "cpu"
       "backlight"
       "battery"
+      "network"
       "tray"
     ];
 
@@ -70,6 +71,19 @@
       format-alt = "{time} {icon}";
       format-icons = ["" "" "" "" "" "" "" "" "" ""];
       on-update = "$HOME/.config/waybar/scripts/check_battery.sh";
+    };
+
+    network = {
+      interface = "wlp2s0";
+      format = "{ifname}";
+      format-wifi = "{essid} ({signalStrength}%) ";
+      format-ethernet = "{ipaddr}/{cidr} 󰊗";
+      format-disconnected = "";
+      tooltip-format = "{ifname} via {gwaddr} 󰊗";
+      tooltip-format-wifi = "{essid} ({signalStrength}%) ";
+      tooltip-format-ethernet = "{ifname} ";
+      tooltip-format-disconnected = "Disconnected";
+      max-length = 50;
     };
 
     tray = {

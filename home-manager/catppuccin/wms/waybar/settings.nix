@@ -3,9 +3,9 @@
 {
   programs.waybar.settings = {
     mainBar = {
-      layer = "top";
-      position = "bottom";
-      margin = "1 250 1 250";
+      layer = "bottom";
+      position = "bottom"; # bottom, top
+      margin = "0 25 0 25";
     };
   };
 }
