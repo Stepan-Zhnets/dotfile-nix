@@ -110,7 +110,8 @@ homeConfigurations = {
 		pkgs = nixpkgs.legacyPackages.${system};
 		extraSpecialArgs = { inherit inputs; };
 		modules = [
-			./home-manager/home.nix
+			./home-manager/gruvbox.nix
+			# ./home-manager/catppuccin.nix
 		];
 	};
 };

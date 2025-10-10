@@ -5,7 +5,7 @@
   imports = [
     ./style.nix
     ./settings.nix
-    ./modules/bundle.nix
+    # ./modules/bundle.nix
   ];
 
   programs.waybar = {

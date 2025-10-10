@@ -1,7 +1,7 @@
 # ~/nix/home-manager/home.nix
 {
 	imports = [
-		./modules/bundle.nix
+		./modules/gruvbox.nix
 	];
 
 	# Выбор цветовой темы
