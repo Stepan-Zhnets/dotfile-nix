@@ -1,11 +1,15 @@
 # ~/home-manager/modules/wms/waybar/settings.nix
 
 {
+  imports = [
+    # ./modules/bundle.nix
+  ];
+
   programs.waybar.settings = {
     mainBar = {
-      layer = "top"; # bottom
-      position = "top";
-      margin = "9 13 10 18";
+      layer = "top";
+      position = "top"; # bottom, top
+      margin = "0 25 0 25";
 
       modules-left = [
         "hyprland/workspaces"
@@ -48,13 +52,11 @@
       };
 
       "clock" = {
-        # timezone = "Europe/Moscow";
         tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
         format = "{:%a; %d %b, %I:%M %p}";
       };
 
       "pulseaudio" = {
-        # scroll-step = 1; # %, can be a float
         reverse-scrolling = 1;
         format = "{volume}% {icon} {format_source}";
         format-bluetooth = "{volume}% {icon} {format_source}";
@@ -85,15 +87,11 @@
       "cpu" = {
         interval = 2;
         format = "{usage}% ";
-        #format = "{usage}% 󰘚";
         min-length = 6;
       };
 
       "temperature" = {
-        # thermal-zone = 2;
-        # hwmon-path = "/sys/class/hwmon/hwmon2/temp1_input";
         critical-threshold = 80;
-        # format-critical = "{temperatureC}°C {icon}";
         format = "{temperatureC}°C {icon}";
         format-icons = ["" "" "" "" ""];
         tooltip = false;
@@ -106,10 +104,10 @@
         min-length = 7;
       };
 
-      battery = {
+      "battery" = {
         states = {
-            warning = 30;
-            critical = 15;
+          warning = 30;
+          critical = 15;
         };
         format = "{capacity}% {icon}";
         format-charging = "{capacity}% ";
@@ -119,22 +117,23 @@
         on-update = "$HOME/.config/waybar/scripts/check_battery.sh";
       };
 
-      network = {
-        # interface = "wlp0s20f3";
-        format-ethernet = "\\udb83\\udc9d ";
-        format-wifi = "{icon}";
-        format-disconnected = "\\udb83\\udc9c ";
-        format-icons = ["\\udb82\\udd2f" "\\udb82\\udd1f" "\\udb82\\udd22" "\\udb82\\udd25" "\\udb82\\udd28"];
-        tooltip-format-wifi = "{essid} ({signalStrength}%)";
-        tooltip-format-ethernet = "{ifname} {ipaddr}";
-        tooltip-format-disconnected = "Отключено";
-        format-alt = "{ifname}: {ipaddr}/{cidr}";
+      "network" = {
+        interface = "wlp2s0";
+        format = "{ifname}";
+        format-wifi = "{essid} ({signalStrength}%) ";
+        format-ethernet = "{ipaddr}/{cidr} 󰊗";
+        format-disconnected = "";
+        tooltip-format = "{ifname} via {gwaddr} 󰊗";
+        tooltip-format-wifi = "{essid} ({signalStrength}%) ";
+        tooltip-format-ethernet = "{ifname} ";
+        tooltip-format-disconnected = "Disconnected";
+        max-length = 50;
       };
 
-      tray = {
+      "tray" = {
         icon-size = 16;
         spacing = 0;
       };
-		};
+    };
   };
 }

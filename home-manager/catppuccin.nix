@@ -1,7 +1,7 @@
 # ~/hms/catppuccine/home.nix
 
 {
-  imports = [ ./modules/bundle.nix ];
+  imports = [ ./catppuccin/bundle.nix ];
 
   home = {
     username = "zhnets";
