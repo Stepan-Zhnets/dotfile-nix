@@ -1,8 +1,6 @@
 # ~/nix/home-manager/home.nix
 {
-	imports = [
-		./modules/gruvbox.nix
-	];
+	imports = [./gruvbox/bundle.nix];
 
 	# Выбор цветовой темы
 	# theme.name = "catppuccin_mocha";
