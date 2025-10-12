@@ -1,235 +1,214 @@
-# ~/home-manager/modules/wms/waybar/style.nix
+# ~/home-manager/gruvbox/wms/waybar/style.nix
 
 { config, lib, ... }:
 let 
-  # Import the color theme
   colorTheme = import ./../../color_theme.nix;
-  # Use gruvbox_dark theme by default
   colors = colorTheme.gruvbox_dark;
+
+  #|==============================|
+
+  # window_br          = "25px 25px 50px 50px"; #top
+  # border_radius      = "25px 25px 50px 50px"; #top
+  border_radius      = "25px";
+
+  window_bgc         = "rgba(202, 51, 51, 0)";
+  window_fgc         = "rgba(202, 51, 51, 0)";
+  # window_bgc         = colors.surface0;
+  # window_fgc         = colors.overlay0;
+  window_bc          = colors.bg_1;
+
+  module_bgc         = colors.bg_1;
+  module_fgc         = colors.fg_0;
+  mod_hover_bgc      = colors.bg_3;
+
+  workspaces_br      = "50px";
+  workspaces_bg      = colors.bg_1;
+  ws_bth_fgc         = colors.fg_0;
+  ws_btn_persistent  = colors.fg_0;
+  ws_btn_hower_fgc   = colors.bg_1;
+  ws_btn_hower_bg    = colors.bg_3;
+  ws_btn_active_bgc  = colors.fg_0;
+  ws_btn_active_fgc  = colors.bg_3;
+
+  language_br        = "50px 0px 0px 50px";
+  language_fgc       = colors.fg_0;
+  language_bc        = colors.bg_1;
   
-  # Color variables for better organization
-  bg-primary = colors.bg_0;
-  bg-secondary = colors.bg_2;
-  bg-tertiary = colors.bg_3;
-  fg-primary = colors.fg_1;
-  fg-secondary = colors.fg_3;
-  gray-neutral = colors.gray_n;
-  red-bright = colors.red_b;
-  green-bright = colors.green_b;
-  orange-bright = colors.orange_b;
+  keyboard_br        = "0px 50px 50px 0px";
+  keyboard_state_fgc = colors.fg_0;
+  keyboard_state_bg  = colors.bg_1;
+
+  clock_bgc          = colors.bg_1;
+  clock_fgc          = colors.fg_0;
+  
+  pulseaudio_bgc     = colors.bg_1;
+  pulseaudio_fgc     = colors.fg_0;
+
+  memory_bgc         = colors.bg_1;
+  memory_fgc         = colors.fg_0;
+  
+  cpu_bgc            = colors.bg_1;
+  cpu_fgc            = colors.fg_0;
+
+  backlight_bgc      = colors.bg_1;
+  backlight_fgc      = colors.fg_0;
+
+  battery_bgc        = colors.bg_1;
+  battery_fgc        = colors.fg_0;
+
+  tray_bgc           = colors.bg_1;
+  tray_fgc           = colors.fg_0;
+
 in
 {
   programs.waybar.style = ''
-* {
-    border: none;
-    border-radius: 0;
-    /* `otf-font-awesome` is required to be installed for icons */
-    font-family: JetBrains Mono;
-    font-weight: bold; 
-    min-height: 20px;
-}
-
-window#waybar {
-    background: transparent;
-}
-
-window#waybar.hidden {
-    opacity: 0.2;
-}
-
-#workspaces {
-    margin-right: 8px;
-    border-radius: 10px;
-    transition: none;
-    background: ${bg-secondary};
-}
-
-#workspaces button {
-    transition: none;
-    color: ${fg-secondary};
-    background: transparent;
-    padding: 5px;
-    font-size: 18px;
-}
-
-#workspaces button.persistent {
-    color: ${fg-secondary};
-    font-size: 12px;
-}
-
-/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
-#workspaces button:hover {
-    transition: none;
-    box-shadow: inherit;
-    text-shadow: inherit;
-    border-radius: inherit;
-    color: ${bg-secondary};
-    background: ${fg-secondary};
-}
-
-#workspaces button.active {
-    background: ${bg-tertiary};
-    color: ${fg-primary};
-    border-radius: inherit;
-}
-
-#language {
-    padding-left: 16px;
-    padding-right: 8px;
-    border-radius: 10px 0px 0px 10px;
-    transition: none;
-    color: ${fg-primary};
-    background: ${bg-secondary};
-}
-
-#keyboard-state {
-    margin-right: 8px;
-    padding-right: 16px;
-    border-radius: 0px 10px 10px 0px;
-    transition: none;
-    color: ${fg-primary};
-    background: ${bg-secondary};
-}
-
-#custom-pacman {
-    padding-left: 16px;
-    padding-right: 8px;
-    border-radius: 10px 0px 0px 10px;
-    transition: none;
-    color: ${fg-primary};
-    background: ${bg-secondary};
-}
-
-#custom-mail {
-    margin-right: 8px;
-    padding-right: 16px;
-    border-radius: 0px 10px 10px 0px;
-    transition: none;
-    color: ${fg-primary};
-    background: ${bg-secondary};
-}
-
-#submap {
-    padding-left: 16px;
-    padding-right: 16px;
-    border-radius: 10px;
-    transition: none;
-    color: ${fg-primary};
-    background: ${bg-secondary};
-}
-
-#clock {
-    padding-left: 16px;
-    padding-right: 16px;
-    border-radius: 10px 10px 10px 10px;
-    transition: none;
-    color: ${fg-primary};
-    background: ${bg-secondary};
-}
-
-#pulseaudio {
-    margin-right: 8px;
-    padding-left: 16px;
-    padding-right: 16px;
-    border-radius: 10px;
-    transition: none;
-    color: ${fg-primary};
-    background: ${bg-secondary};
-}
-
-#pulseaudio.muted {
-    background-color: ${gray-neutral};
-    color: ${bg-primary};
-}
-
-#custom-mem {
-    margin-right: 8px;
-    padding-left: 16px;
-    padding-right: 16px;
-    border-radius: 10px;
-    transition: none;
-    color: ${fg-primary};
-    background: ${bg-secondary};
-}
-
-#cpu {
-    margin-right: 8px;
-    padding-left: 16px;
-    padding-right: 16px;
-    border-radius: 10px;
-    transition: none;
-    color: ${fg-primary};
-    background: ${bg-secondary};
-}
-
-#temperature {
-    margin-right: 8px;
-    padding-left: 16px;
-    padding-right: 16px;
-    border-radius: 10px;
-    transition: none;
-    color: ${fg-primary};
-    background: ${bg-secondary};
-}
-
-#temperature.critical {
-    background-color: ${red-bright};
-}
-
-#backlight {
-    margin-right: 8px;
-    padding-left: 16px;
-    padding-right: 16px;
-    border-radius: 10px;
-    transition: none;
-    color: ${fg-primary};
-    background: ${bg-secondary};
-}
-
-#battery {
-    margin-right: 8px;
-    padding-left: 16px;
-    padding-right: 16px;
-    border-radius: 10px;
-    transition: none;
-    color: ${fg-primary};
-    background: ${bg-secondary};
-}
-
-#battery.charging {
-    color: ${fg-primary};
-    background-color: ${green-bright};
-}
-
-#battery.warning:not(.charging) {
-    background-color: ${orange-bright};
-    color: ${bg-primary};
-}
-
-#battery.critical:not(.charging) {
-    background-color: ${red-bright};
-    color: ${fg-primary};
-    animation-name: blink;
-    animation-duration: 0.5s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-}
-
-#tray {
-    padding-left: 16px;
-    padding-right: 16px;
-    border-radius: 10px;
-    transition: none;
-    color: ${fg-primary};
-    background: ${bg-secondary};
-}
-
-@keyframes blink {
-    to {
-        background-color: ${fg-primary};
-        color: ${bg-primary};
+    * {
+      border: none;
+      border-radius: ${border_radius};
+      font-family: "JetBrainsMono Nerd Font";
+      font-size: 14px;
     }
-}
+
+    window#waybar {
+      background-color: ${window_bgc};
+      color: ${window_fgc};
+    }
+
+    window#waybar.hidden {
+      opacity: 0.2;
+    }
+
+    .modules {
+      margin: 0 5px;
+    }
+
+    .module {
+      background-color: ${module_bgc};
+      color: ${module_fgc};
+      padding: 0 8px;
+      margin: 3px 2px;
+      border-radius: ${border_radius};
+    }
+
+    .module:hover {
+      background-color: ${mod_hover_bgc};
+    }
+
+    #workspaces {
+      margin-right: 8px;
+      border: 2 solid ${ws_bth_fgc};
+      border-radius: ${workspaces_br};
+      transition: none;
+      background: ${workspaces_bg};
+    }
+    #workspaces button {
+      transition: none;
+      color: ${ws_bth_fgc};
+      background: transparent;
+      padding: 5px;
+      font-size: 18px;
+    }
+    #workspaces button.persistent {
+      color: ${ws_btn_persistent};
+      font-size: 12px;
+    }
+    #workspaces button:hover {
+      transition: none;
+      box-shadow: inherit;
+      text-shadow: inherit;
+      border-radius: inherit;
+      color: ${ws_btn_hower_fgc};
+      background: ${ws_btn_hower_bg};
+    }
+    #workspaces button.active {
+      background: ${ws_btn_active_bgc};
+      color: ${ws_btn_active_fgc};
+      border-radius: inherit;
+    }
+
+    #language {
+      padding-left: 16px;
+      padding-right: 8px;
+      border: 2 solid ${language_fgc};
+      border-radius: ${language_br};
+      transition: none;
+      color: ${language_fgc};
+      background: ${language_bc};
+    }
+
+    #keyboard-state {
+      margin-right: 8px;
+      padding-right: 16px;
+      border: 2 solid ${keyboard_state_fgc};
+      border-radius: ${keyboard_br};
+      transition: none;
+      color: ${keyboard_state_fgc};
+      background: ${keyboard_state_bg};
+    }
+
+    #clock {
+      border: 5px;
+      background-color: ${clock_bgc};
+      color: ${clock_fgc};
+      padding: 0 10px;
+      margin: 3px 2px;
+      border-radius: ${border_radius};
+      border: 2 solid ${clock_fgc};
+    }
+
+    #battery {
+      background-color: ${battery_bgc};
+      color: ${battery_fgc};
+      padding: 0 10px;
+      margin: 3px 2px;
+      border: 2 solid ${battery_fgc};
+      border-radius: ${border_radius};
+    }
+
+    #cpu {
+      background-color: ${cpu_bgc};
+      color: ${cpu_fgc};
+      padding: 0 10px;
+      margin: 3px 2px;
+      border: 2 solid ${cpu_fgc};
+      border-radius: ${border_radius};
+    }
+
+    #memory {
+      background-color: ${memory_bgc};
+      color: ${memory_fgc};
+      padding: 0 10px;
+      margin: 3px 2px;
+      border: 2 solid ${memory_fgc};
+      border-radius: ${border_radius};
+    }
+
+    #pulseaudio {
+      background-color: ${pulseaudio_bgc};
+      color: ${pulseaudio_fgc};
+      padding: 0 10px;
+      margin: 3px 2px;
+      border: 2 solid ${pulseaudio_fgc};
+      border-radius: ${border_radius};
+    }
+
+    #backlight {
+      background-color: ${backlight_bgc};
+      color: ${backlight_fgc};
+      padding: 0 10px;
+      margin: 3px 2px;
+      border: 2 solid ${backlight_fgc};
+      border-radius: ${border_radius};
+    }
+
+    #tray {
+      background-color: ${tray_bgc};
+      color: ${tray_fgc};
+      padding: 0 10px;
+      margin: 3px 2px;
+      border: 2 solid ${tray_fgc};
+      border-radius: ${border_radius};
+    }
   '';
 }
+

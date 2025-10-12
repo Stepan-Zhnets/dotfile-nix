@@ -22,7 +22,7 @@
       ];
       modules-right = [
         "pulseaudio"
-        "custom/mem"
+        # "custom/memory"
         "cpu"
         "backlight"
         "battery"
@@ -77,7 +77,7 @@
         min-length = 13;
       };
 
-      "custom/mem" = {
+      "custom/memory" = {
         format = "{} ";
         interval = 3;
         exec = "free -h | awk '/Mem:/{printf $3}'";

@@ -1,4 +1,4 @@
-# ~/hms/catppuccine/home.nix
+# ~/hms/catppuccine/catppuccin.nix
 
 {
   imports = [ ./catppuccin/bundle.nix ];

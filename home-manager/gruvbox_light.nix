@@ -1,6 +1,6 @@
-# ~/nix/home-manager/gruvbox.nix
+# ~/nix/home-manager/gruvbox_light.nix
 {
-	imports = [./gruvbox/bundle.nix];
+	imports = [./gruvbox_light/bundle.nix];
 
 	home = {
 		username = "zhnets";
