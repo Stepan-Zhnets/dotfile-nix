@@ -29,7 +29,8 @@
     mantle    = "#181825";
     crust     = "#181825";
   };
-  catppuccin_mocha_hypr = { #{_CATPPUCCIN_MOCHA_HYPR}
+
+  catppuccin_mocha_hypr = { #{_CATPPUCCIN_MOCHA_HYPR_}
     rosewater = "f5e0dc";
     flamingo  = "f2cdcd";
     pink      = "f5c2e7";
