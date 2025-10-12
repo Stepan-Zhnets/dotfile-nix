@@ -1,4 +1,4 @@
-# ~/home-manager/modules/cava.nix
+# ~/home-manager/catppuccin/cava.nix
 
 { config, ... }:
 let 
@@ -16,13 +16,14 @@ in
         # Use centralized theme colors
         gradient = 1;
 
-        gradient_color_1 = "'${colors.text}'";
-        gradient_color_2 = "'${colors.surface2}'";
-        gradient_color_3 = "'${colors.surface1}'";
-        gradient_color_4 = "'${colors.surface0}'";
-        gradient_color_5 = "'${colors.base}'";
-        gradient_color_6 = "'${colors.mantle}'";
-        gradient_color_7 = "'${colors.crust}'";
+        gradient_color_1 = "'${colors.teal}'";
+        gradient_color_2 = "'${colors.sky}'";
+        gradient_color_3 = "'${colors.sapphire}'";
+        gradient_color_4 = "'${colors.blue}'";
+        gradient_color_5 = "'${colors.mauve}'";
+        gradient_color_6 = "'${colors.pink}'";
+        gradient_color_7 = "'${colors.maroon}'";
+        gradient_color_8 = "'${colors.red}'";
       };
     };
   };
