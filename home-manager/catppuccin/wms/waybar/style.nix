@@ -1,4 +1,4 @@
-# ~/home-manager/modules/wms/waybar/style.nix
+# ~/home-manager/catppuccin/wms/waybar/style.nix
 
 { config, lib, ... }:
 let 

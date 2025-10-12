@@ -1,4 +1,4 @@
-# ~/home-manager/modules/wms/waybar/color.nix
+# ~/home-manager/gruvbox/wms/waybar/color.nix
 
 {
   gruvbox_dark = { # {_GruvBox-Dark_}

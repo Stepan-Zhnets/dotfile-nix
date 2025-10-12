@@ -18,7 +18,7 @@
       ];
       modules-right = [
         "pulseaudio"
-        "custom/mem"
+        # "custom/mem"
         "cpu"
         "backlight"
         "battery"
