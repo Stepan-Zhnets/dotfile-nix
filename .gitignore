@@ -1,4 +1,3 @@
 # ~/nix/.gitignore
-flake.lock
 .vscode
 walls/*
