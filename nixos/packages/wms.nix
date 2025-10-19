@@ -9,11 +9,20 @@
 
     # {_APP_LAUNCHER_}
     rofi
+    rofi-network-manager
     # rofi-wayland
 
     # {_HYPR_}
     hyprland
     hyprlock
     hypridle
+    hyprpaper
+
+    # {_PAPER_}
+    waypaper
+    mpvpaper
+
+    # NIRI
+    niriswitcher
   ];
 }

@@ -8,12 +8,19 @@
 
     #=> Minecraft
     # lunar-client
-    # prismlauncher
+    prismlauncher
 
     #=> Steam
     steam
     adwsteamgtk
 
     # lutris
+
+    #=> Android_gaming
+    waydroid
+    waydroid-helper
+
+    #=> All
+    mangohud
   ];
 }
