@@ -17,6 +17,7 @@
     # lutris
 
     #=> Android_gaming
+    genymotion
     waydroid
     waydroid-helper
 

@@ -54,6 +54,8 @@
 
     #=> WinApps
     freerdp
+    dialog
+    libnotify
 
     #=> Training_programs
     logisim
