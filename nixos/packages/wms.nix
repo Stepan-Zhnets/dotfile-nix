@@ -22,7 +22,7 @@
     waypaper
     mpvpaper
 
-    # NIRI
-    niriswitcher
+    #=> Logout
+    wlogout
   ];
 }

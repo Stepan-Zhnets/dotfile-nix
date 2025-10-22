@@ -75,6 +75,7 @@
       };
 
       lsp = {
+        document.colors = "background";
         rust-analyzer = {
           binary = {
             #                        path = lib.getExe pkgs.rust-analyzer;

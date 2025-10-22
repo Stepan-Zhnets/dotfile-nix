@@ -1,7 +1,7 @@
 # ~/home-manager/catppuccin/wms/waybar/style.nix
 
 { config, lib, ... }:
-let 
+let
   colorTheme = import ./../../color_theme.nix;
   colors = colorTheme.catppuccin_mocha;
 
@@ -17,9 +17,14 @@ let
   # window_fgc         = colors.overlay0;
   window_bc          = colors.mauve;
 
+  module_br          = colors.sky;
   module_bgc         = colors.surface1;
-  module_fgc         = colors.peach;
+  module_fgc         = colors.sky;
   mod_hover_bgc      = colors.surface0;
+
+  distro_icon_br     = "25px";
+  distro_icon_bgc    = colors.surface1;
+  distro_icon_fgc    = colors.sky;
 
   workspaces_br      = "50px";
   workspaces_bg      = colors.surface1;
@@ -33,20 +38,20 @@ let
   language_br        = "50px 0px 0px 50px";
   language_fgc       = colors.green;
   language_bc        = colors.surface1;
-  
+
   keyboard_br        = "0px 50px 50px 0px";
   keyboard_state_fgc = colors.teal;
   keyboard_state_bg  = colors.surface1;
 
   clock_bgc          = colors.surface1;
   clock_fgc          = colors.rosewater;
-  
+
   pulseaudio_bgc     = colors.surface1;
   pulseaudio_fgc     = colors.sapphire;
 
   memory_bgc         = colors.surface1;
-  memory_fgc         = colors.red;
-  
+  memory_fgc         = colors.peach;
+
   cpu_bgc            = colors.surface1;
   cpu_fgc            = colors.mauve;
 
@@ -85,19 +90,33 @@ in
     .module {
       background-color: ${module_bgc};
       color: ${module_fgc};
-      padding: 0 8px;
-      margin: 3px 2px;
+      padding: 0 12 0 8px;
+      margin: 3px 3px;
       border-radius: ${border_radius};
+      border: 2 solid ${module_br};
+      font-size: 14;
     }
 
     .module:hover {
       background-color: ${mod_hover_bgc};
     }
 
+    #custom-distro_icon {
+      padding: 0 12 0 2px;
+      margin: 3px 10px;
+      border: 2 solid ${tray_fgc};
+      border-radius: ${border_radius};
+
+      border: 2 solid ${distro_icon_fgc};
+      background: ${distro_icon_bgc};
+      color: ${distro_icon_fgc};
+      font-size: 26;
+    }
+
     #workspaces {
       margin-right: 8px;
       border: 2 solid ${ws_bth_fgc};
-      border-radius: ${workspaces_br};
+      border-radius: ${border_radius}; /**/
       transition: none;
       background: ${workspaces_bg};
     }
@@ -174,7 +193,7 @@ in
       border-radius: ${border_radius};
     }
 
-    #memory {
+    #custom-memory {
       background-color: ${memory_bgc};
       color: ${memory_fgc};
       padding: 0 10px;
@@ -211,4 +230,3 @@ in
     }
   '';
 }
-
