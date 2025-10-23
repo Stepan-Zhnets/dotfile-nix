@@ -8,6 +8,12 @@
     extensions = ["nix" "toml" "elixir" "make"];
 
     userSettings = {
+      language_models = {
+        openai = {
+          api_url = "https://api.openai.com/v1";
+        };
+      };
+      #/////////////////////////
       assistant = {
         enabled = true;
         version = "2";
@@ -16,9 +22,11 @@
         ### zed.dev models { claude-3-5-sonnet-latest } requires github connected
         ### anthropic models { claude-3-5-sonnet-latest claude-3-haiku-latest claude-3-opus-latest  } requires API_KEY
         ### copilot_chat models { gpt-4o gpt-4 gpt-3.5-turbo o1-preview } requires github connected
-        default_model = { 
-            provider = "zed.dev";
-            model = "claude-3-5-sonnet-latest";
+        default_model = {
+            # provider = "zed.dev";
+            # model = "claude-3-5-sonnet-latest";
+            provider = "lmstudio";
+            model = "openai/gpt-oss-20b";
         };
 
           #                inline_alternatives = [
@@ -56,7 +64,7 @@
         line_height = "comfortable";
         option_as_meta = false;
         button = false;
-        shell = "system"; 
+        shell = "system";
         #{
         #                    program = "zsh";
         #};
@@ -67,21 +75,22 @@
       };
 
       lsp = {
+        document.colors = "background";
         rust-analyzer = {
           binary = {
             #                        path = lib.getExe pkgs.rust-analyzer;
             path_lookup = true;
           };
         };
-        nix = { 
-          binary = { 
-            path_lookup = true; 
-          }; 
+        nix = {
+          binary = {
+            path_lookup = true;
+          };
         };
 
         elixir-ls = {
           binary = {
-            path_lookup = true; 
+            path_lookup = true;
           };
           settings = {
             dialyzerEnabled = true;
@@ -116,8 +125,8 @@
       base_keymap = "VSCode";
       theme = {
         mode = "system";
-        light = "Gruvbox Light Soft";
-        dark = "Gruvbox Dark Soft";
+        # light = "";
+        dark = "Catppuccin Mocha (Blur) [Heavy]";
       };
       show_whitespaces = "all" ;
       ui_font_size = 16;

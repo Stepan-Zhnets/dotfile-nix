@@ -7,6 +7,7 @@
   programs.rofi = {
     enable = true;
     # package = pkgs.rofi-wayland;
+    # theme = ./theme.rasi;
     font = "DejaVu Sans Mono 10";
     location = "bottom"; # center, right, left, top, bottom
     # modules = [];
@@ -22,6 +23,7 @@
       disable-history = false;
       hide-scrollbar = true;
       display-drun = "Apps";
+      slidebar-mode = true;
     };
       # sidebar-mode = true;
   };

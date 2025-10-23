@@ -3,30 +3,30 @@
 { config, pkgs, ...}:
 {
   environment.systemPackages = with pkgs; [
-    #=>Browsers
+    #=> Browsers
     firefox
     librewolf
     mullvad-browser
     chromium
 
-    #=>Editors
+    #=> Editors
     vscodium
     code-cursor
     zed-editor
     # android-studio
 
-    #=>Tools
+    #=> Tools
     libreoffice
     obsidian
     github-desktop
 
-    #=>Chat
+    #=> Chat
     discord
     telegram-desktop
     simplex-chat-desktop
     thunderbird
 
-    #=>Media
+    #=> Media
     # spotify
     vlc
     obs-studio
@@ -35,20 +35,41 @@
     davinci-resolve
     # shotcut
     # olive-editor
-    # flameshot
+    swappy
+    gimp
     ferrishot
+    grim
+    grimblast
+
+    #=> Audio
+    myxer
+    mixxc
+    pulsemeeter
+
+    #=> Wifi
+    iwgtk
 
     #=> AI
     lmstudio
 
     #=> WinApps
     freerdp
+    dialog
+    libnotify
 
-    #=> {_Training_programs_}
+    #=> Training_programs
     logisim
     logisim-evolution
 
+    #=> VPN
+    protonvpn-gui
+    protonvpn-cli_2
+
     #=> All
     authenticator
+
+    # pulseaudioFull
+    # soundtouch
+    # alsa-oss
   ];
 }

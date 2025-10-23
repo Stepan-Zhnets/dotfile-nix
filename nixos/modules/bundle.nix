@@ -10,6 +10,7 @@ imports = [
   # ./fonts.nix
   ./sound.nix
   ./user.nix
+  ./waydroid.nix
   ./xserver.nix
   ./steam.nix
   ./zapret_1.nix

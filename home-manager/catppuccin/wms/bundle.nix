@@ -6,5 +6,7 @@ imports = [
   ./hyprland/hyprland.nix
   ./waybar/waybar.nix
   ./rofi/rofi.nix
+  ./wlogout/wlogout.nix
+  ./hyprpaper.nix
   ];
 }

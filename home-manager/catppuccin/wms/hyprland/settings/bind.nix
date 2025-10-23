@@ -16,7 +16,7 @@
 		"$mainMod, J, togglesplit, # dwindle"
 		"$mainMod, R, exec, rofi -show drun"
 		"$mainMod, L, exec, wlogout" # hyprlock
-		"$mainMod SHIFT, S, exec, ferrishot"
+		"$mainMod SHIFT, S, exec, grimblast copy area"
 
 		# {_ПЕРЕМЕЩЕНИЕ_ФОКУСА_}
 		"$mainMod, left,  movefocus, l"
@@ -86,8 +86,8 @@
 		# '', Print, exec, grim -g "$(slurp)" - | swappy -f -''
 
 		# Waybar
-    # "$mainMod, B, exec, pkill -SIGUSR1 waybar"
-    # "$mainMod, W, exec, pkill -SIGUSR2 waybar"
+    "$mainMod, W, exec, pkill -SIGUSR1 waybar"
+    "$mainMod, B, exec, pkill -SIGUSR2 waybar"
 
 		# Disable all effects
   ];
