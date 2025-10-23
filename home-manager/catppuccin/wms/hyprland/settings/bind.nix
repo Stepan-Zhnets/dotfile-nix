@@ -15,7 +15,7 @@
 		"$mainMod, P, pseudo, # dwindle"
 		"$mainMod, J, togglesplit, # dwindle"
 		"$mainMod, R, exec, rofi -show drun"
-		"$mainMod, L, exec, wlogout" # hyprlock
+		"$mainMod, L, exec, wlogout --buttons-per-row=4" # hyprlock
 		"$mainMod SHIFT, S, exec, grimblast copy area"
 
 		# {_ПЕРЕМЕЩЕНИЕ_ФОКУСА_}
