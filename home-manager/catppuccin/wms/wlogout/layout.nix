@@ -16,7 +16,7 @@
     }
     {
       label = "logout";
-      action = "logout";
+      action = "exit";
       text = "Logout";
       keybind = "q";
     }

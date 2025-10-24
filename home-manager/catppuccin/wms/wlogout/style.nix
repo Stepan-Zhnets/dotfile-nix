@@ -56,6 +56,7 @@ in{
      	background-size: 10%;
       font-size: 50px;
       margin: 20px;
+      font-weight: bolder;
     }
 
     button:focus,
@@ -64,6 +65,7 @@ in{
       background-color: ${button_a_bgc};
       color: ${button_a_fgc};
       outline-style: none;
+      font-weight: bolder;
     }
 
     button#shutdown {
