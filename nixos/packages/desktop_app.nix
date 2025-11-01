@@ -67,6 +67,7 @@
 
     #=> All
     authenticator
+    rustdesk
 
     # pulseaudioFull
     # soundtouch

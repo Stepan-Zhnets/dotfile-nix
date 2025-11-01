@@ -2,12 +2,12 @@
 
 { config, pkgs, ... }: {
   imports = [
-    ./theme.nix
+    # ./theme.nix
   ];
   programs.rofi = {
     enable = true;
     # package = pkgs.rofi-wayland;
-    # theme = ./theme.rasi;
+    theme = ./theme.rasi;
     font = "DejaVu Sans Mono 10";
     location = "bottom"; # center, right, left, top, bottom
     # modules = [];
@@ -15,6 +15,8 @@
     terminal = "${pkgs.alacritty}/bin/alacritty";
 
     extraConfig = {
+      columns = 2;
+      lines = 5;
       modi = "combi,drun,window";
       combi-modi = "combi,drun,window";
       terminal = "alacritty";

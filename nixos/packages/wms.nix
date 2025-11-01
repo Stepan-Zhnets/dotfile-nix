@@ -11,6 +11,7 @@
     rofi
     rofi-network-manager
     # rofi-wayland
+    wofi
 
     # {_HYPR_}
     hyprland

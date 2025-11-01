@@ -25,9 +25,9 @@
         "pulseaudio"
         "custom/memory"
         "cpu"
+        "network"
         "backlight"
         "battery"
-        "network"
         "tray"
       ];
 
@@ -77,7 +77,7 @@
           phone = "";
           portable = "";
           car = "";
-          default = ["" "" ""];
+          default = [" " " " " "];
         };
         on-click = "pavucontrol";
         min-length = 13;
@@ -124,7 +124,7 @@
       };
 
       "network" = {
-        interface = "wlp2s0";
+        interface = "wlp0s20f3";
         format = "{ifname}";
         format-wifi = "{essid} ({signalStrength}%) ";
         format-ethernet = "{ipaddr}/{cidr} 󰊗";
@@ -137,7 +137,7 @@
       };
 
       "tray" = {
-        icon-size = 16;
+        icon-size = 20;
         spacing = 0;
       };
     };
