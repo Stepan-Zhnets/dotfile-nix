@@ -1,106 +1,125 @@
-# ~/home-manager/catppuccin/wms/rofi/theme.nix
+{
+  theme = ''
+    * {
+        bg-col:  rgba(30, 30, 46, 1); // Фон
+        bg-col-glass:  rgba(30, 30, 46, 1); // Прозрачный фон
+        bg-col-light: rgba(30, 30, 46, 1); //
+        border-col: rgba(30, 30, 46, 1); // Границы окна
+        selected-col: rgba(30, 30, 46, 1); // Выбор
+        blue: rgba(137, 180, 250, 1); // иконки меню
+        fg-col: rgba(205, 214, 244, 1); // текст
+        fg-col2: rgba(243, 139, 168, 1); // выбранный текст
+        grey: rgba(108, 112, 134, 1); //
 
-{ config, ... }:
-let
-  colorTheme = import ./../../color_theme.nix;
-  colors = colorTheme.catppuccin_mocha;
+        width: 600;
+        font: "JetBrainsMono Nerd Font 14";
+    }
 
-  #|==============================|
+    element-text, element-icon , mode-switcher {
+        background-color: inherit;
+        text-color:       inherit;
+    }
 
-  border_radius      = "15px";
+    window {
+        height: 360px;
+        border: 3px;
+        border-radius: 15px;
+        border-color: @border-col;
+        background-color: @bg-col;
+    }
 
-  window_bgc = colors.surface0;
-  window_fgc = colors.overlay0;
-  window_bc  = colors.green;
+    mainbox {
+        background-color: @bg-col;
+    }
 
-  mainbox_bgc = colors.sky;
+    inputbar {
+        children: [prompt,entry];
+        background-color: @bg-col;
+        border-radius: 5px;
+        padding: 2px;
+    }
 
-  inputbar_bgc = colors.yellow;
+    prompt {
+        background-color: @blue;
+        padding: 6px;
+        text-color: @bg-col;
+        border-radius: 3px;
+        margin: 20px 0px 0px 20px;
+    }
 
-  prompt_bgc = colors.surface0;
-  prompt_fgc = colors.mauve;
+    textbox-prompt-colon {
+        expand: false;
+        str: ":";
+    }
 
-  entry_bgc = colors.blue;
-  entry_columns = "2";
-  entry_lines = "5";
+    entry {
+        border-radius: 15px;
+        padding: 6px;
+        margin: 20px 0px 0px 10px;
+        text-color: @fg-col;
+        background-color: @bg-col;
+    }
 
-  textbox_fgc = colors.yellow;
-  textbox_bgc = colors.surface2;
+    listview { // область выбора
+        border-radius: 20px;
+        border: 0px 0px 0px;
+        padding: 6px 0px 0px;
+        margin: 10px 0px 0px 20px;
+        columns: 2;
+        lines: 5;
+        background-color: @bg-col-glass;
+    }
 
-in {
-  programs.rofi.theme = let
-    inherit (config.lib.formats.rasi) mkLiteral;
-  in {
-    "*" = {
-      background-color = mkLiteral window_bgc;
-      foreground-color = mkLiteral window_fgc;
-      # bg-l = mkLiteral "#3c3836";
-    };
-    "window" = {
-      height = "360px";
-      border = 3;
-      border-radius = mkLiteral border_radius;
-      y-offset = -5;
-      border-color = mkLiteral window_bc;
-      margin = "30px";
-    };
-    "mainbox" = {#=> Основная панель
-      background-color = mkLiteral mainbox_bgc;
-      #
-    };
-    "inputbar" = {#=> Область ввода
-      children = ["prompt" "entry"];
-      padding = "2px";
-      border-radius = mkLiteral border_radius;
-      background-color = mkLiteral inputbar_bgc;
-    };
-    "prompt" = {#=> APPS
-      background-color = mkLiteral prompt_bgc;
-      padding = "6px";
-      text-color = mkLiteral prompt_fgc;
-      border-radius = mkLiteral border_radius;
-      margin = "20px 0px 0px 20px";
-    };
-    "text-box-prompt-colon" = {#=>
-      expand = false;
-      str = ":";
-    };
-    "entry" = {#=>
-      border-radius = mkLiteral border_radius;
-      padding = "6px";
-      margin = "10px 0px 0px 20px";
-      columns = 2;
-      lines = 5;
-      background-color = entry_bgc;
-    };
-    "listview" = {#=> Область выбора
-      #
-    };
-    "element" = {#=> Элементы выбора
-      #
-    };
-    "element-ison" = {#=> Иконки элиментов
-      size = "25px";
-    };
-    "element selected" = {#=> Выбранный элимент
-      #
-    };
-    "mode-switcher" = {#=>
-      #
-    };
-    "button" = {#=> Кнопка
-      #
-    };
-    "button selected" = {#=> Выбранная кнопка
-      #
-    };
-    "message" = {#=>
-      #
-    };
-    "textbox" = {#=>
-      text-color = mkLiteral textbox_fgc;
-      background-color = mkLiteral textbox_bgc;
-      #
-    };
-  };
+    element { // Элементы выбора
+        border-radius: 20px;
+        padding: 5px;
+        background-color: @bg-col-glass;
+        text-color: @fg-col  ;
+    }
+
+    element-icon { // Иконки элиментов
+        border-radius: 10px;
+        size: 25px;
+    }
+
+    element selected { // Выбранный элимент
+        border-radius: 20px;
+        background-color:  @selected-col ;
+        text-color: @fg-col2  ;
+    }
+
+    mode-switcher {
+        spacing: 0;
+      }
+
+    button { // Нижние кнопки
+        padding: 10px;
+        background-color: @bg-col-light;
+        text-color: @grey;
+        vertical-align: 0.5;
+        horizontal-align: 0.5;
+    }
+
+    button selected { // Выбранная нижняя кнопка
+      background-color: @bg-col;
+      text-color: @blue;
+    }
+
+    message { //
+        border-radius: 20px;
+        background-color: @bg-col-light;
+        margin: 2px;
+        padding: 2px;
+        border-radius: 5px;
+    }
+
+    textbox { //
+        border-radius: 20px;
+        padding: 6px;
+        margin: 20px 0px 0px 20px;
+        text-color: @blue;
+        background-color: @bg-col-light;
+    }
+
+  '';
 }

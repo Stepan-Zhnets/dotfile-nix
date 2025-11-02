@@ -8,7 +8,7 @@
 		"$mainMod, Q, exec, alacritty"
 		"$mainMod, C, killactive,"
 		"$mainMod, M, exit,"
-		"$mainMod, E, exec, dolphin" # dolphin"
+		"$mainMod, E, exec, dolphin"
 		"$mainMod, Y, exec, yazi"
 		"$mainMod, V, togglefloating,"
 		# "$mainMod, D, exec, wofi --show drun"
