@@ -1,5 +1,5 @@
 {
-  theme = ''
+  theme_rofi = ''
     * {
         bg-col:  rgba(30, 30, 46, 1); // Фон
         bg-col-glass:  rgba(30, 30, 46, 1); // Прозрачный фон

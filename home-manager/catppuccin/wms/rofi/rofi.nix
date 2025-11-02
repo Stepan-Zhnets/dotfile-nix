@@ -2,7 +2,7 @@
 
 { config, pkgs, ... }: let
   RofiTheme = import ./theme.nix;
-  themes = RofiTheme.theme;
+  themes = RofiTheme.theme_rofi;
 in {
   imports = [
     ./theme.nix
