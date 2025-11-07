@@ -25,6 +25,9 @@ inputs = {
 # hyprland
 	hyprland.url = "github:hyprwm/Hyprland";
 
+# Niri - noctalia-shell
+  noctalia-shell.url = "github:Noctalia-Shell/noctalia-shell";
+
 	winapps = {
 		url = "github:winapps-org/winapps";
 		inputs.nixpkgs.follows = "nixpkgs";
@@ -55,6 +58,7 @@ outputs = {
 	nixvim,
 	# nvf,
 	hyprland,
+	noctalia-shell,
 	# fabric,
 	# prism-launcher,
 	# ayugram-desktop,
@@ -97,6 +101,7 @@ nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
 			}:
 			{
 				environment.systemPackages = [
+				  noctalia-shell.packages.x86_64-linux.default
 					winapps.packages."${system}".winapps
 					winapps.packages."${system}".winapps-launcher # optional
 				];

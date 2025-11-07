@@ -5,13 +5,13 @@
   themes = RofiTheme.theme_rofi;
 in {
   imports = [
-    ./theme.nix
+    # ./theme.nix
   ];
   programs.rofi = {
     enable = true;
     # package = pkgs.rofi-wayland;
-    # theme = ./theme.rasi;
-    theme = themes;
+    theme = ./theme.rasi;
+    # theme = themes;
     font = "DejaVu Sans Mono 10";
     location = "bottom"; # center, right, left, top, bottom
     # modules = [];

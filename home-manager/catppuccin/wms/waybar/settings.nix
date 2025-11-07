@@ -8,7 +8,7 @@
   programs.waybar.settings = {
     mainBar = {
       layer = "top";
-      position = "top"; # bottom, top
+      position = "bottom"; # bottom, top
       margin = "0 25 0 25";
 
       modules-left = [
@@ -17,14 +17,14 @@
         "hyprland/language"
         "keyboard-state"
         "hyprland/submap"
+        "cpu"
+        "custom/memory"
       ];
       modules-center = [
         "clock"
       ];
       modules-right = [
         "pulseaudio"
-        "custom/memory"
-        "cpu"
         "network"
         "backlight"
         "battery"

@@ -11,7 +11,7 @@
 		"$mainMod, E, exec, dolphin"
 		"$mainMod, Y, exec, yazi"
 		"$mainMod, V, togglefloating,"
-		# "$mainMod, D, exec, wofi --show drun"
+		"$mainMod, D, exec, wofi --show drun"
 		"$mainMod, P, pseudo, # dwindle"
 		"$mainMod, J, togglesplit, # dwindle"
 		"$mainMod, R, exec, rofi -show drun"

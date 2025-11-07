@@ -1,48 +1,71 @@
-{
-  theme_rofi = ''
+{ ... }:
+let
+  colorTheme = import ./../../color_theme.nix;
+  colors = colorTheme.catppuccin_mocha;
+
+  #|==============================|
+  border_bc = colors.green;
+  border_radius      = "15px";
+
+  window_bgc = colors.surface0;
+  window_fgc = colors.overlay0;
+  window_bc  = colors.green;
+
+  mainbox_bgc = colors.sky;
+
+  inputbar_bgc = colors.yellow;
+
+  prompt_bgc = colors.surface0;
+  prompt_fgc = colors.mauve;
+
+  entry_bgc = colors.surface0;
+  entry_fgc = colors.blue;
+
+  listview_bgc = colors.surface2;
+
+  element_bgc = colors.surface0;
+  element_fgc = colors.yellow;
+  element_s_bgc = colors.surface2;
+  element_s_fgc = colors.yellow;
+
+  button_bgc = colors.surface0;
+  button_fgc = colors.lavender;
+  button_s_bgc = colors.surface2;
+  button_s_fgc = colors.lavender;
+
+  message_bgc = colors.surface0;
+
+  textbox_fgc = colors.yellow;
+  textbox_bgc = colors.surface2;
+in let
+  myrofitheme = ''
     * {
-        bg-col:  rgba(30, 30, 46, 1); // Фон
-        bg-col-glass:  rgba(30, 30, 46, 1); // Прозрачный фон
-        bg-col-light: rgba(30, 30, 46, 1); //
-        border-col: rgba(30, 30, 46, 1); // Границы окна
-        selected-col: rgba(30, 30, 46, 1); // Выбор
-        blue: rgba(137, 180, 250, 1); // иконки меню
-        fg-col: rgba(205, 214, 244, 1); // текст
-        fg-col2: rgba(243, 139, 168, 1); // выбранный текст
-        grey: rgba(108, 112, 134, 1); //
-
-        width: 600;
-        font: "JetBrainsMono Nerd Font 14";
-    }
-
-    element-text, element-icon , mode-switcher {
-        background-color: inherit;
-        text-color:       inherit;
+        background-color: ${window_bgc};
     }
 
     window {
         height: 360px;
         border: 3px;
         border-radius: 15px;
-        border-color: @border-col;
-        background-color: @bg-col;
+        border-color: ${border_bc};
+        background-color: ${window_bgc};
     }
 
     mainbox {
-        background-color: @bg-col;
+        background-color: ${mainbox_bgc};
     }
 
     inputbar {
         children: [prompt,entry];
-        background-color: @bg-col;
+        background-color: ${inputbar_bgc};
         border-radius: 5px;
         padding: 2px;
     }
 
-    prompt {
-        background-color: @blue;
+    prompt { //=> APPS
+        background-color: ${prompt_bgc};
         padding: 6px;
-        text-color: @bg-col;
+        text-color: ${prompt_fgc};
         border-radius: 3px;
         margin: 20px 0px 0px 20px;
     }
@@ -56,25 +79,25 @@
         border-radius: 15px;
         padding: 6px;
         margin: 20px 0px 0px 10px;
-        text-color: @fg-col;
-        background-color: @bg-col;
+        text-color: ${entry_fgc};
+        background-color: ${entry_fgc};
     }
 
-    listview { // область выбора
+    listview { //=> область выбора
         border-radius: 20px;
         border: 0px 0px 0px;
         padding: 6px 0px 0px;
         margin: 10px 0px 0px 20px;
         columns: 2;
         lines: 5;
-        background-color: @bg-col-glass;
+        background-color: ${listview_bgc};
     }
 
     element { // Элементы выбора
         border-radius: 20px;
         padding: 5px;
-        background-color: @bg-col-glass;
-        text-color: @fg-col  ;
+        background-color: ${element_bgc};
+        text-color: ${element_fgc};
     }
 
     element-icon { // Иконки элиментов
@@ -84,8 +107,8 @@
 
     element selected { // Выбранный элимент
         border-radius: 20px;
-        background-color:  @selected-col ;
-        text-color: @fg-col2  ;
+        background-color:  ${element_s_bgc};
+        text-color: ${element_s_fgc};
     }
 
     mode-switcher {
@@ -94,20 +117,19 @@
 
     button { // Нижние кнопки
         padding: 10px;
-        background-color: @bg-col-light;
-        text-color: @grey;
+        background-color: ${button_bgc};
+        text-color: ${button_fgc};
         vertical-align: 0.5;
         horizontal-align: 0.5;
     }
 
     button selected { // Выбранная нижняя кнопка
-      background-color: @bg-col;
-      text-color: @blue;
+      background-color: ${button_s_bgc};
+      text-color: ${button_s_fgc};
     }
 
     message { //
-        border-radius: 20px;
-        background-color: @bg-col-light;
+        background-color: ${message_bgc};
         margin: 2px;
         padding: 2px;
         border-radius: 5px;
@@ -117,9 +139,11 @@
         border-radius: 20px;
         padding: 6px;
         margin: 20px 0px 0px 20px;
-        text-color: @blue;
-        background-color: @bg-col-light;
+        text-color: ${textbox_fgc};
+        background-color: ${textbox_bgc};
     }
 
   '';
+in{
+  programs.rofi.theme = myrofitheme;
 }

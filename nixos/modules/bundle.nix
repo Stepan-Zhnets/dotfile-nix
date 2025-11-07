@@ -7,6 +7,7 @@ imports = [
   ./bluetooth.nix
   ./drivers.nix
   ./hyprland.nix
+  ./niri.nix
   # ./fonts.nix
   ./sound.nix
   ./user.nix

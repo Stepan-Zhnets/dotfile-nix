@@ -135,14 +135,14 @@ in
       transition: none;
       box-shadow: inherit;
       text-shadow: inherit;
-      border-radius: inherit;
+      border-radius: 100%;
       color: ${ws_btn_hower_fgc};
       background: ${ws_btn_hower_bg};
     }
     #workspaces button.active {
       background: ${ws_btn_active_bgc};
       color: ${ws_btn_active_fgc};
-      border-radius: inherit;
+      border-radius: 100%;
     }
 
     #language {

@@ -19,6 +19,10 @@
     hypridle
     hyprpaper
 
+    # Niri
+    niri
+    xwayland-satellite
+
     # {_PAPER_}
     waypaper
     mpvpaper
