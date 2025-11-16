@@ -3,12 +3,14 @@ let
   files = pkgs.fetchFromGitHub {
     owner = "Flowseal";
     repo = "zapret-discord-youtube";
-    rev = "1.8.1";
+    # rev = "1.8.1";
+    rev = "1.9.0";
     sparseCheckout = [
       "bin"
       "lists"
     ];
-    hash = "sha256-hYw6o6ngvezoJNwqUDkssqZJMyjzVp6PfEJ2BrN6sao=";
+    # hash = "sha256-hYw6o6ngvezoJNwqUDkssqZJMyjzVp6PfEJ2BrN6sao=";
+    hash = "sha256-nv+k28Rc5/n4SueKTutcELXi//VaFqUq0xJpLTwOIxc=";
   };
   BIN = "${files}/bin/";
   LISTS = "${files}/lists/";
