@@ -4,8 +4,8 @@ let
     owner = "Flowseal";
     repo = "zapret-discord-youtube";
     # REV-11.26
-    rev = "1.10.4";
-    # rev = "1.8.1";
+    #rev = "1.10.4";
+    rev = "1.8.1";
     # rev = "1.9.0";
     sparseCheckout = [
       "bin"
@@ -14,9 +14,9 @@ let
     # HASH-11.26 (rev_1.10.4)
     # sha256:291af673bd0238506f9548e0e94ca0abf244000f4c9a06960544fb01c5f97b34
     #/ocvOujEM8m6Nqb6EyDjj8Cvaj6zM2m+uhGWWzI5s7I=
-    hash = "sha256-/ocvOujEM8m6Nqb6EyDjj8Cvaj6zM2m+uhGWWzI5s7I=";
+    #hash = "sha256-/ocvOujEM8m6Nqb6EyDjj8Cvaj6zM2m+uhGWWzI5s7I=";
 
-    # hash = "sha256-hYw6o6ngvezoJNwqUDkssqZJMyjzVp6PfEJ2BrN6sao=";
+    hash = "sha256-hYw6o6ngvezoJNwqUDkssqZJMyjzVp6PfEJ2BrN6sao=";
     # hash = "sha256-nv+k28Rc5/n4SueKTutcELXi//VaFqUq0xJpLTwOIxc=";
   };
   BIN = "${files}/bin/";
