@@ -6,25 +6,36 @@
     #=> Browsers
     firefox
     librewolf
-    mullvad-browser
+    # mullvad-browser
     chromium
+    # ungoogled-chromium
 
     #=> Editors
     vscodium
-    code-cursor
+    # code-cursor
     zed-editor
     # android-studio
 
     #=> Tools
-    libreoffice
-    obsidian
     github-desktop
+
+    #=> Office
+    libreoffice
+    onlyoffice-desktopeditors
+    # cryptpad
+    obsidian
 
     #=> Chat
     discord
     telegram-desktop
+    ayugram-desktop
     simplex-chat-desktop
-    thunderbird
+    session-desktop
+
+    #=> Mail
+    # protonmail-desktop
+    # tutanota-desktop
+    # thunderbird
 
     #=> Media
     # spotify
@@ -32,14 +43,27 @@
     obs-studio
     easyeffects
     youtube-music
-    davinci-resolve
+    # davinci-resolve
     # shotcut
     # olive-editor
-    swappy
+    kdePackages.kdenlive
+
+    #=>ART
+    # pixelorama
+    # asepritee
+    # libresprite
     gimp
-    ferrishot
+
+    #=> Screan
+    # inkscape
+    # swappy
+    # ferrishot
     grim
     grimblast
+
+    #=>3D
+    # material-maker
+    # blender
 
     #=> Audio
     myxer
@@ -47,30 +71,33 @@
     pulsemeeter
 
     #=> Wifi
-    iwgtk
+    # iwgtk
 
     #=> AI
-    lmstudio
+    # lmstudio
 
     #=> WinApps
     freerdp
-    dialog
-    libnotify
+    # dialog
+    # libnotify
 
     #=> Training_programs
-    logisim
-    logisim-evolution
+    # logisim
+    # logisim-evolution
 
     #=> VPN
-    protonvpn-gui
-    protonvpn-cli_2
+    # protonvpn-gui
+    # protonvpn-cli_2
 
     #=> All
-    authenticator
+    # authenticator
     rustdesk
 
     # pulseaudioFull
     # soundtouch
     # alsa-oss
+
+    #=> Parser
+    # insomnia
   ];
 }

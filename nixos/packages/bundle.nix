@@ -8,14 +8,17 @@ imports = [
   ./driver.nix
   ./fonts.nix
   ./games.nix
+  # ./hack.nix
   ./wms.nix
 ];
 environment.systemPackages = with pkgs; [
   zapret
+  # zapret2
   blueman
 
   #=> NIX
   home-manager
+  nurl
 
   #=> Style
   base16-schemes

@@ -14,7 +14,7 @@ imports = [
   ./waydroid.nix
   ./xserver.nix
   ./steam.nix
-  ./zapret_0.nix
+  ./zapret_1.nix
   ./shell.nix
 
   ./devops/bundle.nix

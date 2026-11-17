@@ -5,7 +5,7 @@
 
     # {_BAR_}
     waybar
-    eww
+    # eww
 
     # {_APP_LAUNCHER_}
     rofi

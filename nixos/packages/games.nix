@@ -22,6 +22,6 @@
     # waydroid-helper
 
     #=> All
-    mangohud
+    # mangohud
   ];
 }
