@@ -4,19 +4,19 @@ let
 
     owner = "bol-van";
     # owner = "Flowseal";
-    repo = "zapret2";
+    repo = "zapret";
     # repo = "zapret-discord-youtube";
     # REV-11.26
-    rev = "1.0.7";
+    rev = "72.13";
     # rev = "1.8.1";
     # rev = "1.9.0";
     sparseCheckout = [
       "bin"
       "lists"
     ];
-    # HASH-11.26 (rev_1.0.7)
+    # HASH-11.26 (rev_72.13)
     # sha256:fe872f3ae8c433c9ba36a6fa1320e38fc0af6a3eb33369beba11965b3239b3b2
-    hash = "sha256-ctUkfziY8RQesYE6sYugFT829IqKZsq11fuUW8jAUeY=";
+    hash = "sha256-2yFZwNGbMcTFcZRRJmWh01IxefT52cbBa/bw22QuUZk=";
 
     # hash = "sha256-hYw6o6ngvezoJNwqUDkssqZJMyjzVp6PfEJ2BrN6sao=";
     # hash = "sha256-nv+k28Rc5/n4SueKTutcELXi//VaFqUq0xJpLTwOIxc=";
