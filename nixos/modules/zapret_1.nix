@@ -5,8 +5,8 @@ let
     repo = "zapret-discord-youtube";
     # REV-11.26
     #rev = "1.10.4";
-    rev = "1.8.1";
-    # rev = "1.9.0";
+    # rev = "1.8.1";
+    rev = "1.9.0";
     sparseCheckout = [
       "bin"
       "lists"
@@ -16,8 +16,8 @@ let
     #/ocvOujEM8m6Nqb6EyDjj8Cvaj6zM2m+uhGWWzI5s7I=
     #hash = "sha256-/ocvOujEM8m6Nqb6EyDjj8Cvaj6zM2m+uhGWWzI5s7I=";
 
-    hash = "sha256-hYw6o6ngvezoJNwqUDkssqZJMyjzVp6PfEJ2BrN6sao=";
-    # hash = "sha256-nv+k28Rc5/n4SueKTutcELXi//VaFqUq0xJpLTwOIxc=";
+    # hash = "sha256-hYw6o6ngvezoJNwqUDkssqZJMyjzVp6PfEJ2BrN6sao=";
+    hash = "sha256-nv+k28Rc5/n4SueKTutcELXi//VaFqUq0xJpLTwOIxc=";
   };
   BIN = "${files}/bin/";
   LISTS = "${files}/lists/";
