@@ -11,8 +11,10 @@ let
       "bin"
       "lists"
     ];
-    # HASH-11.26
-    hash = "sha256:291af673bd0238506f9548e0e94ca0abf244000f4c9a06960544fb01c5f97b34";
+    # HASH-11.26 (rev_1.10.4)
+    # sha256:fe872f3ae8c433c9ba36a6fa1320e38fc0af6a3eb33369beba11965b3239b3b2
+    hash = "sha256-bLgB1xbM9jATf74dhSER3lXjfOQHwseM9heA/h5PWbE=";
+
     # hash = "sha256-hYw6o6ngvezoJNwqUDkssqZJMyjzVp6PfEJ2BrN6sao=";
     # hash = "sha256-nv+k28Rc5/n4SueKTutcELXi//VaFqUq0xJpLTwOIxc=";
   };
