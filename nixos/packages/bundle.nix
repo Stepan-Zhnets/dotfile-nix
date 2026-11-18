@@ -2,6 +2,7 @@
 
 { pkgs, inputs, ... }: {
 imports = [
+  ./ai.nix
   ./cli.nix
   ./desktop_app.nix
   ./code.nix
