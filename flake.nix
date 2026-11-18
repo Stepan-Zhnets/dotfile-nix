@@ -76,6 +76,13 @@ outputs = {
 let
 	system = "x86_64-linux";
 	#ZAPRET_APP
+	supportedSystems = [ "x86_64-linux" "aarch64-linux" ];
+	forAllSystems = nixpkgs.lib.genAttrs supportedSystems;
+
+	commonInputs = pkgs: with pkgs; [
+		bash curl iptables iproute2 ipset coreutils
+		gnugrep gawk gnused pciutils procps git bc
+	];
 	mkZapretApp = pkgs: scriptName: binName: pkgs.writeShellApplication {
 		name = binName;
 		runtimeInputs = commonInputs pkgs;
