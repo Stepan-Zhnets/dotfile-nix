@@ -596,6 +596,22 @@
         "type": "github"
       }
     },
+    "nixpkgs_5": {
+      "locked": {
+        "lastModified": 1785090369,
+        "narHash": "sha256-m0pDuRJG7EDo9ri+4Ksu83VsI+PlxNC9lNBfydejce4=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "624af665418d3c65d544145b4d34ad696439570e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
     "nixvim": {
       "inputs": {
         "flake-parts": "flake-parts",
@@ -737,7 +753,8 @@
         "nixvim": "nixvim",
         "noctalia-shell": "noctalia-shell",
         "nvf": "nvf",
-        "winapps": "winapps"
+        "winapps": "winapps",
+        "zapret2-nix": "zapret2-nix"
       }
     },
     "systems": {
@@ -891,6 +908,24 @@
       "original": {
         "owner": "hyprwm",
         "repo": "xdg-desktop-portal-hyprland",
+        "type": "github"
+      }
+    },
+    "zapret2-nix": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_5"
+      },
+      "locked": {
+        "lastModified": 1786030230,
+        "narHash": "sha256-jj2eHTwSNClDIvgEceFX2mk/xa6/J37k5rLjMQ5BVBs=",
+        "owner": "ZenonEl",
+        "repo": "zapret2-nix",
+        "rev": "fcf0d5c9f9debba423144c59940d0c6fea4da13f",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ZenonEl",
+        "repo": "zapret2-nix",
         "type": "github"
       }
     }
