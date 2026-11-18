@@ -8,5 +8,5 @@
     opencode-desktop
 
     claude-code
-  ]
+  ];
 }
