@@ -6,6 +6,7 @@ imports = [
   ./bootloader.nix
   ./bluetooth.nix
   ./drivers.nix
+  ./happ.nix
   ./hyprland.nix
   ./niri.nix
   # ./fonts.nix

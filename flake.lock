@@ -596,22 +596,6 @@
         "type": "github"
       }
     },
-    "nixpkgs_5": {
-      "locked": {
-        "lastModified": 1785090369,
-        "narHash": "sha256-m0pDuRJG7EDo9ri+4Ksu83VsI+PlxNC9lNBfydejce4=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "624af665418d3c65d544145b4d34ad696439570e",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NixOS",
-        "ref": "nixos-unstable",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
     "nixvim": {
       "inputs": {
         "flake-parts": "flake-parts",
@@ -754,7 +738,7 @@
         "noctalia-shell": "noctalia-shell",
         "nvf": "nvf",
         "winapps": "winapps",
-        "zapret2-nix": "zapret2-nix"
+        "zapret-src": "zapret-src"
       }
     },
     "systems": {
@@ -911,21 +895,19 @@
         "type": "github"
       }
     },
-    "zapret2-nix": {
-      "inputs": {
-        "nixpkgs": "nixpkgs_5"
-      },
+    "zapret-src": {
+      "flake": false,
       "locked": {
-        "lastModified": 1786030230,
-        "narHash": "sha256-jj2eHTwSNClDIvgEceFX2mk/xa6/J37k5rLjMQ5BVBs=",
-        "owner": "ZenonEl",
-        "repo": "zapret2-nix",
-        "rev": "fcf0d5c9f9debba423144c59940d0c6fea4da13f",
+        "lastModified": 1786960044,
+        "narHash": "sha256-UmsoF5YejczR87iv1fGU9LA4JXDz714dhop/Q4sMCBQ=",
+        "owner": "Sergeydigl3",
+        "repo": "zapret-discord-youtube-linux",
+        "rev": "69db771b527ba11ca71efe28728a7f9491eec352",
         "type": "github"
       },
       "original": {
-        "owner": "ZenonEl",
-        "repo": "zapret2-nix",
+        "owner": "Sergeydigl3",
+        "repo": "zapret-discord-youtube-linux",
         "type": "github"
       }
     }
