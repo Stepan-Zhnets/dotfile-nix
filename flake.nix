@@ -29,7 +29,10 @@ inputs = {
   noctalia-shell.url = "github:noctalia-dev/noctalia-shell";
 
 # HAPP
-	happ-nix.url = "github:d4hl/happ-nix";
+	# happ-nix.url = "github:d4hl/happ-nix";
+
+#ZAPRET
+	zapret-rust.url = "github:Sergeydigl3/zapret-discord-youtube-rust";
 
 	winapps = {
 		url = "github:winapps-org/winapps";
@@ -57,7 +60,8 @@ inputs = {
 outputs = {
 	self,
 	nixpkgs, nixpkgs-stable, home-manager,
-	happ-nix,
+	# happ-nix,
+	zapret-rust,
 	winapps,
 	nixvim,
 	# nvf,
@@ -105,14 +109,15 @@ nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
 			}:
 			{
 				environment.systemPackages = [
-				  noctalia-shell.packages."${system}".default
+					zapret-rust.packages.x86_64-linux.default
+				  	noctalia-shell.packages."${system}".default
 					winapps.packages."${system}".winapps
 					winapps.packages."${system}".winapps-launcher # optional
 				];
 			}
 		)
-		happ-nix.nixosModules.default
-        { programs.happ.enable = true; }
+		# happ-nix.nixosModules.default
+        # { programs.happ.enable = true; }
 	];
 };
 
