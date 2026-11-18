@@ -12,7 +12,7 @@ imports = [
   ./wms.nix
 ];
 environment.systemPackages = with pkgs; [
-  zapret2
+  # zapret2
   blueman
 
   #=> NIX
