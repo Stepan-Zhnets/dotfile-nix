@@ -5,7 +5,7 @@
 {
   environment.systemPackages = with pkgs; [
     opencode
-    opencode-desktop
+    # opencode-desktop
 
     claude-code
   ];
