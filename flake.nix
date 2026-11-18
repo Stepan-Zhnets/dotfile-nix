@@ -120,6 +120,7 @@ nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
 				enable = true;
 				presets = [ "youtube" "discord" ];
 				defaultPreset = "youtube";
+				firewall.ports.udp = ["443" "50000-65535"];
 			};
 		}
 	];
