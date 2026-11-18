@@ -65,7 +65,6 @@ outputs = {
 	# nvf,
 	hyprland,
 	noctalia-shell,
-	zapret2-nix,
 	# fabric,
 	# prism-launcher,
 	# ayugram-desktop,
