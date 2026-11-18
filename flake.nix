@@ -28,11 +28,10 @@ inputs = {
 # Niri - noctalia-shell
   noctalia-shell.url = "github:noctalia-dev/noctalia-shell";
 
-# # Zapret
-# 	zapret-flowseal = {
-# 		url = "github:Flowseal/zapret-discord-youtube";
-# 		flake = false;
-# 	};
+# Zapret2
+	zapret2-nix = {
+		url = "github:ZenonEl/zapret2-nix";
+	};
 
 	winapps = {
 		url = "github:winapps-org/winapps";
@@ -65,7 +64,7 @@ outputs = {
 	# nvf,
 	hyprland,
 	noctalia-shell,
-	# zapret-flowseal,
+	zapret2-nix,
 	# fabric,
 	# prism-launcher,
 	# ayugram-desktop,
