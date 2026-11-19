@@ -125,13 +125,13 @@ nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
         # { programs.happ.enable = true; }
 
 		happ-nixos.nixosModules.default
-		# {
-		# 	services.happ = {
-		# 		enable = true;
-		# 		forceXwayland = true;
-		# 		forceSoftwareRendering = true;
-		# 	};
-		# }
+		{
+			services.happ = {
+				enable = true;
+				# forceXwayland = true;
+				# forceSoftwareRendering = true;
+			};
+		}
 	];
 };
 
