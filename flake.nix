@@ -30,7 +30,10 @@ inputs = {
 
 # HAPP
 	# happ-nix.url = "github:d4hl/happ-nix";
-	happ-nixos.url = "git+https://codeberg.org/VOXEL0798/happ.flake.git";
+	happ-nixos = {
+		url = "git+https://codeberg.org/VOXEL0798/happ.flake.git";
+		inputs.nixpkgs.follows = "nixpkgs";
+	};
 
 # #ZAPRET
 # 	zapret-rust.url = "github:Sergeydigl3/zapret-discord-youtube-rust";
