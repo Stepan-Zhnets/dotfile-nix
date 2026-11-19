@@ -30,9 +30,10 @@ inputs = {
 
 # HAPP
 	# happ-nix.url = "github:d4hl/happ-nix";
+	happ-nixos.url = "git+https://codeberg.org/VOXEL0798/happ.flake.git";
 
-#ZAPRET
-	zapret-rust.url = "github:Sergeydigl3/zapret-discord-youtube-rust";
+# #ZAPRET
+# 	zapret-rust.url = "github:Sergeydigl3/zapret-discord-youtube-rust";
 
 	winapps = {
 		url = "github:winapps-org/winapps";
@@ -61,7 +62,8 @@ outputs = {
 	self,
 	nixpkgs, nixpkgs-stable, home-manager,
 	# happ-nix,
-	zapret-rust,
+	# zapret-rust,
+	happ-nixos,
 	winapps,
 	nixvim,
 	# nvf,
@@ -109,8 +111,8 @@ nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
 			}:
 			{
 				environment.systemPackages = [
-					zapret-rust.packages.x86_64-linux.default
-				  	noctalia-shell.packages."${system}".default
+					# zapret-rust.packages.x86_64-linux.default
+				  noctalia-shell.packages."${system}".default
 					winapps.packages."${system}".winapps
 					winapps.packages."${system}".winapps-launcher # optional
 				];
@@ -118,6 +120,13 @@ nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
 		)
 		# happ-nix.nixosModules.default
         # { programs.happ.enable = true; }
+		happ-nixos.nixosModules.default
+		{
+			services.happ = {
+				enable = true;
+				forceXwayland = true;
+			}
+		}
 	];
 };
 

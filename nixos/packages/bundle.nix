@@ -14,7 +14,7 @@ imports = [
 ];
 environment.systemPackages = with pkgs; [
   # zapret2
-  v2raya
+  # v2raya
   blueman
 
   #=> NIX
