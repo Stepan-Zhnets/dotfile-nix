@@ -30,7 +30,7 @@ inputs = {
 
 # HAPP
 	# happ-nix.url = "github:d4hl/happ-nix";
-	# happ-nixos.url = "git+https://codeberg.org/VOXEL0798/happ.flake.git";
+	happ-nixos.url = "git+https://codeberg.org/VOXEL0798/happ.flake.git";
 
 # #ZAPRET
 # 	zapret-rust.url = "github:Sergeydigl3/zapret-discord-youtube-rust";
@@ -63,7 +63,7 @@ outputs = {
 	nixpkgs, nixpkgs-stable, home-manager,
 	# happ-nix,
 	# zapret-rust,
-	# happ-nixos,
+	happ-nixos,
 	winapps,
 	nixvim,
 	# nvf,
@@ -121,14 +121,14 @@ nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
 		# happ-nix.nixosModules.default
         # { programs.happ.enable = true; }
 
-		# happ-nixos.nixosModules.default
-		# {
-		# 	services.happ = {
-		# 		enable = true;
-		# 		forceXwayland = true;
-		# 		forceSoftwareRendering = true;
-		# 	};
-		# }
+		happ-nixos.nixosModules.default
+		{
+			services.happ = {
+				enable = true;
+				forceXwayland = true;
+				forceSoftwareRendering = true;
+			};
+		}
 	];
 };
 
