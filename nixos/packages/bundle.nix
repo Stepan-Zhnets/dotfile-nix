@@ -14,7 +14,7 @@ imports = [
 ];
 environment.systemPackages = with pkgs; [
   #HAPP-
-  libxtst
+  xorg.libxtst
 
   # zapret2
   # v2raya
