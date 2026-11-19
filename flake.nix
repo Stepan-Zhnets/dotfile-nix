@@ -128,7 +128,7 @@ nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
 		# 		forceXwayland = true;
 		# 		forceSoftwareRendering = true;
 		# 	};
-		}
+		# }
 	];
 };
 
