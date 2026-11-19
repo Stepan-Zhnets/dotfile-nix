@@ -9,6 +9,6 @@
 
     claude-code
 
-    grok-cli
+    # grok-cli
   ];
 }
