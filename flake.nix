@@ -124,7 +124,8 @@ nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
 		{
 			services.happ = {
 				enable = true;
-				# forceXwayland = true;
+				forceXwayland = true;
+				forceSoftwareRendering = true;
 			};
 		}
 	];
