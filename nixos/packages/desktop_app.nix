@@ -74,7 +74,7 @@
     # iwgtk
 
     #=> AI
-    # lmstudio
+    lmstudio
 
     #=> WinApps
     freerdp

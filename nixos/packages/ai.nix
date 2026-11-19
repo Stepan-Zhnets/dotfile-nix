@@ -1,5 +1,5 @@
 #
-# ~/nix/nixos/modules/cli.nix
+# ~/nix/nixos/modules/ai.nix
 
 { config, pkgs, ...}:
 {
@@ -8,5 +8,7 @@
     # opencode-desktop
 
     claude-code
+
+    grok-cli
   ];
 }
