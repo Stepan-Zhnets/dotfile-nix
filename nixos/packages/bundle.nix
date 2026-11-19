@@ -13,6 +13,9 @@ imports = [
   ./wms.nix
 ];
 environment.systemPackages = with pkgs; [
+  #HAPP-
+  libxtst
+
   # zapret2
   # v2raya
   blueman
