@@ -1,9 +1,9 @@
-{ lib, config, ... }:
+{ lib, config, pkgs, ... }:
 {
   services.zapret2 = {
     enable = true;
     # Указываем пакет zapret, который будет использоваться
-    # package = pkgs.zapret;
+    package = pkgs.zapret;
 
     # Включаем автоматическое определение доменов для обхода
     hosts.autodetect = true;
