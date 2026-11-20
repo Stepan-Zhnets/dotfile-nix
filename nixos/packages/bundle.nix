@@ -16,7 +16,7 @@ environment.systemPackages = with pkgs; [
   #HAPP-
   # libxtst
 
-  # zapret2
+  zapret
   # v2raya
   blueman
 
