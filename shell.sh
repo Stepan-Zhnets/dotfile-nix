@@ -1,0 +1,1 @@
+curl -sL https://github.com/Flowseal/zapret-discord-youtube | sha256sum

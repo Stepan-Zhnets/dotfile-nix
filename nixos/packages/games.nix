@@ -17,11 +17,11 @@
     # lutris
 
     #=> Android_gaming
-    genymotion
-    waydroid
-    waydroid-helper
+    # genymotion
+    # waydroid
+    # waydroid-helper
 
     #=> All
-    mangohud
+    # mangohud
   ];
 }

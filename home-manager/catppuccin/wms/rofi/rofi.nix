@@ -1,13 +1,17 @@
 # ~/home-manager/modules/wms/rofi/rofi.nix
 
-{ config, pkgs, ... }: {
+{ config, pkgs, ... }: let
+  RofiTheme = import ./theme.nix;
+  themes = RofiTheme.theme_rofi;
+in {
   imports = [
-    ./theme.nix
+    # ./theme.nix
   ];
   programs.rofi = {
     enable = true;
     # package = pkgs.rofi-wayland;
-    # theme = ./theme.rasi;
+    theme = ./theme.rasi;
+    # theme = themes;
     font = "DejaVu Sans Mono 10";
     location = "bottom"; # center, right, left, top, bottom
     # modules = [];
@@ -15,6 +19,8 @@
     terminal = "${pkgs.alacritty}/bin/alacritty";
 
     extraConfig = {
+      columns = 2;
+      lines = 5;
       modi = "combi,drun,window";
       combi-modi = "combi,drun,window";
       terminal = "alacritty";

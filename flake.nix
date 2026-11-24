@@ -25,6 +25,19 @@ inputs = {
 # hyprland
 	hyprland.url = "github:hyprwm/Hyprland";
 
+# Niri - noctalia-shell
+  noctalia-shell.url = "github:noctalia-dev/noctalia-shell";
+
+# HAPP
+	# happ-nix.url = "github:d4hl/happ-nix";
+	happ-nixos = {
+		url = "git+https://codeberg.org/VOXEL0798/happ.flake.git";
+		inputs.nixpkgs.follows = "nixpkgs";
+	};
+
+# #ZAPRET
+# 	zapret-rust.url = "github:Sergeydigl3/zapret-discord-youtube-rust";
+
 	winapps = {
 		url = "github:winapps-org/winapps";
 		inputs.nixpkgs.follows = "nixpkgs";
@@ -51,10 +64,14 @@ inputs = {
 outputs = {
 	self,
 	nixpkgs, nixpkgs-stable, home-manager,
+	# happ-nix,
+	# zapret-rust,
+	happ-nixos,
 	winapps,
 	nixvim,
 	# nvf,
 	hyprland,
+	noctalia-shell,
 	# fabric,
 	# prism-launcher,
 	# ayugram-desktop,
@@ -97,11 +114,24 @@ nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
 			}:
 			{
 				environment.systemPackages = [
+					# zapret-rust.packages.x86_64-linux.default
+				  noctalia-shell.packages."${system}".default
 					winapps.packages."${system}".winapps
 					winapps.packages."${system}".winapps-launcher # optional
 				];
 			}
 		)
+		# happ-nix.nixosModules.default
+        # { programs.happ.enable = true; }
+
+		happ-nixos.nixosModules.default
+		# {
+		# 	services.happ = {
+		# 		enable = true;
+		# 		forceXwayland = true;
+		# 		forceSoftwareRendering = true;
+		# 	};
+		# }
 	];
 };
 

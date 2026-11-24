@@ -5,18 +5,23 @@
 
     # {_BAR_}
     waybar
-    eww
+    # eww
 
     # {_APP_LAUNCHER_}
     rofi
     rofi-network-manager
     # rofi-wayland
+    wofi
 
     # {_HYPR_}
     hyprland
     hyprlock
     hypridle
     hyprpaper
+
+    # Niri
+    niri
+    xwayland-satellite
 
     # {_PAPER_}
     waypaper
