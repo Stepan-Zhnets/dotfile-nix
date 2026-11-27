@@ -21,6 +21,6 @@ imports = [
 
   ./devops/bundle.nix
 
-  ./nixvim/nixvim.nix
+  # ./nixvim/nixvim.nix
 ];
 }
