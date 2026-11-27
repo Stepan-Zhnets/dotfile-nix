@@ -1,6 +1,11 @@
-{
-  programs.happ = {
+{ inputs, ... }: {
+  imports = [
+    inputs.happ-nixos.nixosModules.default
+  ];
+
+  services.happ = {
     enable = true;
-    tunMode.enable = true;
+    # Для Hyprland/Sway может потребоваться:
+    # forceXwayland = true;
   };
 }

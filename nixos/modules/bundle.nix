@@ -6,7 +6,7 @@ imports = [
   ./bootloader.nix
   ./bluetooth.nix
   ./drivers.nix
-  # ./happ.nix
+  ./happ.nix
   ./hyprland.nix
   ./niri.nix
   # ./fonts.nix
@@ -16,7 +16,7 @@ imports = [
   ./xserver.nix
   ./steam.nix
   # ./zapret_1.nix
-  ./zapret2_1.nix
+  # ./zapret2_1.nix
   ./shell.nix
 
   ./devops/bundle.nix
