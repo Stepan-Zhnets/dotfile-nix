@@ -57,7 +57,6 @@ outputs = {
 	winapps,
 	nixvim,
 	# nvf,
-	happ-nixos,
 	hyprland,
 	noctalia-shell,
 	# prism-launcher,
