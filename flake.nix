@@ -111,7 +111,7 @@ nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
 				];
 			}
 		)
-		happ-nixos.nixosModules.default
+		# happ-nixos.nixosModules.default
 		# {
 		# 	services.happ = {
 		# 		enable = true;
