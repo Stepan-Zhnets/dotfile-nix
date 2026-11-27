@@ -13,12 +13,6 @@ inputs = {
 		inputs.nixpkgs.follows = "nixpkgs";
 	};
 
-# # nixvim
-# 	nixvim = {
-# 		url = "github:nix-community/nixvim";
-# 		inputs.nixpkgs.follows = "nixpkgs";
-# 	};
-
 # NVF
 	nvf.url = "github:notashelf/nvf";
 
@@ -27,23 +21,6 @@ inputs = {
 
 # Niri - noctalia-shell
   noctalia-shell.url = "github:noctalia-dev/noctalia-shell";
-
-# HAPP
-	# happ-nix.url = "github:d4hl/happ-nix";
-	# happ-nixos = {
-	# 	url = "git+https://codeberg.org/VOXEL0798/happ.flake.git";
-	# 	inputs.nixpkgs.follows = "nixpkgs";
-	# };
-
-	# Пример изменения в вашем flake.nix
-  happ-desktop = pkgs.happ-desktop.overrideAttrs (oldAttrs: rec {
-    version = "4.8.3"; # <-- Измените эту строку
-    src = pkgs.fetchurl {
-      url = "https://github.com/Happ-proxy/happ-desktop/releases/download/${version}/Happ.linux.x64.deb";
-      # Хэш для новой версии, возможно, потребуется обновить
-      hash = "sha256-...";
-    };
-  });
 
 # ZAPRET2
 	zapret2-nix.url = "github:zenonel/zapret2-nix";
@@ -66,10 +43,8 @@ inputs = {
 outputs = {
 	self,
 	nixpkgs, nixpkgs-stable, home-manager,
-	happ-nixos,
 	zapret2-nix,
 	winapps,
-	# nixvim,
 	# nvf,
 	hyprland,
 	noctalia-shell,
@@ -82,18 +57,8 @@ outputs = {
 let
 	system = "x86_64-linux";
 in {
-
-# {_CONFIGURATION-NIXVIM_}
-
-# # {_CONFIGURATION-NVF_}
-# packages.${system}.default = (
-# 	nvf.lib.neovimConfiguration {
-# 		pkgs = nixpkgs.legacyPackages.${system};
-# 		modules = [ ./nvf/nvf-configuration.nix ];
-# 	}
-# ).neovim;
-
 # {_CONFIGURATION-NIXOS_}
+
 nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
 	specialArgs = {
 		pkgs-stable = import nixpkgs-stable {
@@ -104,8 +69,6 @@ nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
 	};
 	modules = [
 		./nixos/configuration.nix
-		# inputs.nixvim.nixosModules.nixvim
-		# nvf.nixosModules.default
 		(
 			{
 				pkgs,
@@ -114,21 +77,12 @@ nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
 			}:
 			{
 				environment.systemPackages = [
-					# zapret-rust.packages.x86_64-linux.default
 				  noctalia-shell.packages."${system}".default
 					winapps.packages."${system}".winapps
 					winapps.packages."${system}".winapps-launcher # optional
 				];
 			}
 		)
-		# happ-nixos.nixosModules.default
-		# {
-		# 	services.happ = {
-		# 		enable = true;
-		# 		forceXwayland = true;
-		# 		forceSoftwareRendering = true;
-		# 	};
-		# }
 	];
 };
 

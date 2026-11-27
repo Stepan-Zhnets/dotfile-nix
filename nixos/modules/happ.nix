@@ -1,11 +1,11 @@
-{ inputs, ... }: {
-  imports = [
-    inputs.happ-nixos.nixosModules.default
-  ];
+# { inputs, ... }: {
+#   imports = [
+#     inputs.happ-nixos.nixosModules.default
+#   ];
 
-  services.happ = {
-    enable = true;
-    # Для Hyprland/Sway может потребоваться:
-    # forceXwayland = true;
-  };
-}
+#   services.happ = {
+#     enable = true;
+#     # Для Hyprland/Sway может потребоваться:
+#     # forceXwayland = true;
+#   };
+# }
