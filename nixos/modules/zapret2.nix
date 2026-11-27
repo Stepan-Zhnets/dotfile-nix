@@ -6,7 +6,7 @@
     package = pkgs.zapret;
 
     # Включаем автоматическое определение доменов для обхода
-    hosts.autodetect = true;
+    # hosts.autodetect = true;
 
     # Настройки для конкретных профилей (можно несколько)
     profiles.default = {
