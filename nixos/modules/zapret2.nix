@@ -11,7 +11,7 @@
     # Настройки для конкретных профилей (можно несколько)
     profiles.default = {
       # Список доменов, которые нужно обходить
-      include = [
+      host.include = [
         "discord.com"
         "discordapp.com"
         "youtube.com"
