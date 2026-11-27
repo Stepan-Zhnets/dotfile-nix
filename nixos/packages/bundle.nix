@@ -17,7 +17,7 @@ environment.systemPackages = with pkgs; [
   # libxtst
 
   zapret
-  zapret2
+  # zapret2
   # v2raya
   blueman
 
