@@ -1,25 +1,26 @@
-{ lib, config, pkgs, ... }:
-{
+{ inputs, ... }: {
+  imports = [
+    inputs.zapret2-nix.nixosModules.default
+  ];
+
   services.zapret2 = {
     enable = true;
-    # Указываем пакет zapret, который будет использоваться
-    package = pkgs.zapret;
-
-    # Включаем автоматическое определение доменов для обхода
-    # hosts.autodetect = true;
-
-    # Настройки для конкретных профилей (можно несколько)
+    # Пример настройки профиля для обхода блокировок YouTube/Discord
     profiles.default = {
-      # Список доменов, которые нужно обходить
-      host.include = [
-        "discord.com"
-        "discordapp.com"
+      # Домены, которые нужно обходить
+      hosts.include = [
         "youtube.com"
         "googlevideo.com"
-        "ytimg.com"
+        "discord.com"
+        "discordapp.com"
       ];
-      # Можно указать параметры для zapret напрямую
-      # parameters = [ "--dpi-desync=split2" ];
+      # Можно указать IP-адреса или подсети
+      ips.include = [ ];
+      # Параметры стратегии обхода (подбираются индивидуально)
+      parameters = [
+        "--dpi-desync=disorder2"
+        "--dpi-desync-split-pos=1"
+      ];
     };
   };
 }
