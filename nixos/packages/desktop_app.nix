@@ -26,7 +26,7 @@
     obsidian
 
     #=> Chat
-    discord
+    vesktop # discord
     telegram-desktop
     ayugram-desktop
     simplex-chat-desktop
@@ -42,7 +42,7 @@
     vlc
     obs-studio
     easyeffects
-    youtube-music
+    pear-desktop
     # davinci-resolve
     # shotcut
     # olive-editor

@@ -13,11 +13,11 @@ inputs = {
 		inputs.nixpkgs.follows = "nixpkgs";
 	};
 
-# nixvim
-	nixvim = {
-		url = "github:nix-community/nixvim";
-		inputs.nixpkgs.follows = "nixpkgs";
-	};
+# # nixvim
+# 	nixvim = {
+# 		url = "github:nix-community/nixvim";
+# 		inputs.nixpkgs.follows = "nixpkgs";
+# 	};
 
 # NVF
 	nvf.url = "github:notashelf/nvf";
@@ -34,6 +34,9 @@ inputs = {
 		url = "git+https://codeberg.org/VOXEL0798/happ.flake.git";
 		inputs.nixpkgs.follows = "nixpkgs";
 	};
+
+# ZAPRET2
+	zapret2-nix.url = "github:zenonel/zapret2-nix";
 
 	winapps = {
 		url = "github:winapps-org/winapps";
@@ -54,8 +57,9 @@ outputs = {
 	self,
 	nixpkgs, nixpkgs-stable, home-manager,
 	happ-nixos,
+	zapret2-nix,
 	winapps,
-	nixvim,
+	# nixvim,
 	# nvf,
 	hyprland,
 	noctalia-shell,
@@ -90,7 +94,7 @@ nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
 	};
 	modules = [
 		./nixos/configuration.nix
-		inputs.nixvim.nixosModules.nixvim
+		# inputs.nixvim.nixosModules.nixvim
 		# nvf.nixosModules.default
 		(
 			{

@@ -18,7 +18,6 @@
     lazysql
 
     #=> Fetch
-    neofetch
     fastfetch
     cpufetch
     nerdfetch
