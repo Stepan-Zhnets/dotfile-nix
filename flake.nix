@@ -35,21 +35,10 @@ inputs = {
 		inputs.nixpkgs.follows = "nixpkgs";
 	};
 
-# #ZAPRET
-# 	zapret-rust.url = "github:Sergeydigl3/zapret-discord-youtube-rust";
-
 	winapps = {
 		url = "github:winapps-org/winapps";
 		inputs.nixpkgs.follows = "nixpkgs";
 	};
-
-# # fabric
-# 	fabric.url = "github:Fabric-Development/fabric";
-# 	fabric-libgray.url = "github:Fabric-Development/gray";
-# 	fabric-libglace.url = "github:muhchaudhary/glace/hyprland";
-
-# Godot_Engine
-	# godot.url = "github:godotengine/godot/4.5";
 
 # PrismLauncher
 	# prism-launcher.url = "github:PrismLauncher/PrismLauncher#prismlauncher";
@@ -64,15 +53,13 @@ inputs = {
 outputs = {
 	self,
 	nixpkgs, nixpkgs-stable, home-manager,
-	# happ-nix,
-	# zapret-rust,
 	happ-nixos,
 	winapps,
 	nixvim,
 	# nvf,
+	happ-nixos,
 	hyprland,
 	noctalia-shell,
-	# fabric,
 	# prism-launcher,
 	# ayugram-desktop,
 	# swww,
@@ -121,9 +108,6 @@ nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
 				];
 			}
 		)
-		# happ-nix.nixosModules.default
-        # { programs.happ.enable = true; }
-
 		happ-nixos.nixosModules.default
 		# {
 		# 	services.happ = {
@@ -140,8 +124,8 @@ homeConfigurations = {
 		pkgs = nixpkgs.legacyPackages.${system};
 		extraSpecialArgs = { inherit inputs; };
 		modules = [
-			./home-manager/gruvbox.nix
-			# ./home-manager/catppuccin.nix
+			# ./home-manager/gruvbox.nix
+			./home-manager/catppuccin.nix
 		];
 	};
 };
