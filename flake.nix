@@ -30,10 +30,20 @@ inputs = {
 
 # HAPP
 	# happ-nix.url = "github:d4hl/happ-nix";
-	happ-nixos = {
-		url = "git+https://codeberg.org/VOXEL0798/happ.flake.git";
-		inputs.nixpkgs.follows = "nixpkgs";
-	};
+	# happ-nixos = {
+	# 	url = "git+https://codeberg.org/VOXEL0798/happ.flake.git";
+	# 	inputs.nixpkgs.follows = "nixpkgs";
+	# };
+
+	# Пример изменения в вашем flake.nix
+  happ-desktop = pkgs.happ-desktop.overrideAttrs (oldAttrs: rec {
+    version = "4.8.3"; # <-- Измените эту строку
+    src = pkgs.fetchurl {
+      url = "https://github.com/Happ-proxy/happ-desktop/releases/download/${version}/Happ.linux.x64.deb";
+      # Хэш для новой версии, возможно, потребуется обновить
+      hash = "sha256-...";
+    };
+  });
 
 # ZAPRET2
 	zapret2-nix.url = "github:zenonel/zapret2-nix";
