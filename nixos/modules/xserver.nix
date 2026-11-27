@@ -6,7 +6,7 @@
   services = {
       #=>Enable the KDE Plasma Desktop Environment.
       displayManager.sddm.enable = true;
-      desktopManager.plasma6.enable = true;
+      # desktopManager.plasma6.enable = true;
 
 	#=>Enable thee Gnome Desktop Environment.
 	# desktopManager.gnome.enable = true;
