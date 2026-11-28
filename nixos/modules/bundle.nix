@@ -17,6 +17,7 @@ imports = [
   ./steam.nix
   # ./zapret_1.nix
   # ./zapret2_1.nix
+  ./zapret2
   ./shell.nix
 
   ./devops/bundle.nix
